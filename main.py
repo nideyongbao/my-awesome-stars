@@ -150,7 +150,10 @@ def main():
         cache = {}
 
     # 2. 获取 GitHub Stars
-    g = Github(GITHUB_TOKEN)
+    # DeprecationWarning: Argument login_or_token is deprecated, please use auth=github.Auth.Token(...) instead
+    from github import Auth
+    auth = Auth.Token(GITHUB_TOKEN)
+    g = Github(auth=auth)
     user = g.get_user()
     print(f"Fetching stars for user: {user.login}...")
     
