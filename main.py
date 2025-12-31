@@ -59,7 +59,12 @@ def get_llm_category(repo_name, description):
         )
         return response.choices[0].message.content.strip()
     except Exception as e:
-        print(f"LLM Error: {e}")
+        # 如果是 Rate Limit (429)，打印更明显的警告
+        if "429" in str(e):
+             print(f"⚠️ LLM Rate Limit hit for {repo_name}. Sleeping for 60s...")
+             time.sleep(60)
+        else:
+             print(f"LLM Error: {e}")
         return "Uncategorized"
 
 def update_readme(data):
@@ -122,8 +127,9 @@ def main():
         repo_id = str(repo.id)
         
         # 如果缓存里有，且不需要强制刷新，直接复用
-        if repo_id in cache:
-            # 更新 star 数（因为 star 数是动态的）
+        # CHANGE: 如果之前是 Uncategorized，则重新尝试分类
+        if repo_id in cache and cache[repo_id].get('category') != 'Uncategorized':
+            # 更新 star 数
             cache[repo_id]['stars'] = repo.stargazers_count
             new_cache[repo_id] = cache[repo_id]
         else:
