@@ -1,6 +1,7 @@
 import os
 import json
 import time
+import github
 from github import Github
 from openai import OpenAI
 from tqdm import tqdm
@@ -8,89 +9,139 @@ from tqdm import tqdm
 # --- 配置部分 ---
 GITHUB_TOKEN = os.getenv("GH_TOKEN")
 LLM_API_KEY = os.getenv("LLM_API_KEY")
-LLM_BASE_URL = os.getenv("LLM_BASE_URL", "https://api.deepseek.com") # 默认使用DeepSeek，可改
-LLM_MODEL = os.getenv("LLM_MODEL", "deepseek-chat") 
+LLM_BASE_URL = os.getenv("LLM_BASE_URL", "https://api.deepseek.com")
+LLM_MODEL = os.getenv("LLM_MODEL", "deepseek-chat")
 
-# 你的分类体系
-CATEGORIES = [
-    "AI-Sys-Train (训练框架, DeepSpeed, Megatron)",
-    "AI-Sys-Inference (推理与部署, vLLM, TGI)",
-    "AI-Sys-Perf (性能优化, CUDA, Kernel)",
-    "AI-Sys-Core (DL框架底座, PyTorch, JAX)",
-    "AI-Algo-Model (模型架构, Llama, Qwen)",
-    "AI-App-Agent (Agent, CoT, Planner)",
-    "AI-App-Utils (LangChain, RAG, PDF解析)",
-    "AI-Data (数据集, 数据处理)",
-    "Dev-Web (前后端开发)",
-    "Tools-CLI (命令行工具, 效率脚本)",
+# --- 默认分类体系 (根据 docs/default_catrgories.md 设计) ---
+DEFAULT_CATEGORIES = [
+    # AI System (核心关注区)
+    "AI-Sys-Train (分布式训练框架, DeepSpeed, Megatron-LM)",
+    "AI-Sys-Inference (推理引擎与后端, vLLM, TGI, TensorRT-LLM)",
+    "AI-Sys-Compiler (编译器与图优化, TVM, MLIR, Triton)",
+    "AI-Sys-Device (异构计算与硬件接口, CUDA, ROCm)",
+    "AI-Sys-Ops (MLOps, 实验管理, 模型监控)",
+    # AI Algorithm & Models
+    "AI-Algo-LLM (语言模型架构与微调, Llama, Qwen, LoRA)",
+    "AI-Algo-Vision (计算机视觉与生成, Stable Diffusion, YOLO)",
+    "AI-Algo-Audio (语音识别与合成, Whisper, TTS)",
+    "AI-Algo-Multi (多模态与新架构, CLIP, Mamba, MoE)",
+    "AI-Algo-Theory (纯理论代码, 论文复现, 数学库)",
+    # AI Engineering & Application
+    "AI-App-Agent (智能体, 规划与记忆, AutoGPT, MetaGPT)",
+    "AI-App-RAG (检索增强生成与向量库, LangChain, LlamaIndex)",
+    "AI-App-Framework (应用开发框架, Dify, Flowise)",
+    "AI-Data-Eng (数据处理, ETL, 标注工具)",
+    # General Development
+    "Dev-Web-FullStack (现代Web开发, Next.js, React, FastAPI)",
+    "Dev-Infra-Cloud (云原生, 容器, K8s)",
+    "Dev-DB-Storage (数据库与存储, PostgreSQL, Redis)",
+    "Dev-Lang-Core (编程语言核心资源, Rust, Python, C++)",
+    "Dev-Sec (安全工具与逆向工程)",
+    # Tools & Misc
+    "Tools-Efficiency (生产力与终端工具, Oh-My-Zsh, Raycast)",
+    "Tools-Media (图像视频处理工具, FFmpeg)",
     "Proj-RedLoop (RedLoop相关项目)",
-    "Research-Other (其他研究, 量化等)",
+    "CS-Education (教程, 面试, 路线图)",
     "Uncategorized (无法分类)"
 ]
 
 CACHE_FILE = "stars_cache.json"
+CATEGORY_FILE = "categories.json"
 
-def get_llm_category(repo_name, description):
-    """调用 LLM 进行分类"""
+# --- Prompt 模板 (JSON 输出 + 思维链) ---
+PROMPT_TEMPLATE = """
+你是一个资深的 GitHub 仓库分类专家。你的任务是将给定的仓库归类到最合适的类别中。
+
+### 输入信息
+- 仓库名: {repo_name}
+- 描述: {description}
+- 主要语言/Topics: {topics}
+
+### 预设分类体系 (Name: Description)
+{categories_json}
+
+### 决策逻辑
+1. **优先匹配**：首先尝试从[预设分类体系]中寻找最匹配的类别。
+   - 如果是底层算子、CUDA优化，必须选 `AI-Sys-` 开头的类别。
+   - 如果是 Agent 或 RAG 相关，优先选 `AI-App-` 开头的类别。
+2. **新建分类**：只有当[预设分类体系]中**完全没有**合适的类别时（例如遇到了区块链、量子计算等新领域），才允许新建分类。
+   - 新分类格式必须为：`New-Category-Name (简短中文描述)`。
+   - 例如：`Tech-Blockchain (区块链与Web3)`。
+   - 严禁创建与现有体系重叠的分类（例如不要创建 `Web-Frontend`，因为已有 `Dev-Web-FullStack`）。
+
+### 输出格式 (必须是纯 JSON)
+请仅输出一个 JSON 对象，不要包含 Markdown 标记或其他文本：
+{{
+    "category": "分类名称 (描述)",
+    "confidence": "high/medium/low",
+    "reasoning": "简短的分类理由（10个字以内）"
+}}
+"""
+
+
+def load_categories():
+    """加载分类体系，如果有动态扩展的分类则合并"""
+    if os.path.exists(CATEGORY_FILE):
+        with open(CATEGORY_FILE, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    return DEFAULT_CATEGORIES.copy()
+
+
+def save_categories(categories):
+    """保存分类体系（包含动态扩展的新分类）"""
+    with open(CATEGORY_FILE, 'w', encoding='utf-8') as f:
+        json.dump(categories, f, ensure_ascii=False, indent=2)
+
+
+def get_llm_classification(repo_name, description, topics, current_categories):
+    """调用 LLM 进行分类，返回 JSON 结果"""
     client = OpenAI(api_key=LLM_API_KEY, base_url=LLM_BASE_URL)
-    
-    prompt = f"""
-    你是一个专业的技术仓库分类器。请根据以下 GitHub 仓库信息，从给定的分类列表中选择最匹配的一个。
-    
-    仓库名: {repo_name}
-    描述: {description}
-    
-    可选分类列表 (仅供参考，如果没有合适的，你可以新建一个符合格式的分类):
-    {json.dumps(CATEGORIES, ensure_ascii=False)}
-    
-    规则：
-    1. 只能返回分类名称字符串，不要解释。
-    2. 如果现有分类不合适，请生成一个新的分类，格式必须为 "Category-Name (Description)"，例如 "AI-Audio (语音合成与识别)"。
-    3. 如果是分布式训练相关，优先选 AI-Sys-Train。
-    
-    输出分类名称：
-    """
-    
+
+    prompt = PROMPT_TEMPLATE.format(
+        repo_name=repo_name,
+        description=description,
+        topics=", ".join(topics) if topics else "N/A",
+        categories_json=json.dumps(current_categories, ensure_ascii=False, indent=2)
+    )
+
     try:
         response = client.chat.completions.create(
             model=LLM_MODEL,
             messages=[{"role": "user", "content": prompt}],
+            response_format={"type": "json_object"},  # 强制 JSON 模式
             temperature=0.1
         )
-        return response.choices[0].message.content.strip()
+        result = json.loads(response.choices[0].message.content)
+        return result
     except Exception as e:
-        # 如果是 Rate Limit (429)，打印更明显的警告
         if "429" in str(e):
-             print(f"⚠️ LLM Rate Limit hit for {repo_name}. Sleeping for 60s...")
-             time.sleep(60)
+            print(f"⚠️ LLM Rate Limit hit for {repo_name}. Sleeping for 60s...")
+            time.sleep(60)
         else:
-             print(f"LLM Error: {e}")
-        return "Uncategorized"
+            print(f"LLM Error: {e}")
+        return {"category": "Uncategorized", "confidence": "low", "reasoning": "API Error"}
 
-def update_readme(data):
-    """生成 Markdown"""
+
+def update_readme(data, categories):
+    """生成 README.md"""
     # 动态收集所有分类
     all_categories = set()
     for repo in data.values():
         all_categories.add(repo['category'])
-    
-    # 将标准分类和新发现的分类合并并排序
-    # 优先展示配置好的 CATEGORIES 顺序，新分类按字母序排在后面
+
+    # 排序：优先 categories 列表顺序，新分类按字母序，Uncategorized 最后
     sorted_cats = []
     seen = set()
-    
-    # 1. 先加预定义的
-    for cat in CATEGORIES:
+
+    for cat in categories:
         if cat in all_categories:
             sorted_cats.append(cat)
             seen.add(cat)
-            
-    # 2. 再加新生成的 (排除 Uncategorized)
+
     remaining = [c for c in all_categories if c not in seen and c != "Uncategorized"]
     remaining.sort()
     sorted_cats.extend(remaining)
-    
-    # 3. 最后加 Uncategorized
+
     if "Uncategorized" in all_categories:
         sorted_cats.append("Uncategorized")
 
@@ -101,104 +152,126 @@ def update_readme(data):
         if cat in grouped:
             grouped[cat].append(repo)
         else:
-            # Fallback 如果有些奇奇怪怪的分类没被捕获
             if "Uncategorized" not in grouped:
                 grouped["Uncategorized"] = []
             grouped["Uncategorized"].append(repo)
-    
+
     # 生成内容
     md = "# 🌟 My Awesome AI Stars\n\n> 🤖 自动生成于 GitHub Actions, Powered by LLM.\n\n"
     md += "## 目录\n"
     for cat in sorted_cats:
-        cat_key = cat.split(" ")[0] # 提取 "AI-Sys-Train" 用于锚点
-        # 兼容一下，如果生成的分类没有空格，直接用全文
-        if " " not in cat: 
-             cat_key = cat
-        
+        cat_key = cat.split(" ")[0]
+        if " " not in cat:
+            cat_key = cat
         count = len(grouped[cat])
         md += f"- [{cat} ({count})](#{cat_key.lower()})\n"
-    
+
     md += "\n---\n"
-    
+
     for cat in sorted_cats:
         repos = grouped[cat]
-        if not repos: continue
-        
+        if not repos:
+            continue
+
         cat_key = cat.split(" ")[0]
-        if " " not in cat: cat_key = cat
-        
+        if " " not in cat:
+            cat_key = cat
+
         md += f"## <span id='{cat_key.lower()}'>{cat}</span>\n\n"
         md += "| Project | Description | Stars | Language |\n"
         md += "|---|---|---|---|\n"
-        # 按 Star 数倒序排列
         repos.sort(key=lambda x: x['stars'], reverse=True)
         for r in repos:
-            desc = (r['description'] or "").replace("|", "\|") # 转义表格符
+            desc = (r.get('description') or "").replace("|", r"\|").replace("\n", " ")
             lang = r.get('language') or "N/A"
-            md += f"| [{r['name']}]({r['url']}) | {desc} | {r['stars']} | {lang} |\n"
+            md += f"| [{r['name']}]({r['url']}) | {desc[:100]} | {r['stars']} | {lang} |\n"
         md += "\n"
-        
+
     with open("README.md", "w", encoding="utf-8") as f:
         f.write(md)
 
+
 def main():
-    # 1. 读取缓存
+    # 1. 加载分类体系
+    categories = load_categories()
+
+    # 2. 读取缓存
     if os.path.exists(CACHE_FILE):
         with open(CACHE_FILE, 'r', encoding='utf-8') as f:
             cache = json.load(f)
     else:
         cache = {}
 
-    # 2. 获取 GitHub Stars
-    # DeprecationWarning: Argument login_or_token is deprecated, please use auth=github.Auth.Token(...) instead
-    from github import Auth
-    auth = Auth.Token(GITHUB_TOKEN)
+    # 3. 获取 GitHub Stars (使用新版 Auth)
+    auth = github.Auth.Token(GITHUB_TOKEN)
     g = Github(auth=auth)
     user = g.get_user()
     print(f"Fetching stars for user: {user.login}...")
-    
+
     starred_repos = user.get_starred()
-    
-    # 3. 增量更新逻辑
+
+    # 4. 增量更新逻辑
     new_cache = {}
-    is_updated = False
-    
-    # 注意：这里为了演示只取前 500 个，全量同步可去掉切片，但要注意 API 速率
+
     for repo in tqdm(starred_repos, total=starred_repos.totalCount):
         repo_id = str(repo.id)
-        
-        # 如果缓存里有，且不需要强制刷新，直接复用
-        # CHANGE: 如果之前是 Uncategorized，则重新尝试分类
+
+        # 如果缓存里有，且不是 Uncategorized，直接复用
         if repo_id in cache and cache[repo_id].get('category') != 'Uncategorized':
-            # 更新动态数据: stars, language
             cache[repo_id]['stars'] = repo.stargazers_count
             cache[repo_id]['language'] = repo.language
             new_cache[repo_id] = cache[repo_id]
         else:
-            # 新发现的仓库，调用 LLM
-            print(f"🤖 Classifying new repo: {repo.full_name}")
-            category = get_llm_category(repo.name, repo.description or "")
-            
+            # 新仓库或需要重新分类
+            print(f"🤖 Classifying: {repo.full_name}")
+
+            # 获取 Topics
+            try:
+                topics = repo.get_topics()
+            except Exception:
+                topics = []
+
+            result = get_llm_classification(
+                repo.name,
+                repo.description or "",
+                topics,
+                categories
+            )
+
+            category_name = result.get("category", "Uncategorized")
+
+            # --- 动态扩展逻辑 ---
+            if category_name not in categories and "(" in category_name:
+                print(f"✨ 发现新领域，自动扩展分类体系: {category_name}")
+                categories.append(category_name)
+                save_categories(categories)
+
             entry = {
                 "name": repo.full_name,
                 "url": repo.html_url,
                 "description": repo.description,
                 "stars": repo.stargazers_count,
-                "category": category,
+                "category": category_name,
                 "language": repo.language,
+                "topics": topics,
+                "confidence": result.get("confidence", "unknown"),
+                "reasoning": result.get("reasoning", ""),
                 "crawled_at": time.time()
             }
             new_cache[repo_id] = entry
-            is_updated = True
-            time.sleep(1) # 避免 LLM Rate Limit
-            
-    # 4. 保存缓存
+            time.sleep(1)  # 避免 LLM Rate Limit
+
+    # 5. 保存缓存
     with open(CACHE_FILE, 'w', encoding='utf-8') as f:
         json.dump(new_cache, f, ensure_ascii=False, indent=2)
-        
-    # 5. 生成 Readme
-    update_readme(new_cache)
+
+    # 6. 保存分类体系
+    save_categories(categories)
+
+    # 7. 生成 README
+    update_readme(new_cache, categories)
     print("Done!")
+
 
 if __name__ == "__main__":
     main()
