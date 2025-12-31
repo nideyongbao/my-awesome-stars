@@ -36,4 +36,5 @@ jobs:
         git config --global user.name "GitHub Action"
         git add README.md stars_cache.json
         git commit -m "🤖 Auto-update stars classification" || exit 0
+        git pull --rebase
         git push
