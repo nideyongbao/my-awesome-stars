@@ -128,17 +128,14 @@ def update_readme(data):
         if " " not in cat: cat_key = cat
         
         md += f"## <span id='{cat_key.lower()}'>{cat}</span>\n\n"
-    
-    for cat, repos in grouped.items():
-        if not repos: continue
-        md += f"## {cat}\n\n"
-        md += "| Project | Description | Stars | Category |\n"
+        md += "| Project | Description | Stars | Language |\n"
         md += "|---|---|---|---|\n"
         # 按 Star 数倒序排列
         repos.sort(key=lambda x: x['stars'], reverse=True)
         for r in repos:
             desc = (r['description'] or "").replace("|", "\|") # 转义表格符
-            md += f"| [{r['name']}]({r['url']}) | {desc} | {r['stars']} | {r['category']} |\n"
+            lang = r.get('language') or "N/A"
+            md += f"| [{r['name']}]({r['url']}) | {desc} | {r['stars']} | {lang} |\n"
         md += "\n"
         
     with open("README.md", "w", encoding="utf-8") as f:
@@ -170,8 +167,9 @@ def main():
         # 如果缓存里有，且不需要强制刷新，直接复用
         # CHANGE: 如果之前是 Uncategorized，则重新尝试分类
         if repo_id in cache and cache[repo_id].get('category') != 'Uncategorized':
-            # 更新 star 数
+            # 更新动态数据: stars, language
             cache[repo_id]['stars'] = repo.stargazers_count
+            cache[repo_id]['language'] = repo.language
             new_cache[repo_id] = cache[repo_id]
         else:
             # 新发现的仓库，调用 LLM
@@ -184,6 +182,7 @@ def main():
                 "description": repo.description,
                 "stars": repo.stargazers_count,
                 "category": category,
+                "language": repo.language,
                 "crawled_at": time.time()
             }
             new_cache[repo_id] = entry
