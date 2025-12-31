@@ -40,13 +40,13 @@ def get_llm_category(repo_name, description):
     仓库名: {repo_name}
     描述: {description}
     
-    可选分类列表:
+    可选分类列表 (仅供参考，如果没有合适的，你可以新建一个符合格式的分类):
     {json.dumps(CATEGORIES, ensure_ascii=False)}
     
     规则：
-    1. 只能返回列表中的某一个字符串，不要解释。
-    2. 如果是分布式训练相关，优先选 AI-Sys-Train。
-    3. 如果是 Agent 或 MCP 相关，优先选 AI-App-Agent。
+    1. 只能返回分类名称字符串，不要解释。
+    2. 如果现有分类不合适，请生成一个新的分类，格式必须为 "Category-Name (Description)"，例如 "AI-Audio (语音合成与识别)"。
+    3. 如果是分布式训练相关，优先选 AI-Sys-Train。
     
     输出分类名称：
     """
@@ -69,24 +69,65 @@ def get_llm_category(repo_name, description):
 
 def update_readme(data):
     """生成 Markdown"""
-    # 按分类分组
-    grouped = {cat.split(" ")[0]: [] for cat in CATEGORIES}
-    grouped["Uncategorized"] = []
-    
+    # 动态收集所有分类
+    all_categories = set()
     for repo in data.values():
-        cat_key = repo['category'].split(" ")[0] # 提取 "AI-Sys-Train" 这种短名
-        if cat_key not in grouped:
-            cat_key = "Uncategorized"
-        grouped[cat_key].append(repo)
+        all_categories.add(repo['category'])
+    
+    # 将标准分类和新发现的分类合并并排序
+    # 优先展示配置好的 CATEGORIES 顺序，新分类按字母序排在后面
+    sorted_cats = []
+    seen = set()
+    
+    # 1. 先加预定义的
+    for cat in CATEGORIES:
+        if cat in all_categories:
+            sorted_cats.append(cat)
+            seen.add(cat)
+            
+    # 2. 再加新生成的 (排除 Uncategorized)
+    remaining = [c for c in all_categories if c not in seen and c != "Uncategorized"]
+    remaining.sort()
+    sorted_cats.extend(remaining)
+    
+    # 3. 最后加 Uncategorized
+    if "Uncategorized" in all_categories:
+        sorted_cats.append("Uncategorized")
+
+    # 分组
+    grouped = {cat: [] for cat in sorted_cats}
+    for repo in data.values():
+        cat = repo['category']
+        if cat in grouped:
+            grouped[cat].append(repo)
+        else:
+            # Fallback 如果有些奇奇怪怪的分类没被捕获
+            if "Uncategorized" not in grouped:
+                grouped["Uncategorized"] = []
+            grouped["Uncategorized"].append(repo)
     
     # 生成内容
     md = "# 🌟 My Awesome AI Stars\n\n> 🤖 自动生成于 GitHub Actions, Powered by LLM.\n\n"
     md += "## 目录\n"
-    for cat in grouped.keys():
-        if grouped[cat]:
-            md += f"- [{cat}](#{cat.lower()})\n"
+    for cat in sorted_cats:
+        cat_key = cat.split(" ")[0] # 提取 "AI-Sys-Train" 用于锚点
+        # 兼容一下，如果生成的分类没有空格，直接用全文
+        if " " not in cat: 
+             cat_key = cat
+        
+        count = len(grouped[cat])
+        md += f"- [{cat} ({count})](#{cat_key.lower()})\n"
     
     md += "\n---\n"
+    
+    for cat in sorted_cats:
+        repos = grouped[cat]
+        if not repos: continue
+        
+        cat_key = cat.split(" ")[0]
+        if " " not in cat: cat_key = cat
+        
+        md += f"## <span id='{cat_key.lower()}'>{cat}</span>\n\n"
     
     for cat, repos in grouped.items():
         if not repos: continue
