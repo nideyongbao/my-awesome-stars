@@ -14,23 +14,38 @@ LLM_MODEL = os.getenv("LLM_MODEL", "deepseek-chat")
 
 # --- 默认分类体系 (根据 docs/default_catrgories.md 设计) ---
 DEFAULT_CATEGORIES = [
-    # AI System (核心关注区)
-    "AI-Sys-Train (分布式训练框架, DeepSpeed, Megatron-LM)",
-    "AI-Sys-Inference (推理引擎与后端, vLLM, TGI, TensorRT-LLM)",
-    "AI-Sys-Compiler (编译器与图优化, TVM, MLIR, Triton)",
-    "AI-Sys-Device (异构计算与硬件接口, CUDA, ROCm)",
-    "AI-Sys-Ops (MLOps, 实验管理, 模型监控)",
+    # AI System (核心关注区),
+    "AI-Sys-Posttraining (大模型后训练学习框架)",
+    "AI-Sys-RL (强化学习框架, PPO, GRPO)",
+    "AI-Sys-FineTuning (微调与轻量化训练, LoRA, PEFT, Unsloth)",
+    "AI-Sys-Pretraining (预训练框架, Megatron, deepspeed)",
+    "AI-Sys-Inference (推理引擎与后端, vLLM, TGI, TensorRT-LLM, llama.cpp)",
+    "AI-Sys-Quantization (量化与压缩, GPTQ, AWQ, Bitsandbytes)",
+    "AI-Sys-Kernel (高性能算子与底层优化, FlashAttention, CUTLASS, OpenAI-Triton)",
+    "AI-Sys-Compiler (编译器与图优化, TVM, MLIR, XLA, TorchCompile)",
+    "AI-Sys-Framework (深度学习框架底座, PyTorch, TensorFlow, JAX, MXNet)",
+    "AI-Sys-Cluster (集群调度与编排, Kubernetes, Ray, Slurm, Skypilot)",
+    "AI-Sys-MLOps (实验管理与模型监控, MLflow, WandB, Prometheus)",
+    "AI-Sys-Hardware (硬件接口与驱动, CUDA, ROCm, Ascend, Metal)",
+    # AI Data (数据工程)
+    "AI-Data-Dataset (开源数据集, HuggingFace-Datasets, FineWeb, CommonCrawl)",
+    "AI-Data-Pipeline (数据处理管线与ETL, Datatrove, Data-Juicer, Apache Beam)",
+    "AI-Data-Synthetic (合成数据生成, Argilla, Distilabel, Self-Instruct)",
+    "AI-Data-Crawl (网页抓取与爬虫, Crawlee, Scrapy, Firecrawl)",
+    "AI-Data-Labeling (数据标注工具, Label Studio, CVAT)",
+    "AI-Data-Vector (向量数据库与索引, Milvus, Chroma, Faiss, Pinecone)",
     # AI Algorithm & Models
     "AI-Algo-LLM (语言模型架构与微调, Llama, Qwen, LoRA)",
     "AI-Algo-Vision (计算机视觉与生成, Stable Diffusion, YOLO)",
     "AI-Algo-Audio (语音识别与合成, Whisper, TTS)",
     "AI-Algo-Multi (多模态与新架构, CLIP, Mamba, MoE)",
+    "AI-Algo-Omni (全模态大模型, OpenAI, Anthropic)",
     "AI-Algo-Theory (纯理论代码, 论文复现, 数学库)",
     # AI Engineering & Application
     "AI-App-Agent (智能体, 规划与记忆, AutoGPT, MetaGPT)",
     "AI-App-RAG (检索增强生成与向量库, LangChain, LlamaIndex)",
     "AI-App-Framework (应用开发框架, Dify, Flowise)",
-    "AI-Data-Eng (数据处理, ETL, 标注工具)",
+    "AI-App-MCP (Model Context Protocol)",
     # General Development
     "Dev-Web-FullStack (现代Web开发, Next.js, React, FastAPI)",
     "Dev-Infra-Cloud (云原生, 容器, K8s)",
@@ -40,8 +55,8 @@ DEFAULT_CATEGORIES = [
     # Tools & Misc
     "Tools-Efficiency (生产力与终端工具, Oh-My-Zsh, Raycast)",
     "Tools-Media (图像视频处理工具, FFmpeg)",
-    "Proj-RedLoop (RedLoop相关项目)",
     "CS-Education (教程, 面试, 路线图)",
+    "Research-Paper (论文代码复现, Arxiv)",
     "Uncategorized (无法分类)"
 ]
 
@@ -50,31 +65,36 @@ CATEGORY_FILE = "categories.json"
 
 # --- Prompt 模板 (JSON 输出 + 思维链) ---
 PROMPT_TEMPLATE = """
-你是一个资深的 GitHub 仓库分类专家。你的任务是将给定的仓库归类到最合适的类别中。
+你是一个资深的 AI Infra 架构师。你的任务是将 GitHub 仓库精准分类。
 
 ### 输入信息
 - 仓库名: {repo_name}
 - 描述: {description}
-- 主要语言/Topics: {topics}
+- Topics: {topics}
 
-### 预设分类体系 (Name: Description)
+### 预设分类体系
 {categories_json}
 
-### 决策逻辑
-1. **优先匹配**：首先尝试从[预设分类体系]中寻找最匹配的类别。
-   - 如果是底层算子、CUDA优化，必须选 `AI-Sys-` 开头的类别。
-   - 如果是 Agent 或 RAG 相关，优先选 `AI-App-` 开头的类别。
-2. **新建分类**：只有当[预设分类体系]中**完全没有**合适的类别时（例如遇到了区块链、量子计算等新领域），才允许新建分类。
-   - 新分类格式必须为：`New-Category-Name (简短中文描述)`。
-   - 例如：`Tech-Blockchain (区块链与Web3)`。
-   - 严禁创建与现有体系重叠的分类（例如不要创建 `Web-Frontend`，因为已有 `Dev-Web-FullStack`）。
+### 核心决策逻辑 (Priority Logic)
+1. **AI System 细分原则**：
+   - **Posttraining vs FineTuning**: 如果是全量训练框架选 `AI-Sys-Posttraining`；如果是 LoRA/QLoRA 等轻量微调库（如 PEFT）选 `AI-Sys-FineTuning`。
+   - **Compiler vs Kernel**: 如果是端到端的编译器（如 TVM）选 `AI-Sys-Compiler`；如果是具体的算子实现（如 FlashAttention）选 `AI-Sys-Kernel`。
+   - **Ops vs Cluster**: 如果是 K8s/Ray/Slurm 相关的调度选 `AI-Sys-Cluster`；如果是 WandB 等指标监控选 `AI-Sys-MLOps`。
 
-### 输出格式 (必须是纯 JSON)
-请仅输出一个 JSON 对象，不要包含 Markdown 标记或其他文本：
+2. **AI Data 细分原则**：
+   - **Vector vs RAG**: 如果是单纯的向量数据库（如 Milvus）选 `AI-Data-Vector`；如果是构建 RAG 应用的编排框架（如 LangChain）选 `AI-App-RAG`。
+   - **Synthetic**: 凡是涉及 "Synthetic Data" 或 "Distillation" 的工具，优先选 `AI-Data-Synthetic`。
+
+3. **MCP 特别规则**:
+   - 凡是提及 "Model Context Protocol" 或 "MCP Server" 的项目，必须归入 `AI-App-MCP`。
+
+4. **通用规则**:
+   - 只有当完全不属于 AI 领域时，才使用 `Dev-` 或 `Tools-` 开头的分类。
+
+### 输出格式 (JSON)
 {{
-    "category": "分类名称 (描述)",
-    "confidence": "high/medium/low",
-    "reasoning": "简短的分类理由（10个字以内）"
+    "category": "Selected Category Name",
+    "reasoning": "简短理由"
 }}
 """
 
