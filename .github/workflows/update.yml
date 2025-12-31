@@ -1,0 +1,39 @@
+name: Update Awesome Stars
+
+on:
+  workflow_dispatch: # 手动触发
+  schedule:
+    - cron: '0 0 * * *' # 每天 UTC 0点运行
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+        
+    - name: Install dependencies
+      run: pip install -r requirements.txt
+      
+    - name: Run classifier script
+      env:
+        GH_TOKEN: ${{ secrets.GH_TOKEN }} # 需要你在仓库设置 Secrets
+        LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+        LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }} # 可选，默认 DeepSeek
+        LLM_MODEL: ${{ secrets.LLM_MODEL }}       # 可选
+      run: python main.py
+      
+    - name: Commit and push if changed
+      run: |
+        git config --global user.email "action@github.com"
+        git config --global user.name "GitHub Action"
+        git add README.md stars_cache.json
+        git commit -m "🤖 Auto-update stars classification" || exit 0
+        git push
