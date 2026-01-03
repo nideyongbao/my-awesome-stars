@@ -3,7 +3,7 @@
     "name": "tukuaiai/vibe-coding-cn",
     "url": "https://github.com/tukuaiai/vibe-coding-cn",
     "description": "我的开发经验+提示词库=vibecoding工作站；My development experience + prompt dictionary = Vibecoding workstation；ניסיון הפיתוח שלי + מילון פרומפטים = תחנת עבודה Vibecoding；私の開発経験 + プロンプト辞書 = Vibecoding ワークステーション；나의 개발 경험 + 프롬프트 사전 = Vibecoding 워크스테이션；Mon expérience de développement + dictionnaire de prompts = station de travail Vibecoding；Meine Entwicklungserfahru",
-    "stars": 5812,
+    "stars": 5889,
     "category": "AI-App-Agent",
     "language": "Python",
     "topics": [
@@ -24,7 +24,7 @@
     "name": "x1xhlol/system-prompts-and-models-of-ai-tools",
     "url": "https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools",
     "description": "FULL Augment Code, Claude Code, Cluely, CodeBuddy, Comet, Cursor, Devin AI, Junie, Kiro, Leap.new, Lovable, Manus, NotionAI, Orchids.app, Perplexity, Poke, Qoder, Replit, Same.dev, Trae, Traycer AI, VSCode Agent, Warp.dev, Windsurf, Xcode, Z.ai Code, Dia & v0. (And other Open Sourced) System Prompts, Internal Tools & AI Models",
-    "stars": 104700,
+    "stars": 104911,
     "category": "AI-App-Agent",
     "language": null,
     "topics": [
@@ -69,7 +69,7 @@
     "name": "study8677/antigravity-workspace-template",
     "url": "https://github.com/study8677/antigravity-workspace-template",
     "description": "🪐 The ultimate starter kit for Google Antigravity IDE. Optimized for Gemini 3 Agentic Workflows, \"Deep Think\" mode, and auto-configuring .cursorrules.",
-    "stars": 399,
+    "stars": 413,
     "category": "AI-App-Agent",
     "language": "Python",
     "topics": [
@@ -100,14 +100,14 @@
       "workflow"
     ],
     "confidence": "unknown",
-    "reasoning": "仓库仅为产品经理工作流模板集合，无代码、无模型、无数据管道，也不涉及任何 AI Infra 技术栈，无法归入现有 AI 或 Dev 分类。",
-    "crawled_at": 1767317215.5814843
+    "reasoning": "仓库仅提供产品经理工作流模板，无代码、无模型、无数据管道，与 AI 技术栈无关，无法归入任何 AI 或 Dev 子类。",
+    "crawled_at": 1767403331.5311015
   },
   "738733003": {
     "name": "danielmiessler/Fabric",
     "url": "https://github.com/danielmiessler/Fabric",
     "description": "Fabric is an open-source framework for augmenting humans using AI. It provides a modular system for solving specific problems using a crowdsourced set of AI prompts that can be used anywhere.",
-    "stars": 37505,
+    "stars": 37559,
     "category": "AI-App-Framework",
     "language": "Go",
     "topics": [
@@ -142,7 +142,7 @@
     "name": "cv-cat/Spider_XHS",
     "url": "https://github.com/cv-cat/Spider_XHS",
     "description": "小红书爬虫数据采集，小红书全域运营解决方案",
-    "stars": 3920,
+    "stars": 3928,
     "category": "AI-Data-Crawl",
     "language": "JavaScript",
     "topics": [],
@@ -154,7 +154,7 @@
     "name": "hezhizheng/go-wxpush",
     "url": "https://github.com/hezhizheng/go-wxpush",
     "description": "极简且免费的微信消息推送服务 (基于golang)",
-    "stars": 1096,
+    "stars": 1104,
     "category": "Dev-Web-FullStack",
     "language": "Go",
     "topics": [],
@@ -166,7 +166,7 @@
     "name": "NanmiCoder/MediaCrawler",
     "url": "https://github.com/NanmiCoder/MediaCrawler",
     "description": "小红书笔记 | 评论爬虫、抖音视频 | 评论爬虫、快手视频 | 评论爬虫、B 站视频 ｜ 评论爬虫、微博帖子 ｜ 评论爬虫、百度贴吧帖子 ｜ 百度贴吧评论回复爬虫  | 知乎问答文章｜评论爬虫",
-    "stars": 41353,
+    "stars": 41388,
     "category": "AI-Data-Crawl",
     "language": "Python",
     "topics": [],
@@ -178,7 +178,7 @@
     "name": "xpzouying/xiaohongshu-mcp",
     "url": "https://github.com/xpzouying/xiaohongshu-mcp",
     "description": "MCP for xiaohongshu.com",
-    "stars": 7769,
+    "stars": 7781,
     "category": "AI-App-MCP",
     "language": "Go",
     "topics": [
@@ -194,7 +194,7 @@
     "name": "dreammis/social-auto-upload",
     "url": "https://github.com/dreammis/social-auto-upload",
     "description": "自动化上传视频到社交媒体：抖音、小红书、视频号、tiktok、youtube、bilibili",
-    "stars": 7881,
+    "stars": 7896,
     "category": "Tools-Media",
     "language": "Python",
     "topics": [
@@ -212,7 +212,7 @@
     "name": "WangRongsheng/awesome-LLM-resources",
     "url": "https://github.com/WangRongsheng/awesome-LLM-resources",
     "description": "🧑‍🚀 全世界最好的LLM资料总结（多模态生成、Agent、辅助编程、AI审稿、数据处理、模型训练、模型推理、o1 模型、MCP、小语言模型、视觉语言模型） | Summary of the world's best LLM resources. ",
-    "stars": 7150,
+    "stars": 7159,
     "category": "CS-Education",
     "language": null,
     "topics": [
@@ -257,7 +257,7 @@
     "name": "datawhalechina/hello-agents",
     "url": "https://github.com/datawhalechina/hello-agents",
     "description": "📚 《从零开始构建智能体》——从零开始的智能体原理与实践教程",
-    "stars": 13722,
+    "stars": 13819,
     "category": "AI-App-Agent",
     "language": "Python",
     "topics": [
@@ -274,7 +274,7 @@
     "name": "comfyanonymous/ComfyUI",
     "url": "https://github.com/comfyanonymous/ComfyUI",
     "description": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface.",
-    "stars": 98746,
+    "stars": 98819,
     "category": "AI-Algo-Vision",
     "language": "Python",
     "topics": [
@@ -293,7 +293,7 @@
     "name": "VERT-sh/VERT",
     "url": "https://github.com/VERT-sh/VERT",
     "description": "The next-generation file converter. Open source, fully local* and free forever.",
-    "stars": 12925,
+    "stars": 12958,
     "category": "Tools-Media",
     "language": "Svelte",
     "topics": [
@@ -341,7 +341,7 @@
     "name": "agent-infra/sandbox",
     "url": "https://github.com/agent-infra/sandbox",
     "description": "All-in-One Sandbox for AI Agents that combines Browser, Shell, File, MCP and VSCode Server in a single Docker container.",
-    "stars": 1850,
+    "stars": 1857,
     "category": "AI-App-MCP",
     "language": "Python",
     "topics": [
@@ -361,7 +361,7 @@
     "name": "666ghj/BettaFish",
     "url": "https://github.com/666ghj/BettaFish",
     "description": "微舆：人人可用的多Agent舆情分析助手，打破信息茧房，还原舆情原貌，预测未来走向，辅助决策！从0实现，不依赖任何框架。",
-    "stars": 33896,
+    "stars": 33931,
     "category": "AI-App-Agent",
     "language": "Python",
     "topics": [
@@ -384,7 +384,7 @@
     "name": "lfnovo/open-notebook",
     "url": "https://github.com/lfnovo/open-notebook",
     "description": "An Open Source implementation of Notebook LM with more flexibility and features",
-    "stars": 17016,
+    "stars": 17065,
     "category": "AI-App-RAG",
     "language": "TypeScript",
     "topics": [
@@ -403,7 +403,7 @@
     "name": "DayuanJiang/next-ai-draw-io",
     "url": "https://github.com/DayuanJiang/next-ai-draw-io",
     "description": "A next.js web application that integrates AI capabilities with draw.io diagrams. This app allows you to create, modify, and enhance diagrams through natural language commands and AI-assisted visualization.",
-    "stars": 16183,
+    "stars": 16396,
     "category": "Dev-Web-FullStack",
     "language": "TypeScript",
     "topics": [
@@ -419,7 +419,7 @@
     "name": "jnsahaj/tweakcn",
     "url": "https://github.com/jnsahaj/tweakcn",
     "description": "A visual no-code theme editor for shadcn/ui components",
-    "stars": 8749,
+    "stars": 8758,
     "category": "Dev-Web-FullStack",
     "language": "TypeScript",
     "topics": [
@@ -438,7 +438,7 @@
     "name": "gamosoft/NoteDiscovery",
     "url": "https://github.com/gamosoft/NoteDiscovery",
     "description": "Your Self-Hosted Knowledge Base",
-    "stars": 1948,
+    "stars": 1959,
     "category": "Dev-Web-FullStack",
     "language": "JavaScript",
     "topics": [
@@ -470,7 +470,7 @@
     "name": "THUDM/slime",
     "url": "https://github.com/THUDM/slime",
     "description": "slime is an LLM post-training framework for RL Scaling.",
-    "stars": 3086,
+    "stars": 3088,
     "category": "AI-Sys-RL (强化学习框架, PPO, GRPO)",
     "language": "Python",
     "topics": [],
@@ -482,7 +482,7 @@
     "name": "dataelement/bisheng",
     "url": "https://github.com/dataelement/bisheng",
     "description": "BISHENG is an open LLM devops platform for next generation Enterprise AI applications. Powerful and comprehensive features include: GenAI workflow, RAG, Agent, Unified model management, Evaluation, SFT, Dataset Management, Enterprise-level System Management, Observability and more.",
-    "stars": 10836,
+    "stars": 10842,
     "category": "AI-App-Framework",
     "language": "TypeScript",
     "topics": [
@@ -562,14 +562,14 @@
       "github"
     ],
     "confidence": "unknown",
-    "reasoning": "项目仅抓取并展示 GitHub 日飙升榜，无 AI 模型、数据、算法或系统组件，与预设 AI/CS 分类均不匹配。",
-    "crawled_at": 1767317222.5985796
+    "reasoning": "仓库仅做 GitHub 日飙升榜统计与展示，无 AI 模型、数据、系统或开发框架相关内容，无法归入任何 AI 或 Dev 细分类别。",
+    "crawled_at": 1767403341.4314358
   },
   "31522041": {
     "name": "vnpy/vnpy",
     "url": "https://github.com/vnpy/vnpy",
     "description": "基于Python的开源量化交易平台开发框架",
-    "stars": 35050,
+    "stars": 35069,
     "category": "Uncategorized",
     "language": "Python",
     "topics": [
@@ -583,14 +583,14 @@
       "vnpy"
     ],
     "confidence": "unknown",
-    "reasoning": "vnpy 是量化交易框架，聚焦金融行情、策略回测与实盘交易，与 AI 训练/推理/数据/算法等预设 AI 类别均无关，也不属于 Dev-、Tools- 等子类，故只能归为 Uncategorized。",
-    "crawled_at": 1767317232.5415118
+    "reasoning": "vnpy 是量化交易平台框架，聚焦金融交易而非 AI 模型训练/推理/数据等，不在预设 AI 分类体系内，也无对应 Dev-/Tools- 子类可收，故归 Uncategorized。",
+    "crawled_at": 1767403348.8628097
   },
   "621799276": {
     "name": "chatchat-space/Langchain-Chatchat",
     "url": "https://github.com/chatchat-space/Langchain-Chatchat",
     "description": "Langchain-Chatchat（原Langchain-ChatGLM）基于 Langchain 与 ChatGLM, Qwen 与 Llama 等语言模型的 RAG 与 Agent 应用 | Langchain-Chatchat (formerly langchain-ChatGLM), local knowledge based LLM (like ChatGLM, Qwen and Llama) RAG and Agent app with langchain ",
-    "stars": 36959,
+    "stars": 36964,
     "category": "AI-App-RAG",
     "language": "Python",
     "topics": [
@@ -623,7 +623,7 @@
     "name": "ggml-org/llama.cpp",
     "url": "https://github.com/ggml-org/llama.cpp",
     "description": "LLM inference in C/C++",
-    "stars": 92304,
+    "stars": 92328,
     "category": "AI-Sys-Inference (推理引擎与后端, vLLM, TGI, TensorRT-LLM, llama.cpp)",
     "language": "C++",
     "topics": [
@@ -637,7 +637,7 @@
     "name": "continuedev/continue",
     "url": "https://github.com/continuedev/continue",
     "description": "⏩ Ship faster with Continuous AI. Open-source CLI that can be used in TUI mode as a coding agent or Headless mode to run background agents",
-    "stars": 30608,
+    "stars": 30620,
     "category": "AI-App-Agent",
     "language": "TypeScript",
     "topics": [
@@ -689,7 +689,7 @@
     "name": "lobehub/lobe-chat",
     "url": "https://github.com/lobehub/lobe-chat",
     "description": "🤯 LobeHub - an open-source, modern design AI Agent Workspace. Supports multiple AI providers, Knowledge Base (file upload / RAG ), one click install MCP Marketplace and Artifacts / Thinking. One-click FREE deployment of your private AI Agent application.",
-    "stars": 69694,
+    "stars": 69722,
     "category": "AI-App-Agent",
     "language": "TypeScript",
     "topics": [
@@ -719,7 +719,7 @@
     "name": "open-webui/open-webui",
     "url": "https://github.com/open-webui/open-webui",
     "description": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
-    "stars": 119449,
+    "stars": 119521,
     "category": "AI-App-RAG",
     "language": "Svelte",
     "topics": [
@@ -747,7 +747,7 @@
     "name": "ollama/ollama",
     "url": "https://github.com/ollama/ollama",
     "description": "Get up and running with OpenAI gpt-oss, DeepSeek-R1, Gemma 3 and other models.",
-    "stars": 158625,
+    "stars": 158671,
     "category": "AI-Sys-Inference (推理引擎与后端, vLLM, TGI, TensorRT-LLM, llama.cpp)",
     "language": "Go",
     "topics": [
@@ -812,7 +812,7 @@
     "name": "qibin0506/Cortex",
     "url": "https://github.com/qibin0506/Cortex",
     "description": "个人构建MoE大模型：从预训练到DPO的完整实践",
-    "stars": 2159,
+    "stars": 2160,
     "category": "AI-Sys-Posttraining (大模型后训练学习框架)",
     "language": "Python",
     "topics": [],
@@ -824,7 +824,7 @@
     "name": "idosal/git-mcp",
     "url": "https://github.com/idosal/git-mcp",
     "description": "Put an end to code hallucinations! GitMCP is a free, open-source, remote MCP server for any GitHub project",
-    "stars": 7298,
+    "stars": 7301,
     "category": "AI-App-MCP",
     "language": "TypeScript",
     "topics": [
@@ -846,7 +846,7 @@
     "name": "karpathy/nanochat",
     "url": "https://github.com/karpathy/nanochat",
     "description": "The best ChatGPT that $100 can buy.",
-    "stars": 39579,
+    "stars": 39632,
     "category": "AI-App-Framework",
     "language": "Python",
     "topics": [],
@@ -858,7 +858,7 @@
     "name": "facebookresearch/xformers",
     "url": "https://github.com/facebookresearch/xformers",
     "description": "Hackable and optimized Transformers building blocks, supporting a composable construction.",
-    "stars": 10240,
+    "stars": 10239,
     "category": "AI-Sys-Kernel",
     "language": "Python",
     "topics": [],
@@ -870,7 +870,7 @@
     "name": "unslothai/unsloth",
     "url": "https://github.com/unslothai/unsloth",
     "description": "Fine-tuning & Reinforcement Learning for LLMs. 🦥 Train OpenAI gpt-oss, DeepSeek, Qwen, Llama, Gemma, TTS 2x faster with 70% less VRAM.",
-    "stars": 50224,
+    "stars": 50257,
     "category": "AI-Sys-FineTuning (微调与轻量化训练, LoRA, PEFT, Unsloth)",
     "language": "Python",
     "topics": [
@@ -903,7 +903,7 @@
     "name": "NVlabs/Sana",
     "url": "https://github.com/NVlabs/Sana",
     "description": "SANA: Efficient High-Resolution Image Synthesis with Linear Diffusion Transformer",
-    "stars": 4862,
+    "stars": 4864,
     "category": "AI-Algo-Vision",
     "language": "Python",
     "topics": [
@@ -922,7 +922,7 @@
     "name": "IST-DASLab/marlin",
     "url": "https://github.com/IST-DASLab/marlin",
     "description": "FP16xINT4 LLM inference kernel that can achieve near-ideal ~4x speedups up to medium batchsizes of 16-32 tokens.",
-    "stars": 973,
+    "stars": 975,
     "category": "AI-Sys-Kernel",
     "language": "Python",
     "topics": [
@@ -963,7 +963,7 @@
     "name": "Alibaba-NLP/DeepResearch",
     "url": "https://github.com/Alibaba-NLP/DeepResearch",
     "description": "Tongyi Deep Research, the Leading Open-source Deep Research Agent",
-    "stars": 17798,
+    "stars": 17802,
     "category": "AI-App-Agent",
     "language": "Python",
     "topics": [
@@ -997,7 +997,7 @@
     "name": "sgl-project/sglang",
     "url": "https://github.com/sgl-project/sglang",
     "description": "SGLang is a high-performance serving framework for large language models and multimodal models.",
-    "stars": 22069,
+    "stars": 22090,
     "category": "AI-Sys-Inference (推理引擎与后端, vLLM, TGI, TensorRT-LLM, llama.cpp)",
     "language": "Python",
     "topics": [
@@ -1028,7 +1028,7 @@
     "name": "vllm-project/vllm",
     "url": "https://github.com/vllm-project/vllm",
     "description": "A high-throughput and memory-efficient inference and serving engine for LLMs",
-    "stars": 66653,
+    "stars": 66715,
     "category": "AI-Sys-Inference (推理引擎与后端, vLLM, TGI, TensorRT-LLM, llama.cpp)",
     "language": "Python",
     "topics": [
@@ -1061,7 +1061,7 @@
     "name": "alibaba/ROLL",
     "url": "https://github.com/alibaba/ROLL",
     "description": "An Efficient and User-Friendly Scaling Library for Reinforcement Learning with Large Language Models",
-    "stars": 2555,
+    "stars": 2557,
     "category": "AI-Sys-RL (强化学习框架, PPO, GRPO)",
     "language": "Python",
     "topics": [
@@ -1077,7 +1077,7 @@
     "name": "inclusionAI/AReaL",
     "url": "https://github.com/inclusionAI/AReaL",
     "description": "Lightning-Fast RL for LLM Reasoning and Agents. Made Simple & Flexible.",
-    "stars": 3303,
+    "stars": 3312,
     "category": "AI-Sys-RL (强化学习框架, PPO, GRPO)",
     "language": "Python",
     "topics": [
@@ -1098,7 +1098,7 @@
     "name": "pytorch/torchtitan",
     "url": "https://github.com/pytorch/torchtitan",
     "description": "A PyTorch native platform for training generative AI models",
-    "stars": 4906,
+    "stars": 4910,
     "category": "AI-Sys-Pretraining (预训练框架, Megatron, deepspeed)",
     "language": "Python",
     "topics": [],
@@ -1110,7 +1110,7 @@
     "name": "ray-project/ray",
     "url": "https://github.com/ray-project/ray",
     "description": "Ray is an AI compute engine. Ray consists of a core distributed runtime and a set of AI Libraries for accelerating ML workloads.",
-    "stars": 40570,
+    "stars": 40583,
     "category": "AI-Sys-Cluster",
     "language": "Python",
     "topics": [
@@ -1143,7 +1143,7 @@
     "name": "pytorch/pytorch",
     "url": "https://github.com/pytorch/pytorch",
     "description": "Tensors and Dynamic neural networks in Python with strong GPU acceleration",
-    "stars": 96269,
+    "stars": 96290,
     "category": "AI-Sys-Framework",
     "language": "Python",
     "topics": [
@@ -1215,7 +1215,7 @@
     "name": "NVIDIA/Megatron-LM",
     "url": "https://github.com/NVIDIA/Megatron-LM",
     "description": "Ongoing research training transformer models at scale",
-    "stars": 14768,
+    "stars": 14772,
     "category": "AI-Sys-Pretraining (预训练框架, Megatron, deepspeed)",
     "language": "Python",
     "topics": [
@@ -1231,7 +1231,7 @@
     "name": "huggingface/transformers",
     "url": "https://github.com/huggingface/transformers",
     "description": "🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training. ",
-    "stars": 154496,
+    "stars": 154527,
     "category": "AI-Sys-Framework",
     "language": "Python",
     "topics": [
@@ -1263,7 +1263,7 @@
     "name": "OpenRLHF/OpenRLHF",
     "url": "https://github.com/OpenRLHF/OpenRLHF",
     "description": "An Easy-to-use, Scalable and High-performance RLHF Framework based on Ray (PPO & GRPO & REINFORCE++ & TIS & vLLM & Ray & Dynamic Sampling & Async Agentic RL)",
-    "stars": 8691,
+    "stars": 8695,
     "category": "AI-Sys-RL (强化学习框架, PPO, GRPO)",
     "language": "Python",
     "topics": [
@@ -1284,7 +1284,7 @@
     "name": "volcengine/verl",
     "url": "https://github.com/volcengine/verl",
     "description": "verl: Volcano Engine Reinforcement Learning for LLMs",
-    "stars": 17963,
+    "stars": 17976,
     "category": "AI-Sys-RL (强化学习框架, PPO, GRPO)",
     "language": "Python",
     "topics": [],
@@ -1376,7 +1376,7 @@
     "name": "zhaochenyang20/Awesome-ML-SYS-Tutorial",
     "url": "https://github.com/zhaochenyang20/Awesome-ML-SYS-Tutorial",
     "description": "My learning notes for ML SYS.",
-    "stars": 4853,
+    "stars": 4854,
     "category": "CS-Education",
     "language": "Python",
     "topics": [],
@@ -1388,7 +1388,7 @@
     "name": "linkedin/Liger-Kernel",
     "url": "https://github.com/linkedin/Liger-Kernel",
     "description": "Efficient Triton Kernels for LLM Training",
-    "stars": 5998,
+    "stars": 6000,
     "category": "AI-Sys-Kernel",
     "language": "Python",
     "topics": [
@@ -1412,7 +1412,7 @@
     "name": "GeeeekExplorer/nano-vllm",
     "url": "https://github.com/GeeeekExplorer/nano-vllm",
     "description": "Nano vLLM",
-    "stars": 10445,
+    "stars": 10470,
     "category": "AI-Sys-Inference (推理引擎与后端, vLLM, TGI, TensorRT-LLM, llama.cpp)",
     "language": "Python",
     "topics": [
@@ -1451,7 +1451,7 @@
     "name": "hiyouga/EasyR1",
     "url": "https://github.com/hiyouga/EasyR1",
     "description": "EasyR1: An Efficient, Scalable, Multi-Modality RL Training Framework based on veRL",
-    "stars": 4352,
+    "stars": 4355,
     "category": "AI-Sys-RL (强化学习框架, PPO, GRPO)",
     "language": "Python",
     "topics": [
@@ -1472,7 +1472,7 @@
     "name": "shiyu-coder/Kronos",
     "url": "https://github.com/shiyu-coder/Kronos",
     "description": "Kronos: A Foundation Model for the Language of Financial Markets",
-    "stars": 9799,
+    "stars": 9836,
     "category": "AI-Algo-LLM",
     "language": "Python",
     "topics": [],
@@ -1484,7 +1484,7 @@
     "name": "QuentinFuxa/WhisperLiveKit",
     "url": "https://github.com/QuentinFuxa/WhisperLiveKit",
     "description": "Simultaneous speech-to-text model",
-    "stars": 9377,
+    "stars": 9380,
     "category": "AI-Algo-Audio",
     "language": "Python",
     "topics": [],
@@ -1496,7 +1496,7 @@
     "name": "awesomedata/awesome-public-datasets",
     "url": "https://github.com/awesomedata/awesome-public-datasets",
     "description": "A topic-centric list of HQ open datasets.",
-    "stars": 71861,
+    "stars": 71881,
     "category": "AI-Data-Dataset",
     "language": null,
     "topics": [
@@ -1541,7 +1541,7 @@
     "name": "ChenmienTan/RL2",
     "url": "https://github.com/ChenmienTan/RL2",
     "description": null,
-    "stars": 976,
+    "stars": 977,
     "category": "AI-Sys-RL (强化学习框架, PPO, GRPO)",
     "language": "Python",
     "topics": [],
@@ -1584,7 +1584,7 @@
     "name": "wyf3/llm_related",
     "url": "https://github.com/wyf3/llm_related",
     "description": "复现大模型相关算法及一些学习记录",
-    "stars": 2779,
+    "stars": 2782,
     "category": "Research-Paper",
     "language": "Python",
     "topics": [],
@@ -1760,7 +1760,7 @@
     "name": "wgwang/awesome-LLMs-In-China",
     "url": "https://github.com/wgwang/awesome-LLMs-In-China",
     "description": "中国大模型",
-    "stars": 6350,
+    "stars": 6352,
     "category": "AI-Algo-LLM",
     "language": null,
     "topics": [],
@@ -1844,7 +1844,7 @@
     "name": "liguodongiot/llm-action",
     "url": "https://github.com/liguodongiot/llm-action",
     "description": "本项目旨在分享大模型相关技术原理以及实战经验（大模型工程化、大模型应用落地）",
-    "stars": 22596,
+    "stars": 22610,
     "category": "AI-Sys-Inference (推理引擎与后端, vLLM, TGI, TensorRT-LLM, llama.cpp)",
     "language": "HTML",
     "topics": [
@@ -1862,7 +1862,7 @@
     "name": "QwenLM/Qwen3-VL",
     "url": "https://github.com/QwenLM/Qwen3-VL",
     "description": "Qwen3-VL is the multimodal large language model series developed by Qwen team, Alibaba Cloud.",
-    "stars": 17510,
+    "stars": 17516,
     "category": "AI-Algo-Multi",
     "language": "Jupyter Notebook",
     "topics": [],
@@ -1898,7 +1898,7 @@
     "name": "KellerJordan/modded-nanogpt",
     "url": "https://github.com/KellerJordan/modded-nanogpt",
     "description": "NanoGPT (124M) in 3 minutes",
-    "stars": 4067,
+    "stars": 4071,
     "category": "AI-Sys-Pretraining",
     "language": "Python",
     "topics": [],
@@ -1910,7 +1910,7 @@
     "name": "itcharge/AlgoNote",
     "url": "https://github.com/itcharge/AlgoNote",
     "description": "⛽️「算法通关手册」：从零开始的「算法与数据结构」学习教程，200 道「算法面试热门题目」，1000+ 道「LeetCode 题目解析」，持续更新中！",
-    "stars": 7497,
+    "stars": 7499,
     "category": "CS-Education",
     "language": "Python",
     "topics": [
@@ -1937,7 +1937,7 @@
     "name": "jingyaogong/minimind",
     "url": "https://github.com/jingyaogong/minimind",
     "description": "🚀🚀 「大模型」2小时完全从0训练26M的小参数GPT！🌏 Train a 26M-parameter GPT from scratch in just 2h!",
-    "stars": 36437,
+    "stars": 36455,
     "category": "AI-Sys-Pretraining (预训练框架, Megatron, deepspeed)",
     "language": "Python",
     "topics": [
