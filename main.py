@@ -116,6 +116,7 @@ def save_categories(categories):
 def get_llm_classification(repo_name, description, topics, current_categories):
     """调用 LLM 进行分类，返回 JSON 结果"""
     client = OpenAI(api_key=LLM_API_KEY, base_url=LLM_BASE_URL)
+    default_result = {"category": "Uncategorized", "confidence": "low", "reasoning": "API Error or Invalid Response"}
 
     prompt = PROMPT_TEMPLATE.format(
         repo_name=repo_name,
@@ -131,15 +132,40 @@ def get_llm_classification(repo_name, description, topics, current_categories):
             response_format={"type": "json_object"},  # 强制 JSON 模式
             temperature=0.1
         )
-        result = json.loads(response.choices[0].message.content)
+        
+        # 校验 response 结构
+        if not response.choices:
+            print(f"LLM Error: Empty choices for {repo_name}")
+            return default_result
+        
+        content = response.choices[0].message.content
+        print(f"📝 LLM Raw Response for {repo_name}: {content[:200] if content else 'None'}...")  # 调试日志
+        
+        if not content:
+            print(f"LLM Error: Empty content for {repo_name}")
+            return default_result
+        
+        result = json.loads(content)
+        print(f"✅ Parsed Result: category={result.get('category', 'N/A')}, reasoning={result.get('reasoning', 'N/A')[:50]}...")
+        
+        # 校验 result 是否为有效 dict 且包含 category 字段
+        if not isinstance(result, dict):
+            print(f"LLM Error: Result is not a dict for {repo_name}, got: {type(result)}")
+            return default_result
+        
+        if "category" not in result:
+            print(f"LLM Warning: Missing 'category' key for {repo_name}, using Uncategorized")
+            result["category"] = "Uncategorized"
+        
         return result
     except Exception as e:
         if "429" in str(e):
             print(f"⚠️ LLM Rate Limit hit for {repo_name}. Sleeping for 60s...")
             time.sleep(60)
+            return get_llm_classification(repo_name, description, topics, current_categories)  # 重试
         else:
             print(f"LLM Error: {e}")
-        return {"category": "Uncategorized", "confidence": "low", "reasoning": "API Error"}
+        return default_result
 
 
 def update_readme(data, categories):
