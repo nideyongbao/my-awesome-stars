@@ -12,60 +12,13 @@ LLM_API_KEY = os.getenv("LLM_API_KEY")
 LLM_BASE_URL = os.getenv("LLM_BASE_URL", "https://api.deepseek.com")
 LLM_MODEL = os.getenv("LLM_MODEL", "deepseek-chat")
 
-# --- 默认分类体系 (根据 docs/default_catrgories.md 设计) ---
-DEFAULT_CATEGORIES = [
-    # AI System (核心关注区),
-    "AI-Sys-Posttraining (大模型后训练学习框架)",
-    "AI-Sys-RL (强化学习框架, PPO, GRPO)",
-    "AI-Sys-FineTuning (微调与轻量化训练, LoRA, PEFT, Unsloth)",
-    "AI-Sys-Pretraining (预训练框架, Megatron, deepspeed)",
-    "AI-Sys-Inference (推理引擎与后端, vLLM, TGI, TensorRT-LLM, llama.cpp)",
-    "AI-Sys-Quantization (量化与压缩, GPTQ, AWQ, Bitsandbytes)",
-    "AI-Sys-Kernel (高性能算子与底层优化, FlashAttention, CUTLASS, OpenAI-Triton)",
-    "AI-Sys-Compiler (编译器与图优化, TVM, MLIR, XLA, TorchCompile)",
-    "AI-Sys-Framework (深度学习框架底座, PyTorch, TensorFlow, JAX, MXNet)",
-    "AI-Sys-Cluster (集群调度与编排, Kubernetes, Ray, Slurm, Skypilot)",
-    "AI-Sys-MLOps (实验管理与模型监控, MLflow, WandB, Prometheus)",
-    "AI-Sys-Hardware (硬件接口与驱动, CUDA, ROCm, Ascend, Metal)",
-    # AI Data (数据工程)
-    "AI-Data-Dataset (开源数据集, HuggingFace-Datasets, FineWeb, CommonCrawl)",
-    "AI-Data-Pipeline (数据处理管线与ETL, Datatrove, Data-Juicer, Apache Beam)",
-    "AI-Data-Synthetic (合成数据生成, Argilla, Distilabel, Self-Instruct)",
-    "AI-Data-Crawl (网页抓取与爬虫, Crawlee, Scrapy, Firecrawl)",
-    "AI-Data-Labeling (数据标注工具, Label Studio, CVAT)",
-    "AI-Data-Vector (向量数据库与索引, Milvus, Chroma, Faiss, Pinecone)",
-    # AI Algorithm & Models
-    "AI-Algo-LLM (语言模型架构与微调, Llama, Qwen, LoRA)",
-    "AI-Algo-Vision (计算机视觉与生成, Stable Diffusion, YOLO)",
-    "AI-Algo-Audio (语音识别与合成, Whisper, TTS)",
-    "AI-Algo-Multi (多模态与新架构, CLIP, Mamba, MoE)",
-    "AI-Algo-Omni (全模态大模型, OpenAI, Anthropic)",
-    "AI-Algo-Theory (纯理论代码, 论文复现, 数学库)",
-    # AI Engineering & Application
-    "AI-App-Agent (智能体, 规划与记忆, AutoGPT, MetaGPT)",
-    "AI-App-RAG (检索增强生成与向量库, LangChain, LlamaIndex)",
-    "AI-App-Framework (应用开发框架, Dify, Flowise)",
-    "AI-App-MCP (Model Context Protocol)",
-    # General Development
-    "Dev-Web-FullStack (现代Web开发, Next.js, React, FastAPI)",
-    "Dev-Infra-Cloud (云原生, 容器, K8s)",
-    "Dev-DB-Storage (数据库与存储, PostgreSQL, Redis)",
-    "Dev-Lang-Core (编程语言核心资源, Rust, Python, C++)",
-    "Dev-Sec (安全工具与逆向工程)",
-    # Tools & Misc
-    "Tools-Efficiency (生产力与终端工具, Oh-My-Zsh, Raycast)",
-    "Tools-Media (图像视频处理工具, FFmpeg)",
-    "CS-Education (教程, 面试, 路线图)",
-    "Research-Paper (论文代码复现, Arxiv)",
-    "Uncategorized (无法分类)"
-]
-
+# 配置文件路径
 CACHE_FILE = "stars_cache.json"
 CATEGORY_FILE = "categories.json"
 
 # --- Prompt 模板 (JSON 输出 + 思维链) ---
 PROMPT_TEMPLATE = """
-你是一个资深的 AI Infra 架构师。你的任务是将 GitHub 仓库精准分类。
+你是一个资深的软件工程师和开源社区专家。你的任务是将 GitHub 仓库精准分类到最匹配的类别。
 
 ### 输入信息
 - 仓库名: {repo_name}
@@ -76,20 +29,36 @@ PROMPT_TEMPLATE = """
 {categories_json}
 
 ### 核心决策逻辑 (Priority Logic)
-1. **AI System 细分原则**：
+
+1. **首先判断是否是 AI 相关项目**：
+   - 如果描述或 Topics 中包含 LLM、ML、AI、模型、训练、推理等关键词 → 进入 AI 分类决策
+   - 如果不包含 → 直接使用 `Dev-`、`Tools-`、`CS-Education` 等通用分类
+
+2. **AI System 细分原则**：
    - **Posttraining vs FineTuning**: 如果是全量训练框架选 `AI-Sys-Posttraining`；如果是 LoRA/QLoRA 等轻量微调库（如 PEFT）选 `AI-Sys-FineTuning`。
    - **Compiler vs Kernel**: 如果是端到端的编译器（如 TVM）选 `AI-Sys-Compiler`；如果是具体的算子实现（如 FlashAttention）选 `AI-Sys-Kernel`。
    - **Ops vs Cluster**: 如果是 K8s/Ray/Slurm 相关的调度选 `AI-Sys-Cluster`；如果是 WandB 等指标监控选 `AI-Sys-MLOps`。
 
-2. **AI Data 细分原则**：
+3. **AI Data 细分原则**：
    - **Vector vs RAG**: 如果是单纯的向量数据库（如 Milvus）选 `AI-Data-Vector`；如果是构建 RAG 应用的编排框架（如 LangChain）选 `AI-App-RAG`。
    - **Synthetic**: 凡是涉及 "Synthetic Data" 或 "Distillation" 的工具，优先选 `AI-Data-Synthetic`。
 
-3. **MCP 特别规则**:
+4. **MCP 特别规则**:
    - 凡是提及 "Model Context Protocol" 或 "MCP Server" 的项目，必须归入 `AI-App-MCP`。
 
-4. **通用规则**:
-   - 只有当完全不属于 AI 领域时，才使用 `Dev-` 或 `Tools-` 开头的分类。
+5. **通用开发项目分类**:
+   - **Web 框架/前端/后端**: `Dev-Web-FullStack`
+   - **容器/K8s/云平台**: `Dev-Infra-Cloud`
+   - **数据库/缓存/存储**: `Dev-DB-Storage`
+   - **编程语言学习资源**: `Dev-Lang-Core`
+   - **安全/渗透/逆向**: `Dev-Sec`
+   - **终端工具/效率**: `Tools-Efficiency`
+   - **音视频处理工具**: `Tools-Media`
+   - **教程/面试/学习路线**: `CS-Education`
+   - **论文复现**: `Research-Paper`
+
+6. **兜底规则**:
+   - 如果无法确定分类，选择 `Uncategorized (无法分类)`
 
 ### 输出格式 (JSON)
 {{
@@ -100,11 +69,11 @@ PROMPT_TEMPLATE = """
 
 
 def load_categories():
-    """加载分类体系，如果有动态扩展的分类则合并"""
-    if os.path.exists(CATEGORY_FILE):
-        with open(CATEGORY_FILE, 'r', encoding='utf-8') as f:
-            return json.load(f)
-    return DEFAULT_CATEGORIES.copy()
+    """从 categories.json 加载分类体系"""
+    if not os.path.exists(CATEGORY_FILE):
+        raise FileNotFoundError(f"分类配置文件 {CATEGORY_FILE} 不存在，请先创建！")
+    with open(CATEGORY_FILE, 'r', encoding='utf-8') as f:
+        return json.load(f)
 
 
 def save_categories(categories):
@@ -132,6 +101,13 @@ def get_llm_classification(repo_name, description, topics, current_categories):
             response_format={"type": "json_object"},  # 强制 JSON 模式
             temperature=0.1
         )
+        
+        # 调试日志：打印完整响应结构
+        print(f"📡 API Response for {repo_name}:")
+        print(f"   - Model: {LLM_MODEL}")
+        print(f"   - Choices count: {len(response.choices) if response.choices else 0}")
+        if response.choices:
+            print(f"   - Finish reason: {response.choices[0].finish_reason}")
         
         # 校验 response 结构
         if not response.choices:

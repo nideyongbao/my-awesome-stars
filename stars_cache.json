@@ -4,11 +4,11 @@
     "url": "https://github.com/sgl-project/mini-sglang",
     "description": "A compact implementation of SGLang, designed to demystify the complexities of modern LLM serving systems.",
     "stars": 2882,
-    "category": "Uncategorized",
+    "category": "AI-Sys-Inference (推理引擎与后端, vLLM, TGI, TensorRT-LLM, llama.cpp, SGLang)",
     "language": "Python",
     "topics": [],
-    "confidence": "low",
-    "reasoning": "API Error",
+    "confidence": "high",
+    "reasoning": "mini-sglang 是 SGLang 推理引擎的紧凑实现，用于演示现代 LLM 服务系统",
     "crawled_at": 1768182073.5422568
   },
   "1126064944": {
@@ -16,11 +16,11 @@
     "url": "https://github.com/CloudAI-X/claude-workflow-v2",
     "description": "Universal Claude Code workflow plugin with agents, skills, hooks, and commands",
     "stars": 1110,
-    "category": "Uncategorized",
+    "category": "AI-App-Coding (AI编程助手, Cursor, Copilot, Aider, Continue)",
     "language": "Python",
     "topics": [],
-    "confidence": "low",
-    "reasoning": "API Error",
+    "confidence": "high",
+    "reasoning": "Claude Code 工作流插件，支持 agents/skills/hooks/commands",
     "crawled_at": 1768182075.4282265
   },
   "887914303": {
@@ -28,11 +28,11 @@
     "url": "https://github.com/funstory-ai/BabelDOC",
     "description": "Yet Another Document Translator",
     "stars": 6819,
-    "category": "Uncategorized",
+    "category": "Tools-Efficiency (生产力与终端工具, Oh-My-Zsh, Raycast, Obsidian, Neovim)",
     "language": "Python",
     "topics": [],
-    "confidence": "low",
-    "reasoning": "API Error",
+    "confidence": "high",
+    "reasoning": "文档翻译工具，属于生产力工具",
     "crawled_at": 1768182077.311516
   },
   "861790708": {
@@ -40,14 +40,14 @@
     "url": "https://github.com/ourongxing/newsnow",
     "description": "Elegant reading of real-time and hottest news",
     "stars": 17178,
-    "category": "Uncategorized",
+    "category": "Tools-Efficiency (生产力与终端工具, Oh-My-Zsh, Raycast, Obsidian, Neovim)",
     "language": "TypeScript",
     "topics": [
       "news",
       "elegant"
     ],
-    "confidence": "low",
-    "reasoning": "API Error",
+    "confidence": "high",
+    "reasoning": "优雅的实时热点新闻阅读工具",
     "crawled_at": 1768182079.195811
   },
   "696444975": {
@@ -55,7 +55,7 @@
     "url": "https://github.com/githubnext/monaspace",
     "description": "An innovative superfamily of fonts for code",
     "stars": 17841,
-    "category": "Uncategorized",
+    "category": "Tools-Efficiency (生产力与终端工具, Oh-My-Zsh, Raycast, Obsidian, Neovim)",
     "language": "Shell",
     "topics": [
       "font",
@@ -64,8 +64,8 @@
       "monospaced",
       "typography"
     ],
-    "confidence": "low",
-    "reasoning": "API Error",
+    "confidence": "high",
+    "reasoning": "编程字体家族，提升代码阅读体验",
     "crawled_at": 1768182081.2828078
   },
   "879636973": {
@@ -73,11 +73,11 @@
     "url": "https://github.com/Anning01/AIMedia",
     "description": "AIMedia 是一款自动抓取热点，AI创作文章，自动发布的集成软件。支持头条，小红书，公众号等",
     "stars": 1478,
-    "category": "Uncategorized",
+    "category": "AI-App-Agent (智能体, 规划与记忆, AutoGPT, MetaGPT, CrewAI)",
     "language": "Python",
     "topics": [],
-    "confidence": "low",
-    "reasoning": "API Error",
+    "confidence": "high",
+    "reasoning": "AI 自动抓取热点、创作文章、自动发布的智能体软件",
     "crawled_at": 1768182083.1021366
   },
   "1091534692": {
@@ -85,7 +85,7 @@
     "url": "https://github.com/AIDC-AI/Pixelle-Video",
     "description": "🚀 AI 全自动短视频引擎 | AI Fully Automated Short Video Engine",
     "stars": 1408,
-    "category": "Uncategorized",
+    "category": "AI-Algo-Vision (计算机视觉与生成, Stable Diffusion, YOLO, SAM, OpenCV)",
     "language": "Python",
     "topics": [
       "aigc",
@@ -94,8 +94,8 @@
       "tts",
       "video-generation"
     ],
-    "confidence": "low",
-    "reasoning": "API Error",
+    "confidence": "high",
+    "reasoning": "AI 全自动短视频生成引擎，涉及图像/视频生成",
     "crawled_at": 1768182084.9464016
   },
   "1105195402": {
@@ -103,11 +103,11 @@
     "url": "https://github.com/RanFeng/clipsketch-ai",
     "description": "将视频瞬间转化为手绘故事 Turn Video Moments into Hand-Drawn Stories",
     "stars": 1282,
-    "category": "Uncategorized",
+    "category": "AI-Algo-Vision (计算机视觉与生成, Stable Diffusion, YOLO, SAM, OpenCV)",
     "language": "TypeScript",
     "topics": [],
-    "confidence": "low",
-    "reasoning": "API Error",
+    "confidence": "high",
+    "reasoning": "将视频转化为手绘风格，属于视觉AI应用",
     "crawled_at": 1768182086.891059
   },
   "552661142": {
@@ -168,7 +168,7 @@
     "url": "https://github.com/rainxchzed/Github-Store",
     "description": "A free, open-source app store for GitHub releases — browse, discover, and install apps with one click. Powered by Kotlin and Compose Multiplatform for Android & Desktop (Linux, MacOS, Windows).",
     "stars": 3548,
-    "category": "Uncategorized",
+    "category": "Dev-Web-FullStack (现代Web开发, Next.js, React, Vue, FastAPI, Django)",
     "language": "Kotlin",
     "topics": [
       "android",
@@ -183,8 +183,8 @@
       "macos-app",
       "windows"
     ],
-    "confidence": "low",
-    "reasoning": "API Error",
+    "confidence": "high",
+    "reasoning": "Kotlin + Compose 跨平台应用商店",
     "crawled_at": 1768182088.7465627
   },
   "660551251": {
@@ -266,15 +266,15 @@
     "url": "https://github.com/Lulzx/tinypdf",
     "description": "Minimal PDF creation library. <400 LOC, zero dependencies, makes real PDFs.",
     "stars": 1313,
-    "category": "Uncategorized",
+    "category": "Dev-Lang-Core (编程语言核心资源, Rust, Python, Go, C++)",
     "language": "TypeScript",
     "topics": [
       "invoice-generator",
       "pdf",
       "pdf-generation"
     ],
-    "confidence": "low",
-    "reasoning": "API Error",
+    "confidence": "high",
+    "reasoning": "极简 PDF 生成库，零依赖",
     "crawled_at": 1768182090.6782758
   },
   "973223133": {
@@ -340,7 +340,7 @@
     "url": "https://github.com/DigitalPlatDev/FreeDomain",
     "description": "DigitalPlat FreeDomain: Free Domain For Everyone",
     "stars": 139583,
-    "category": "Uncategorized",
+    "category": "Dev-Infra-Cloud (云原生与容器, Docker, Kubernetes, Terraform, Pulumi)",
     "language": "HTML",
     "topics": [
       "domain",
@@ -351,8 +351,8 @@
       "domainname",
       "digitalplat"
     ],
-    "confidence": "low",
-    "reasoning": "API Error",
+    "confidence": "high",
+    "reasoning": "免费域名服务平台",
     "crawled_at": 1768182092.5339484
   },
   "793375104": {
@@ -488,7 +488,7 @@
     "url": "https://github.com/jokemon/antiPM-Workflow",
     "description": "A collection of Antigravity workflows for Product Managers. (产品经理专属的 Antigravity 工作流合集)",
     "stars": 14,
-    "category": "Uncategorized",
+    "category": "AI-App-Coding (AI编程助手, Cursor, Copilot, Aider, Continue)",
     "language": null,
     "topics": [
       "antigravity",
@@ -499,8 +499,8 @@
       "specification",
       "workflow"
     ],
-    "confidence": "low",
-    "reasoning": "API Error",
+    "confidence": "high",
+    "reasoning": "产品经理专属的 Antigravity 工作流合集",
     "crawled_at": 1768182094.368618
   },
   "738733003": {
@@ -871,7 +871,7 @@
     "url": "https://github.com/THUDM/slime",
     "description": "slime is an LLM post-training framework for RL Scaling.",
     "stars": 3277,
-    "category": "AI-Sys-RL (强化学习框架, PPO, GRPO)",
+    "category": "AI-Sys-RLHF (人类反馈强化学习, PPO, DPO, GRPO, TRL, OpenRLHF)",
     "language": "Python",
     "topics": [],
     "confidence": "unknown",
@@ -916,7 +916,7 @@
     "url": "https://github.com/MiroMindAI/MiroRL",
     "description": "MiroRL is  an MCP-first reinforcement learning framework for deep research agent.",
     "stars": 214,
-    "category": "AI-Sys-RL (强化学习框架, PPO, GRPO)",
+    "category": "AI-Sys-RLHF (人类反馈强化学习, PPO, DPO, GRPO, TRL, OpenRLHF)",
     "language": "Python",
     "topics": [],
     "confidence": "unknown",
@@ -928,7 +928,7 @@
     "url": "https://github.com/MiroMindAI/MiroTrain",
     "description": "MiroTrain is an efficient and algorithm-first framework for post-training large agentic models. ",
     "stars": 117,
-    "category": "AI-Sys-Posttraining (大模型后训练学习框架)",
+    "category": "AI-Sys-Training (分布式训练框架, DeepSpeed, Megatron, FSDP, Horovod)",
     "language": "Python",
     "topics": [],
     "confidence": "unknown",
@@ -940,7 +940,7 @@
     "url": "https://github.com/nex-agi/NexRL",
     "description": "NexRL is an ultra-loosely-coupled LLM post-training framework.",
     "stars": 67,
-    "category": "AI-Sys-Posttraining (大模型后训练学习框架)",
+    "category": "AI-Sys-Training (分布式训练框架, DeepSpeed, Megatron, FSDP, Horovod)",
     "language": "Python",
     "topics": [],
     "confidence": "unknown",
@@ -952,7 +952,7 @@
     "url": "https://github.com/OpenGithubs/github-daily-rank",
     "description": "Github开源项目:每天📈飙升榜 top10,每天早上8:30更新",
     "stars": 753,
-    "category": "Uncategorized",
+    "category": "Tools-Efficiency (生产力与终端工具, Oh-My-Zsh, Raycast, Obsidian, Neovim)",
     "language": null,
     "topics": [
       "github-rank",
@@ -961,8 +961,8 @@
       "daily",
       "github"
     ],
-    "confidence": "low",
-    "reasoning": "API Error",
+    "confidence": "high",
+    "reasoning": "GitHub 开源项目每日飙升榜",
     "crawled_at": 1768182097.2021313
   },
   "31522041": {
@@ -970,7 +970,7 @@
     "url": "https://github.com/vnpy/vnpy",
     "description": "基于Python的开源量化交易平台开发框架",
     "stars": 35325,
-    "category": "Uncategorized",
+    "category": "Dev-Web-FullStack (现代Web开发, Next.js, React, Vue, FastAPI, Django)",
     "language": "Python",
     "topics": [
       "trading",
@@ -982,8 +982,8 @@
       "fintech",
       "vnpy"
     ],
-    "confidence": "low",
-    "reasoning": "API Error",
+    "confidence": "high",
+    "reasoning": "Python 量化交易平台开发框架",
     "crawled_at": 1768182099.2354224
   },
   "621799276": {
@@ -1213,7 +1213,7 @@
     "url": "https://github.com/qibin0506/Cortex",
     "description": "个人构建MoE大模型：从预训练到DPO的完整实践",
     "stars": 2219,
-    "category": "AI-Sys-Posttraining (大模型后训练学习框架)",
+    "category": "AI-Sys-Training (分布式训练框架, DeepSpeed, Megatron, FSDP, Horovod)",
     "language": "Python",
     "topics": [],
     "confidence": "unknown",
@@ -1462,7 +1462,7 @@
     "url": "https://github.com/alibaba/ROLL",
     "description": "An Efficient and User-Friendly Scaling Library for Reinforcement Learning with Large Language Models",
     "stars": 2620,
-    "category": "AI-Sys-RL (强化学习框架, PPO, GRPO)",
+    "category": "AI-Sys-RLHF (人类反馈强化学习, PPO, DPO, GRPO, TRL, OpenRLHF)",
     "language": "Python",
     "topics": [
       "agentic",
@@ -1478,7 +1478,7 @@
     "url": "https://github.com/inclusionAI/AReaL",
     "description": "Lightning-Fast RL for LLM Reasoning and Agents. Made Simple & Flexible.",
     "stars": 3379,
-    "category": "AI-Sys-RL (强化学习框架, PPO, GRPO)",
+    "category": "AI-Sys-RLHF (人类反馈强化学习, PPO, DPO, GRPO, TRL, OpenRLHF)",
     "language": "Python",
     "topics": [
       "llm",
@@ -1499,7 +1499,7 @@
     "url": "https://github.com/pytorch/torchtitan",
     "description": "A PyTorch native platform for training generative AI models",
     "stars": 4949,
-    "category": "AI-Sys-Pretraining (预训练框架, Megatron, deepspeed)",
+    "category": "AI-Sys-Training (分布式训练框架, DeepSpeed, Megatron, FSDP, Horovod)",
     "language": "Python",
     "topics": [],
     "confidence": "unknown",
@@ -1565,7 +1565,7 @@
     "url": "https://github.com/liangyuwang/Streaming-Dataloader",
     "description": " A memory-efficient streaming data loader designed for LLM pretraining under limited CPU and GPU memory constraints",
     "stars": 3,
-    "category": "AI-Sys-Pretraining",
+    "category": "AI-Sys-Training (分布式训练框架, DeepSpeed, Megatron, FSDP, Horovod)",
     "language": "Python",
     "topics": [
       "dataloader",
@@ -1598,7 +1598,7 @@
     "url": "https://github.com/liangyuwang/Tiny-Megatron",
     "description": "Tiny-Megatron, a minimalistic re-implementation of the Megatron library",
     "stars": 21,
-    "category": "AI-Sys-Pretraining (预训练框架, Megatron, deepspeed)",
+    "category": "AI-Sys-Training (分布式训练框架, DeepSpeed, Megatron, FSDP, Horovod)",
     "language": "Python",
     "topics": [
       "deep-learning",
@@ -1616,7 +1616,7 @@
     "url": "https://github.com/NVIDIA/Megatron-LM",
     "description": "Ongoing research training transformer models at scale",
     "stars": 14869,
-    "category": "AI-Sys-Pretraining (预训练框架, Megatron, deepspeed)",
+    "category": "AI-Sys-Training (分布式训练框架, DeepSpeed, Megatron, FSDP, Horovod)",
     "language": "Python",
     "topics": [
       "large-language-models",
@@ -1664,7 +1664,7 @@
     "url": "https://github.com/OpenRLHF/OpenRLHF",
     "description": "An Easy-to-use, Scalable and High-performance RLHF Framework based on Ray (PPO & GRPO & REINFORCE++ & TIS & vLLM & Ray & Dynamic Sampling & Async Agentic RL)",
     "stars": 8766,
-    "category": "AI-Sys-RL (强化学习框架, PPO, GRPO)",
+    "category": "AI-Sys-RLHF (人类反馈强化学习, PPO, DPO, GRPO, TRL, OpenRLHF)",
     "language": "Python",
     "topics": [
       "transformers",
@@ -1685,7 +1685,7 @@
     "url": "https://github.com/volcengine/verl",
     "description": "verl: Volcano Engine Reinforcement Learning for LLMs",
     "stars": 18224,
-    "category": "AI-Sys-RL (强化学习框架, PPO, GRPO)",
+    "category": "AI-Sys-RLHF (人类反馈强化学习, PPO, DPO, GRPO, TRL, OpenRLHF)",
     "language": "Python",
     "topics": [],
     "confidence": "unknown",
@@ -1721,7 +1721,7 @@
     "url": "https://github.com/liangyuwang/Tiny-FSDP",
     "description": "Tiny-FSDP, a minimalistic re-implementation of the PyTorch FSDP",
     "stars": 93,
-    "category": "AI-Sys-Pretraining",
+    "category": "AI-Sys-Training (分布式训练框架, DeepSpeed, Megatron, FSDP, Horovod)",
     "language": "Python",
     "topics": [],
     "confidence": "unknown",
@@ -1733,7 +1733,7 @@
     "url": "https://github.com/liangyuwang/zo2",
     "description": "ZO2 (Zeroth-Order Offloading): Full Parameter Fine-Tuning 175B LLMs with 18GB GPU Memory [COLM2025]",
     "stars": 198,
-    "category": "AI-Sys-Posttraining (大模型后训练学习框架)",
+    "category": "AI-Sys-Training (分布式训练框架, DeepSpeed, Megatron, FSDP, Horovod)",
     "language": "Python",
     "topics": [
       "llms",
@@ -1852,7 +1852,7 @@
     "url": "https://github.com/hiyouga/EasyR1",
     "description": "EasyR1: An Efficient, Scalable, Multi-Modality RL Training Framework based on veRL",
     "stars": 4412,
-    "category": "AI-Sys-RL (强化学习框架, PPO, GRPO)",
+    "category": "AI-Sys-RLHF (人类反馈强化学习, PPO, DPO, GRPO, TRL, OpenRLHF)",
     "language": "Python",
     "topics": [
       "ai",
@@ -1942,7 +1942,7 @@
     "url": "https://github.com/ChenmienTan/RL2",
     "description": null,
     "stars": 1025,
-    "category": "AI-Sys-RL (强化学习框架, PPO, GRPO)",
+    "category": "AI-Sys-RLHF (人类反馈强化学习, PPO, DPO, GRPO, TRL, OpenRLHF)",
     "language": "Python",
     "topics": [],
     "confidence": "unknown",
@@ -1966,7 +1966,7 @@
     "url": "https://github.com/liangyuwang/Tiny-DeepSpeed",
     "description": "Tiny-DeepSpeed, a minimalistic re-implementation of the DeepSpeed library",
     "stars": 49,
-    "category": "AI-Sys-Pretraining (预训练框架, Megatron, deepspeed)",
+    "category": "AI-Sys-Training (分布式训练框架, DeepSpeed, Megatron, FSDP, Horovod)",
     "language": "Python",
     "topics": [
       "deepspeed",
@@ -2009,7 +2009,7 @@
     "url": "https://github.com/XU-YIJIE/hobo-llm-from-scratch",
     "description": "From Llama to Deepseek, grpo/mtp implemented. With pt/sft/lora/qlora included",
     "stars": 31,
-    "category": "AI-Sys-Posttraining (大模型后训练学习框架)",
+    "category": "AI-Sys-Training (分布式训练框架, DeepSpeed, Megatron, FSDP, Horovod)",
     "language": "Python",
     "topics": [],
     "confidence": "unknown",
@@ -2093,7 +2093,7 @@
     "url": "https://github.com/PKU-Alignment/align-anything",
     "description": "Align Anything: Training All-modality Model with Feedback",
     "stars": 4616,
-    "category": "AI-Sys-Posttraining (大模型后训练学习框架)",
+    "category": "AI-Sys-Training (分布式训练框架, DeepSpeed, Megatron, FSDP, Horovod)",
     "language": "Python",
     "topics": [
       "large-language-models",
@@ -2112,7 +2112,7 @@
     "url": "https://github.com/om-ai-lab/VLM-R1",
     "description": "Solve Visual Understanding with Reinforced VLMs",
     "stars": 5797,
-    "category": "AI-Sys-RL (强化学习框架, PPO, GRPO)",
+    "category": "AI-Sys-RLHF (人类反馈强化学习, PPO, DPO, GRPO, TRL, OpenRLHF)",
     "language": "Python",
     "topics": [
       "deepseek-r1",
@@ -2135,7 +2135,7 @@
     "url": "https://github.com/CoinCheung/gdGPT",
     "description": "Train llm (bloom, llama, baichuan2-7b, chatglm3-6b) with deepspeed pipeline mode. Faster than zero/zero++/fsdp.",
     "stars": 98,
-    "category": "AI-Sys-Posttraining (大模型后训练学习框架)",
+    "category": "AI-Sys-Training (分布式训练框架, DeepSpeed, Megatron, FSDP, Horovod)",
     "language": "Python",
     "topics": [
       "deepspeed",
@@ -2173,7 +2173,7 @@
     "url": "https://github.com/0x0C001/OpenDPO",
     "description": null,
     "stars": 33,
-    "category": "AI-Sys-RL (强化学习框架, PPO, GRPO)",
+    "category": "AI-Sys-RLHF (人类反馈强化学习, PPO, DPO, GRPO, TRL, OpenRLHF)",
     "language": "Python",
     "topics": [],
     "confidence": "unknown",
@@ -2185,7 +2185,7 @@
     "url": "https://github.com/Open-Reasoner-Zero/Open-Reasoner-Zero",
     "description": "Official Repo for Open-Reasoner-Zero",
     "stars": 2087,
-    "category": "AI-Sys-Posttraining (大模型后训练学习框架)",
+    "category": "AI-Sys-Training (分布式训练框架, DeepSpeed, Megatron, FSDP, Horovod)",
     "language": "Python",
     "topics": [],
     "confidence": "unknown",
@@ -2209,7 +2209,7 @@
     "url": "https://github.com/Victorwz/Open-Qwen2VL",
     "description": "[COLM 2025] Open-Qwen2VL: Compute-Efficient Pre-Training of Fully-Open Multimodal LLMs on Academic Resources",
     "stars": 300,
-    "category": "AI-Sys-Pretraining",
+    "category": "AI-Sys-Training (分布式训练框架, DeepSpeed, Megatron, FSDP, Horovod)",
     "language": "Python",
     "topics": [],
     "confidence": "unknown",
@@ -2299,7 +2299,7 @@
     "url": "https://github.com/KellerJordan/modded-nanogpt",
     "description": "NanoGPT (124M) in 3 minutes",
     "stars": 4120,
-    "category": "AI-Sys-Pretraining",
+    "category": "AI-Sys-Training (分布式训练框架, DeepSpeed, Megatron, FSDP, Horovod)",
     "language": "Python",
     "topics": [],
     "confidence": "unknown",
@@ -2338,7 +2338,7 @@
     "url": "https://github.com/jingyaogong/minimind",
     "description": "🚀🚀 「大模型」2小时完全从0训练26M的小参数GPT！🌏 Train a 26M-parameter GPT from scratch in just 2h!",
     "stars": 36920,
-    "category": "AI-Sys-Pretraining (预训练框架, Megatron, deepspeed)",
+    "category": "AI-Sys-Training (分布式训练框架, DeepSpeed, Megatron, FSDP, Horovod)",
     "language": "Python",
     "topics": [
       "artificial-intelligence",
