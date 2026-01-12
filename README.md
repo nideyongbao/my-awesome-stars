@@ -1,37 +1,58 @@
 # 🌟 My Awesome AI Stars
 
 > 🤖 自动生成于 GitHub Actions, Powered by LLM.
+> 📊 基于「6+3 个人研究体系框架」分类
 
 ## 目录
 
-- [AI-Sys-Training (分布式训练框架, DeepSpeed, Megatron, FSDP, Horovod) (17)](#ai-sys-training)
-- [AI-Sys-RLHF (人类反馈强化学习, PPO, DPO, GRPO, TRL, OpenRLHF) (10)](#ai-sys-rlhf)
-- [AI-Sys-FineTuning (轻量微调, LoRA, PEFT, QLoRA, Unsloth, Adapter) (7)](#ai-sys-finetuning)
-- [AI-Sys-Inference (推理引擎与后端, vLLM, TGI, TensorRT-LLM, llama.cpp, SGLang) (10)](#ai-sys-inference)
-- [AI-Sys-Kernel (高性能算子与底层优化, FlashAttention, CUTLASS, Triton) (7)](#ai-sys-kernel)
 - [AI-Sys-Framework (深度学习框架底座, PyTorch, TensorFlow, JAX, MXNet) (3)](#ai-sys-framework)
+- [AI-Sys-Kernel (高性能算子与底层优化, FlashAttention, CUTLASS, Triton) (7)](#ai-sys-kernel)
+- [AI-Sys-Training (分布式训练框架, DeepSpeed, Megatron, FSDP, Horovod) (17)](#ai-sys-training)
+- [AI-Sys-FineTuning (轻量微调, LoRA, PEFT, QLoRA, Unsloth, Adapter) (7)](#ai-sys-finetuning)
+- [AI-Sys-RLHF (后训练对齐, RLHF, PPO, DPO, GRPO, TRL, OpenRLHF) (10)](#ai-sys-rlhf)
 - [AI-Sys-Cluster (集群调度与编排, Kubernetes, Ray, Slurm, Skypilot) (1)](#ai-sys-cluster)
 - [AI-Data-Dataset (开源数据集, HuggingFace-Datasets, FineWeb, CommonCrawl) (1)](#ai-data-dataset)
 - [AI-Data-Crawl (网页抓取与爬虫, Crawlee, Scrapy, Firecrawl) (3)](#ai-data-crawl)
+- [AI-Sys-Inference (推理引擎与后端, vLLM, TGI, TensorRT-LLM, llama.cpp, SGLang) (10)](#ai-sys-inference)
 - [AI-Algo-LLM (语言模型架构, Llama, Qwen, Mistral, DeepSeek, GLM) (5)](#ai-algo-llm)
+- [AI-Algo-Multi (多模态与新架构, CLIP, Mamba, MoE, LLaVA, VLM) (4)](#ai-algo-multi)
 - [AI-Algo-Vision (计算机视觉与生成, Stable Diffusion, YOLO, SAM, OpenCV) (5)](#ai-algo-vision)
 - [AI-Algo-Audio (语音识别与合成, Whisper, TTS, ASR, Bark) (1)](#ai-algo-audio)
-- [AI-Algo-Multi (多模态与新架构, CLIP, Mamba, MoE, LLaVA) (4)](#ai-algo-multi)
-- [AI-Algo-Theory (纯理论代码, 论文复现, 数学库, NumPy, SciPy) (1)](#ai-algo-theory)
-- [AI-App-Agent (智能体, 规划与记忆, AutoGPT, MetaGPT, CrewAI) (13)](#ai-app-agent)
+- [AI-App-Framework (应用编排框架, Dify, Flowise, Langflow, LangGraph) (3)](#ai-app-framework)
 - [AI-App-RAG (检索增强生成, LangChain, LlamaIndex, Haystack) (6)](#ai-app-rag)
-- [AI-App-Framework (应用开发框架, Dify, Flowise, Langflow) (3)](#ai-app-framework)
+- [AI-App-Agent (智能体, 规划与记忆, AutoGPT, MetaGPT, CrewAI) (13)](#ai-app-agent)
 - [AI-App-MCP (Model Context Protocol, MCP Server) (7)](#ai-app-mcp)
-- [AI-App-Coding (AI编程助手, Cursor, Copilot, Aider, Continue) (2)](#ai-app-coding)
+- [AI-Algo-Theory (纯理论代码, 论文复现, 数学库, NumPy, SciPy) (1)](#ai-algo-theory)
+- [Research-Paper (论文代码复现, Arxiv, PapersWithCode) (2)](#research-paper)
 - [Dev-Web-FullStack (现代Web开发, Next.js, React, Vue, FastAPI, Django) (6)](#dev-web-fullstack)
 - [Dev-Infra-Cloud (云原生与容器, Docker, Kubernetes, Terraform, Pulumi) (1)](#dev-infra-cloud)
 - [Dev-Lang-Core (编程语言核心资源, Rust, Python, Go, C++) (1)](#dev-lang-core)
+- [AI-App-Coding (AI编程助手, Cursor, Copilot, Aider, Continue) (2)](#ai-app-coding)
 - [Tools-Efficiency (生产力与终端工具, Oh-My-Zsh, Raycast, Obsidian, Neovim) (9)](#tools-efficiency)
 - [Tools-Media (图像视频处理工具, FFmpeg, ImageMagick, yt-dlp) (2)](#tools-media)
 - [CS-Education (教程与面试, 系统设计, LeetCode, 学习路线图) (5)](#cs-education)
-- [Research-Paper (论文代码复现, Arxiv, PapersWithCode) (2)](#research-paper)
 
 ---
+
+## <span id='ai-sys-framework'>AI-Sys-Framework (深度学习框架底座, PyTorch, TensorFlow, JAX, MXNet)</span>
+
+| Project | Description | Stars | Language |
+|---------|-------------|-------|----------|
+| [huggingface/transformers](https://github.com/huggingface/transformers) | 🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, | 154922 | Python |
+| [pytorch/pytorch](https://github.com/pytorch/pytorch) | Tensors and Dynamic neural networks in Python with strong GPU acceleration | 96536 | Python |
+| [tigert1998/mytorch](https://github.com/tigert1998/mytorch) | A toy Python DL training library with PyTorch like API | 39 | Python |
+
+## <span id='ai-sys-kernel'>AI-Sys-Kernel (高性能算子与底层优化, FlashAttention, CUTLASS, Triton)</span>
+
+| Project | Description | Stars | Language |
+|---------|-------------|-------|----------|
+| [deepseek-ai/FlashMLA](https://github.com/deepseek-ai/FlashMLA) | FlashMLA: Efficient Multi-head Latent Attention Kernels | 11964 | C++ |
+| [facebookresearch/xformers](https://github.com/facebookresearch/xformers) | Hackable and optimized Transformers building blocks, supporting a composable construction. | 10257 | Python |
+| [linkedin/Liger-Kernel](https://github.com/linkedin/Liger-Kernel) | Efficient Triton Kernels for LLM Training | 6030 | Python |
+| [IST-DASLab/marlin](https://github.com/IST-DASLab/marlin) | FP16xINT4 LLM inference kernel that can achieve near-ideal ~4x speedups up to medium batchsizes of 1 | 980 | Python |
+| [jt-zhang/Sparse_Attention_API](https://github.com/jt-zhang/Sparse_Attention_API) |  | 65 | Python |
+| [DefTruth/CUDA-Learn-Notes](https://github.com/DefTruth/CUDA-Learn-Notes) | 📚200+ Tensor/CUDA Cores Kernels, ⚡️flash-attn-mma, ⚡️hgemm with WMMA, MMA and CuTe (98%~100% TFLOPS  | 57 | Cuda |
+| [liangyuwang/MetaProfiler](https://github.com/liangyuwang/MetaProfiler) | MetaProfiler is a lightweight, structure-agnostic operator-level profiler for PyTorch models that le | 2 | Python |
 
 ## <span id='ai-sys-training'>AI-Sys-Training (分布式训练框架, DeepSpeed, Megatron, FSDP, Horovod)</span>
 
@@ -55,7 +76,19 @@
 | [liangyuwang/Tiny-Megatron](https://github.com/liangyuwang/Tiny-Megatron) | Tiny-Megatron, a minimalistic re-implementation of the Megatron library | 21 | Python |
 | [liangyuwang/Streaming-Dataloader](https://github.com/liangyuwang/Streaming-Dataloader) |  A memory-efficient streaming data loader designed for LLM pretraining under limited CPU and GPU mem | 3 | Python |
 
-## <span id='ai-sys-rlhf'>AI-Sys-RLHF (人类反馈强化学习, PPO, DPO, GRPO, TRL, OpenRLHF)</span>
+## <span id='ai-sys-finetuning'>AI-Sys-FineTuning (轻量微调, LoRA, PEFT, QLoRA, Unsloth, Adapter)</span>
+
+| Project | Description | Stars | Language |
+|---------|-------------|-------|----------|
+| [unslothai/unsloth](https://github.com/unslothai/unsloth) | Fine-tuning & Reinforcement Learning for LLMs. 🦥 Train OpenAI gpt-oss, DeepSeek, Qwen, Llama, Gemma, | 50572 | Python |
+| [imoneoi/openchat](https://github.com/imoneoi/openchat) | OpenChat: Advancing Open-source Language Models with Imperfect Data | 5466 | Python |
+| [adonis-dym/memory_reduced_optimizer](https://github.com/adonis-dym/memory_reduced_optimizer) |  | 530 | Python |
+| [AI-Study-Han/Zero-Qwen-VL](https://github.com/AI-Study-Han/Zero-Qwen-VL) | 训练一个对中文支持更好的LLaVA模型，并开源训练代码和数据。 | 77 | Python |
+| [0x0C001/OpenSFT](https://github.com/0x0C001/OpenSFT) |  | 46 | Python |
+| [qibin0506/llm_trainer](https://github.com/qibin0506/llm_trainer) |  | 44 | Python |
+| [liangyuwang/Tiny-transformers](https://github.com/liangyuwang/Tiny-transformers) |  | 3 | Python |
+
+## <span id='ai-sys-rlhf'>AI-Sys-RLHF (后训练对齐, RLHF, PPO, DPO, GRPO, TRL, OpenRLHF)</span>
 
 | Project | Description | Stars | Language |
 |---------|-------------|-------|----------|
@@ -69,53 +102,6 @@
 | [ChenmienTan/RL2](https://github.com/ChenmienTan/RL2) |  | 1025 | Python |
 | [MiroMindAI/MiroRL](https://github.com/MiroMindAI/MiroRL) | MiroRL is  an MCP-first reinforcement learning framework for deep research agent. | 214 | Python |
 | [0x0C001/OpenDPO](https://github.com/0x0C001/OpenDPO) |  | 33 | Python |
-
-## <span id='ai-sys-finetuning'>AI-Sys-FineTuning (轻量微调, LoRA, PEFT, QLoRA, Unsloth, Adapter)</span>
-
-| Project | Description | Stars | Language |
-|---------|-------------|-------|----------|
-| [unslothai/unsloth](https://github.com/unslothai/unsloth) | Fine-tuning & Reinforcement Learning for LLMs. 🦥 Train OpenAI gpt-oss, DeepSeek, Qwen, Llama, Gemma, | 50572 | Python |
-| [imoneoi/openchat](https://github.com/imoneoi/openchat) | OpenChat: Advancing Open-source Language Models with Imperfect Data | 5466 | Python |
-| [adonis-dym/memory_reduced_optimizer](https://github.com/adonis-dym/memory_reduced_optimizer) |  | 530 | Python |
-| [AI-Study-Han/Zero-Qwen-VL](https://github.com/AI-Study-Han/Zero-Qwen-VL) | 训练一个对中文支持更好的LLaVA模型，并开源训练代码和数据。 | 77 | Python |
-| [0x0C001/OpenSFT](https://github.com/0x0C001/OpenSFT) |  | 46 | Python |
-| [qibin0506/llm_trainer](https://github.com/qibin0506/llm_trainer) |  | 44 | Python |
-| [liangyuwang/Tiny-transformers](https://github.com/liangyuwang/Tiny-transformers) |  | 3 | Python |
-
-## <span id='ai-sys-inference'>AI-Sys-Inference (推理引擎与后端, vLLM, TGI, TensorRT-LLM, llama.cpp, SGLang)</span>
-
-| Project | Description | Stars | Language |
-|---------|-------------|-------|----------|
-| [ollama/ollama](https://github.com/ollama/ollama) | Get up and running with OpenAI gpt-oss, DeepSeek-R1, Gemma 3 and other models. | 159217 | Go |
-| [ggml-org/llama.cpp](https://github.com/ggml-org/llama.cpp) | LLM inference in C/C++ | 92798 | C++ |
-| [vllm-project/vllm](https://github.com/vllm-project/vllm) | A high-throughput and memory-efficient inference and serving engine for LLMs | 67280 | Python |
-| [liguodongiot/llm-action](https://github.com/liguodongiot/llm-action) | 本项目旨在分享大模型相关技术原理以及实战经验（大模型工程化、大模型应用落地） | 22743 | HTML |
-| [sgl-project/sglang](https://github.com/sgl-project/sglang) | SGLang is a high-performance serving framework for large language models and multimodal models. | 22264 | Python |
-| [GeeeekExplorer/nano-vllm](https://github.com/GeeeekExplorer/nano-vllm) | Nano vLLM | 10693 | Python |
-| [sgl-project/mini-sglang](https://github.com/sgl-project/mini-sglang) | A compact implementation of SGLang, designed to demystify the complexities of modern LLM serving sys | 2882 | Python |
-| [difey/nano-vllm-v1](https://github.com/difey/nano-vllm-v1) | Nano vLLM v1 engine | 13 | N/A |
-| [cosmoliu2002/nano-vllm-triton](https://github.com/cosmoliu2002/nano-vllm-triton) | Nano vLLM Triton | 13 | Python |
-| [RealJosephus/radix-turn-aware-nano-vllm](https://github.com/RealJosephus/radix-turn-aware-nano-vllm) | Radix Tree KV Cache with Turn-Aware Growth | 10 | Python |
-
-## <span id='ai-sys-kernel'>AI-Sys-Kernel (高性能算子与底层优化, FlashAttention, CUTLASS, Triton)</span>
-
-| Project | Description | Stars | Language |
-|---------|-------------|-------|----------|
-| [deepseek-ai/FlashMLA](https://github.com/deepseek-ai/FlashMLA) | FlashMLA: Efficient Multi-head Latent Attention Kernels | 11964 | C++ |
-| [facebookresearch/xformers](https://github.com/facebookresearch/xformers) | Hackable and optimized Transformers building blocks, supporting a composable construction. | 10257 | Python |
-| [linkedin/Liger-Kernel](https://github.com/linkedin/Liger-Kernel) | Efficient Triton Kernels for LLM Training | 6030 | Python |
-| [IST-DASLab/marlin](https://github.com/IST-DASLab/marlin) | FP16xINT4 LLM inference kernel that can achieve near-ideal ~4x speedups up to medium batchsizes of 1 | 980 | Python |
-| [jt-zhang/Sparse_Attention_API](https://github.com/jt-zhang/Sparse_Attention_API) |  | 65 | Python |
-| [DefTruth/CUDA-Learn-Notes](https://github.com/DefTruth/CUDA-Learn-Notes) | 📚200+ Tensor/CUDA Cores Kernels, ⚡️flash-attn-mma, ⚡️hgemm with WMMA, MMA and CuTe (98%~100% TFLOPS  | 57 | Cuda |
-| [liangyuwang/MetaProfiler](https://github.com/liangyuwang/MetaProfiler) | MetaProfiler is a lightweight, structure-agnostic operator-level profiler for PyTorch models that le | 2 | Python |
-
-## <span id='ai-sys-framework'>AI-Sys-Framework (深度学习框架底座, PyTorch, TensorFlow, JAX, MXNet)</span>
-
-| Project | Description | Stars | Language |
-|---------|-------------|-------|----------|
-| [huggingface/transformers](https://github.com/huggingface/transformers) | 🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, | 154922 | Python |
-| [pytorch/pytorch](https://github.com/pytorch/pytorch) | Tensors and Dynamic neural networks in Python with strong GPU acceleration | 96536 | Python |
-| [tigert1998/mytorch](https://github.com/tigert1998/mytorch) | A toy Python DL training library with PyTorch like API | 39 | Python |
 
 ## <span id='ai-sys-cluster'>AI-Sys-Cluster (集群调度与编排, Kubernetes, Ray, Slurm, Skypilot)</span>
 
@@ -137,6 +123,21 @@
 | [cv-cat/Spider_XHS](https://github.com/cv-cat/Spider_XHS) | 小红书爬虫数据采集，小红书全域运营解决方案 | 4015 | JavaScript |
 | [cwjcw/xhs_douyin_content](https://github.com/cwjcw/xhs_douyin_content) | 自动抓取抖音和小红书创作者中心里的每条笔记/视频的播放，完播，点击，播放时长，点赞，分享，评论，收藏，主页访问，粉丝增量等互动数据 | 251 | Python |
 
+## <span id='ai-sys-inference'>AI-Sys-Inference (推理引擎与后端, vLLM, TGI, TensorRT-LLM, llama.cpp, SGLang)</span>
+
+| Project | Description | Stars | Language |
+|---------|-------------|-------|----------|
+| [ollama/ollama](https://github.com/ollama/ollama) | Get up and running with OpenAI gpt-oss, DeepSeek-R1, Gemma 3 and other models. | 159217 | Go |
+| [ggml-org/llama.cpp](https://github.com/ggml-org/llama.cpp) | LLM inference in C/C++ | 92798 | C++ |
+| [vllm-project/vllm](https://github.com/vllm-project/vllm) | A high-throughput and memory-efficient inference and serving engine for LLMs | 67280 | Python |
+| [liguodongiot/llm-action](https://github.com/liguodongiot/llm-action) | 本项目旨在分享大模型相关技术原理以及实战经验（大模型工程化、大模型应用落地） | 22743 | HTML |
+| [sgl-project/sglang](https://github.com/sgl-project/sglang) | SGLang is a high-performance serving framework for large language models and multimodal models. | 22264 | Python |
+| [GeeeekExplorer/nano-vllm](https://github.com/GeeeekExplorer/nano-vllm) | Nano vLLM | 10693 | Python |
+| [sgl-project/mini-sglang](https://github.com/sgl-project/mini-sglang) | A compact implementation of SGLang, designed to demystify the complexities of modern LLM serving sys | 2882 | Python |
+| [difey/nano-vllm-v1](https://github.com/difey/nano-vllm-v1) | Nano vLLM v1 engine | 13 | N/A |
+| [cosmoliu2002/nano-vllm-triton](https://github.com/cosmoliu2002/nano-vllm-triton) | Nano vLLM Triton | 13 | Python |
+| [RealJosephus/radix-turn-aware-nano-vllm](https://github.com/RealJosephus/radix-turn-aware-nano-vllm) | Radix Tree KV Cache with Turn-Aware Growth | 10 | Python |
+
 ## <span id='ai-algo-llm'>AI-Algo-LLM (语言模型架构, Llama, Qwen, Mistral, DeepSeek, GLM)</span>
 
 | Project | Description | Stars | Language |
@@ -146,6 +147,15 @@
 | [Duxiaoman-DI/XuanYuan](https://github.com/Duxiaoman-DI/XuanYuan) | 轩辕：度小满中文金融对话大模型 | 1290 | Python |
 | [wdndev/llama3-from-scratch-zh](https://github.com/wdndev/llama3-from-scratch-zh) | 从零实现一个 llama3 中文版 | 1002 | Jupyter Notebook |
 | [wdndev/tiny-llm-zh](https://github.com/wdndev/tiny-llm-zh) | 从零实现一个小参数量中文大语言模型。 | 925 | Python |
+
+## <span id='ai-algo-multi'>AI-Algo-Multi (多模态与新架构, CLIP, Mamba, MoE, LLaVA, VLM)</span>
+
+| Project | Description | Stars | Language |
+|---------|-------------|-------|----------|
+| [QwenLM/Qwen3-VL](https://github.com/QwenLM/Qwen3-VL) | Qwen3-VL is the multimodal large language model series developed by Qwen team, Alibaba Cloud. | 17697 | Jupyter Notebook |
+| [MoonshotAI/Kimi-VL](https://github.com/MoonshotAI/Kimi-VL) | Kimi-VL: Mixture-of-Experts Vision-Language Model for Multimodal Reasoning, Long-Context Understandi | 1135 | N/A |
+| [hkproj/pytorch-paligemma](https://github.com/hkproj/pytorch-paligemma) | Coding a Multimodal (Vision) Language Model from scratch in PyTorch with full explanation: https://w | 583 | Python |
+| [Layjins/Spider](https://github.com/Layjins/Spider) | Code for paper "Spider: Any-to-Many Multimodal LLM" | 14 | Python |
 
 ## <span id='ai-algo-vision'>AI-Algo-Vision (计算机视觉与生成, Stable Diffusion, YOLO, SAM, OpenCV)</span>
 
@@ -163,20 +173,24 @@
 |---------|-------------|-------|----------|
 | [QuentinFuxa/WhisperLiveKit](https://github.com/QuentinFuxa/WhisperLiveKit) | Simultaneous speech-to-text model | 9441 | Python |
 
-## <span id='ai-algo-multi'>AI-Algo-Multi (多模态与新架构, CLIP, Mamba, MoE, LLaVA)</span>
+## <span id='ai-app-framework'>AI-App-Framework (应用编排框架, Dify, Flowise, Langflow, LangGraph)</span>
 
 | Project | Description | Stars | Language |
 |---------|-------------|-------|----------|
-| [QwenLM/Qwen3-VL](https://github.com/QwenLM/Qwen3-VL) | Qwen3-VL is the multimodal large language model series developed by Qwen team, Alibaba Cloud. | 17697 | Jupyter Notebook |
-| [MoonshotAI/Kimi-VL](https://github.com/MoonshotAI/Kimi-VL) | Kimi-VL: Mixture-of-Experts Vision-Language Model for Multimodal Reasoning, Long-Context Understandi | 1135 | N/A |
-| [hkproj/pytorch-paligemma](https://github.com/hkproj/pytorch-paligemma) | Coding a Multimodal (Vision) Language Model from scratch in PyTorch with full explanation: https://w | 583 | Python |
-| [Layjins/Spider](https://github.com/Layjins/Spider) | Code for paper "Spider: Any-to-Many Multimodal LLM" | 14 | Python |
+| [karpathy/nanochat](https://github.com/karpathy/nanochat) | The best ChatGPT that $100 can buy. | 40128 | Python |
+| [danielmiessler/Fabric](https://github.com/danielmiessler/Fabric) | Fabric is an open-source framework for augmenting humans using AI. It provides a modular system for  | 38045 | Go |
+| [dataelement/bisheng](https://github.com/dataelement/bisheng) | BISHENG is an open LLM devops platform for next generation Enterprise AI applications. Powerful and  | 10916 | TypeScript |
 
-## <span id='ai-algo-theory'>AI-Algo-Theory (纯理论代码, 论文复现, 数学库, NumPy, SciPy)</span>
+## <span id='ai-app-rag'>AI-App-RAG (检索增强生成, LangChain, LlamaIndex, Haystack)</span>
 
 | Project | Description | Stars | Language |
 |---------|-------------|-------|----------|
-| [CoinCheung/pytorch-loss](https://github.com/CoinCheung/pytorch-loss) | label-smooth, amsoftmax, partial-fc, focal-loss, triplet-loss, lovasz-softmax. Maybe useful  | 2258 | Python |
+| [langchain-ai/langchain](https://github.com/langchain-ai/langchain) | 🦜🔗 The platform for reliable agents. | 123949 | Python |
+| [open-webui/open-webui](https://github.com/open-webui/open-webui) | User-friendly AI Interface (Supports Ollama, OpenAI API, ...) | 120296 | Python |
+| [Shubhamsaboo/awesome-llm-apps](https://github.com/Shubhamsaboo/awesome-llm-apps) | Collection of awesome LLM apps with AI Agents and RAG using OpenAI, Anthropic, Gemini and opensource | 87579 | Python |
+| [chatchat-space/Langchain-Chatchat](https://github.com/chatchat-space/Langchain-Chatchat) | Langchain-Chatchat（原Langchain-ChatGLM）基于 Langchain 与 ChatGLM, Qwen 与 Llama 等语言模型的 RAG 与 Agent 应用 \|  | 37037 | Python |
+| [lfnovo/open-notebook](https://github.com/lfnovo/open-notebook) | An Open Source implementation of Notebook LM with more flexibility and features | 17745 | TypeScript |
+| [mangiucugna/json_repair](https://github.com/mangiucugna/json_repair) | A python module to repair invalid JSON from LLMs | 4306 | Python |
 
 ## <span id='ai-app-agent'>AI-App-Agent (智能体, 规划与记忆, AutoGPT, MetaGPT, CrewAI)</span>
 
@@ -196,25 +210,6 @@
 | [vibesurf-ai/VibeSurf](https://github.com/vibesurf-ai/VibeSurf) | A powerful browser assistant for vibe surfing 一个开源的AI浏览器智能助手 | 390 | Python |
 | [chmod777john/github-hunter](https://github.com/chmod777john/github-hunter) | AI 发掘潜在的爆火项目 | 63 | Jupyter Notebook |
 
-## <span id='ai-app-rag'>AI-App-RAG (检索增强生成, LangChain, LlamaIndex, Haystack)</span>
-
-| Project | Description | Stars | Language |
-|---------|-------------|-------|----------|
-| [langchain-ai/langchain](https://github.com/langchain-ai/langchain) | 🦜🔗 The platform for reliable agents. | 123949 | Python |
-| [open-webui/open-webui](https://github.com/open-webui/open-webui) | User-friendly AI Interface (Supports Ollama, OpenAI API, ...) | 120296 | Python |
-| [Shubhamsaboo/awesome-llm-apps](https://github.com/Shubhamsaboo/awesome-llm-apps) | Collection of awesome LLM apps with AI Agents and RAG using OpenAI, Anthropic, Gemini and opensource | 87579 | Python |
-| [chatchat-space/Langchain-Chatchat](https://github.com/chatchat-space/Langchain-Chatchat) | Langchain-Chatchat（原Langchain-ChatGLM）基于 Langchain 与 ChatGLM, Qwen 与 Llama 等语言模型的 RAG 与 Agent 应用 \|  | 37037 | Python |
-| [lfnovo/open-notebook](https://github.com/lfnovo/open-notebook) | An Open Source implementation of Notebook LM with more flexibility and features | 17745 | TypeScript |
-| [mangiucugna/json_repair](https://github.com/mangiucugna/json_repair) | A python module to repair invalid JSON from LLMs | 4306 | Python |
-
-## <span id='ai-app-framework'>AI-App-Framework (应用开发框架, Dify, Flowise, Langflow)</span>
-
-| Project | Description | Stars | Language |
-|---------|-------------|-------|----------|
-| [karpathy/nanochat](https://github.com/karpathy/nanochat) | The best ChatGPT that $100 can buy. | 40128 | Python |
-| [danielmiessler/Fabric](https://github.com/danielmiessler/Fabric) | Fabric is an open-source framework for augmenting humans using AI. It provides a modular system for  | 38045 | Go |
-| [dataelement/bisheng](https://github.com/dataelement/bisheng) | BISHENG is an open LLM devops platform for next generation Enterprise AI applications. Powerful and  | 10916 | TypeScript |
-
 ## <span id='ai-app-mcp'>AI-App-MCP (Model Context Protocol, MCP Server)</span>
 
 | Project | Description | Stars | Language |
@@ -227,12 +222,18 @@
 | [AI-QL/chat-ui](https://github.com/AI-QL/chat-ui) | Single-File AI Chatbot UI with Multimodal & MCP Support: An All-in-One HTML File for a Streamlined C | 86 | HTML |
 | [jswortz/antigravity-claude-skills](https://github.com/jswortz/antigravity-claude-skills) |  | 5 | Python |
 
-## <span id='ai-app-coding'>AI-App-Coding (AI编程助手, Cursor, Copilot, Aider, Continue)</span>
+## <span id='ai-algo-theory'>AI-Algo-Theory (纯理论代码, 论文复现, 数学库, NumPy, SciPy)</span>
 
 | Project | Description | Stars | Language |
 |---------|-------------|-------|----------|
-| [CloudAI-X/claude-workflow-v2](https://github.com/CloudAI-X/claude-workflow-v2) | Universal Claude Code workflow plugin with agents, skills, hooks, and commands | 1110 | Python |
-| [jokemon/antiPM-Workflow](https://github.com/jokemon/antiPM-Workflow) | A collection of Antigravity workflows for Product Managers. (产品经理专属的 Antigravity 工作流合集) | 14 | N/A |
+| [CoinCheung/pytorch-loss](https://github.com/CoinCheung/pytorch-loss) | label-smooth, amsoftmax, partial-fc, focal-loss, triplet-loss, lovasz-softmax. Maybe useful  | 2258 | Python |
+
+## <span id='research-paper'>Research-Paper (论文代码复现, Arxiv, PapersWithCode)</span>
+
+| Project | Description | Stars | Language |
+|---------|-------------|-------|----------|
+| [wyf3/llm_related](https://github.com/wyf3/llm_related) | 复现大模型相关算法及一些学习记录 | 2828 | Python |
+| [hanfang/chatgpt-usage-taxonomies](https://github.com/hanfang/chatgpt-usage-taxonomies) | Taxonomies and classification prompts from the 'How People Use ChatGPT' research paper (NBER Working | 2 | N/A |
 
 ## <span id='dev-web-fullstack'>Dev-Web-FullStack (现代Web开发, Next.js, React, Vue, FastAPI, Django)</span>
 
@@ -256,6 +257,13 @@
 | Project | Description | Stars | Language |
 |---------|-------------|-------|----------|
 | [Lulzx/tinypdf](https://github.com/Lulzx/tinypdf) | Minimal PDF creation library. <400 LOC, zero dependencies, makes real PDFs. | 1313 | TypeScript |
+
+## <span id='ai-app-coding'>AI-App-Coding (AI编程助手, Cursor, Copilot, Aider, Continue)</span>
+
+| Project | Description | Stars | Language |
+|---------|-------------|-------|----------|
+| [CloudAI-X/claude-workflow-v2](https://github.com/CloudAI-X/claude-workflow-v2) | Universal Claude Code workflow plugin with agents, skills, hooks, and commands | 1110 | Python |
+| [jokemon/antiPM-Workflow](https://github.com/jokemon/antiPM-Workflow) | A collection of Antigravity workflows for Product Managers. (产品经理专属的 Antigravity 工作流合集) | 14 | N/A |
 
 ## <span id='tools-efficiency'>Tools-Efficiency (生产力与终端工具, Oh-My-Zsh, Raycast, Obsidian, Neovim)</span>
 
@@ -287,11 +295,4 @@
 | [zhaochenyang20/Awesome-ML-SYS-Tutorial](https://github.com/zhaochenyang20/Awesome-ML-SYS-Tutorial) | My learning notes for ML SYS. | 5016 | Python |
 | [changyeyu/LLM-RL-Visualized](https://github.com/changyeyu/LLM-RL-Visualized) | 🌟100+ 原创 LLM / RL 原理图📚，《大模型算法》作者巨献！💥（100+  LLM/RL Algorithm Maps ） | 2857 | Python |
 | [ginobefun/BestBlogs](https://github.com/ginobefun/BestBlogs) | bestblogs.dev - 汇集顶级编程、人工智能、产品、科技文章，大语言模型摘要评分辅助阅读，探索编程和技术未来 | 2789 | N/A |
-
-## <span id='research-paper'>Research-Paper (论文代码复现, Arxiv, PapersWithCode)</span>
-
-| Project | Description | Stars | Language |
-|---------|-------------|-------|----------|
-| [wyf3/llm_related](https://github.com/wyf3/llm_related) | 复现大模型相关算法及一些学习记录 | 2828 | Python |
-| [hanfang/chatgpt-usage-taxonomies](https://github.com/hanfang/chatgpt-usage-taxonomies) | Taxonomies and classification prompts from the 'How People Use ChatGPT' research paper (NBER Working | 2 | N/A |
 

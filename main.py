@@ -17,53 +17,95 @@ CACHE_FILE = "stars_cache.json"
 CATEGORY_FILE = "categories.json"
 
 # --- Prompt 模板 (JSON 输出 + 思维链) ---
+# 基于 note.md 中的 "6+3" 个人研究体系框架
 PROMPT_TEMPLATE = """
-你是一个资深的软件工程师和开源社区专家。你的任务是将 GitHub 仓库精准分类到最匹配的类别。
+你是一个资深的 AI 系统工程师和开源社区专家。你的任务是将 GitHub 仓库精准分类到**个人研究体系框架**中最匹配的类别。
 
 ### 输入信息
 - 仓库名: {repo_name}
 - 描述: {description}
 - Topics: {topics}
 
-### 预设分类体系
+### 预设分类体系 (6 大核心研究域 + 3 大支撑基石)
 {categories_json}
 
 ### 核心决策逻辑 (Priority Logic)
 
-1. **首先判断是否是 AI 相关项目**：
-   - 如果描述或 Topics 中包含 LLM、ML、AI、模型、训练、推理等关键词 → 进入 AI 分类决策
-   - 如果不包含 → 直接使用 `Dev-`、`Tools-`、`CS-Education` 等通用分类
+#### 第一步：判断项目类型
+1. **AI 相关项目**：描述或 Topics 中包含 LLM、ML、AI、模型、训练、推理、Transformer、attention、embedding 等关键词 → 进入 AI 分类决策
+2. **通用开发项目**：不包含上述关键词 → 使用 `Dev-`、`Tools-`、`CS-Education` 等通用分类
 
-2. **AI System 细分原则**：
-   - **Posttraining vs FineTuning**: 如果是全量训练框架选 `AI-Sys-Posttraining`；如果是 LoRA/QLoRA 等轻量微调库（如 PEFT）选 `AI-Sys-FineTuning`。
-   - **Compiler vs Kernel**: 如果是端到端的编译器（如 TVM）选 `AI-Sys-Compiler`；如果是具体的算子实现（如 FlashAttention）选 `AI-Sys-Kernel`。
-   - **Ops vs Cluster**: 如果是 K8s/Ray/Slurm 相关的调度选 `AI-Sys-Cluster`；如果是 WandB 等指标监控选 `AI-Sys-MLOps`。
+#### 第二步：AI 项目的 6 大研究域分类
 
-3. **AI Data 细分原则**：
-   - **Vector vs RAG**: 如果是单纯的向量数据库（如 Milvus）选 `AI-Data-Vector`；如果是构建 RAG 应用的编排框架（如 LangChain）选 `AI-App-RAG`。
-   - **Synthetic**: 凡是涉及 "Synthetic Data" 或 "Distillation" 的工具，优先选 `AI-Data-Synthetic`。
+**Domain 1: Compute & Acceleration (计算加速)**
+- **AI-Sys-Hardware**: CUDA/ROCm 驱动、硬件抽象层、Ascend/Metal 后端
+- **AI-Sys-Kernel**: FlashAttention、CUTLASS、Triton 算子、手写 CUDA kernel
+- **AI-Sys-Compiler**: TVM、MLIR、XLA、TorchCompile、计算图优化
+- **AI-Sys-Framework**: PyTorch/TensorFlow/JAX 深度学习框架底座
+- **AI-Sys-MLOps**: MLflow/WandB 实验管理与监控
 
-4. **MCP 特别规则**:
-   - 凡是提及 "Model Context Protocol" 或 "MCP Server" 的项目，必须归入 `AI-App-MCP`。
+**Domain 2: Training Systems (训练系统)**
+- **AI-Sys-Training**: 分布式训练框架如 DeepSpeed ZeRO、Megatron、FSDP、NanoGPT 等从零训练大模型
+- **AI-Sys-FineTuning**: LoRA/QLoRA/PEFT/Adapter 轻量微调、Unsloth 等
+- **AI-Sys-RLHF**: PPO/DPO/GRPO 后训练对齐、TRL、OpenRLHF、verl 等 RL 微调框架
+- **AI-Sys-Cluster**: Ray/Slurm/Skypilot 集群调度
 
-5. **通用开发项目分类**:
-   - **Web 框架/前端/后端**: `Dev-Web-FullStack`
-   - **容器/K8s/云平台**: `Dev-Infra-Cloud`
-   - **数据库/缓存/存储**: `Dev-DB-Storage`
-   - **编程语言学习资源**: `Dev-Lang-Core`
-   - **安全/渗透/逆向**: `Dev-Sec`
-   - **终端工具/效率**: `Tools-Efficiency`
-   - **音视频处理工具**: `Tools-Media`
-   - **教程/面试/学习路线**: `CS-Education`
-   - **论文复现**: `Research-Paper`
+**Domain 3: Data Systems (数据系统)**
+- **AI-Data-Pipeline**: Datatrove/Data-Juicer 数据清洗管线
+- **AI-Data-Synthetic**: Self-Instruct/Distilabel 合成数据生成
+- **AI-Data-Vector**: Milvus/Faiss/Chroma 向量数据库（注意：纯向量库选此项，RAG 框架选 AI-App-RAG）
+- **AI-Data-Dataset**: 公开数据集仓库
+- **AI-Data-Crawl**: 爬虫、数据抓取工具
 
-6. **兜底规则**:
-   - 如果无法确定分类，选择 `Uncategorized (无法分类)`
+**Domain 4: Inference Systems (推理系统)**
+- **AI-Sys-Inference**: vLLM/SGLang/TGI/llama.cpp/ollama 推理引擎
+- **AI-Sys-Quantization**: GPTQ/AWQ/GGUF 量化压缩
+
+**Domain 5: Model Behavior & Control (模型行为与控制)**
+- **AI-Algo-LLM**: Llama/Qwen/DeepSeek/GLM 等语言模型架构
+- **AI-Algo-Multi**: CLIP/LLaVA/VLM 多模态模型、Mamba/MoE 新架构
+- **AI-Algo-Vision**: Stable Diffusion/YOLO/SAM 视觉生成与检测
+- **AI-Algo-Audio**: Whisper/TTS 语音识别与合成
+- **AI-Algo-Robotics**: LeRobot/RT-X/VLA 机器人与具身智能
+
+**Domain 6: AI Applications (AI 系统化应用)**
+- **AI-App-Framework**: Dify/Flowise/LangGraph 应用编排框架
+- **AI-App-RAG**: LangChain/LlamaIndex RAG 检索增强
+- **AI-App-Agent**: AutoGPT/MetaGPT/CrewAI 智能体框架
+- **AI-App-MCP**: 任何提及 "Model Context Protocol" 或 "MCP Server" 的项目 → 必须归入此类
+- **AI-App-Coding**: Cursor/Copilot/Aider AI 编程助手、Claude/Antigravity workflow
+
+#### 第三步：支撑基石分类
+
+**Pillar A: Theoretical Grounding (理论基石)**
+- **AI-Algo-Theory**: 损失函数实现、数学库、算法可视化
+- **Research-Paper**: 论文复现代码、arXiv 实现
+
+**Pillar B: Engineering & Delivery (工程基石)**
+- **Dev-Web-FullStack**: Next.js/React/Vue/FastAPI 全栈开发
+- **Dev-Infra-Cloud**: Docker/K8s/Terraform 云原生
+- **Dev-DB-Storage**: PostgreSQL/Redis/MongoDB 数据库
+- **Dev-Lang-Core**: 编程语言核心资源
+- **Dev-Sec**: 安全、渗透、逆向
+
+**Pillar C: AI-Native Workflow (AI工作流基石)**
+- **Tools-Efficiency**: 终端工具、效率工具、Neovim/Obsidian
+- **Tools-Media**: FFmpeg/yt-dlp 音视频处理
+
+#### 其他通用分类
+- **CS-Education**: 教程、面试、学习路线
+
+
+#### 特殊判断规则
+1. **MCP 最高优先级**: 凡是提及 "MCP"、"Model Context Protocol" 或 "mcp-server" → 直接归入 `AI-App-MCP`
+2. **Awesome-list 集合**: 如果是资源汇总/awesome-list → 归入 `CS-Education`
+3. **Tutorial/教程**: 优先 `CS-Education`
+4. **兜底规则**: 无法确定 → `Uncategorized (无法分类)`
 
 ### 输出格式 (JSON)
 {{
-    "category": "Selected Category Name",
-    "reasoning": "简短理由"
+    "category": "选择最匹配的完整分类名，如 'AI-Sys-Inference (推理引擎与后端, vLLM, TGI, TensorRT-LLM, llama.cpp, SGLang)'",
+    "reasoning": "简短理由（一句话说明为何选择此分类）"
 }}
 """
 
