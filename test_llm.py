@@ -6,7 +6,7 @@ import os
 from openai import OpenAI
 
 # 配置（优先从环境变量读取，否则使用默认值）
-LLM_API_KEY = os.getenv("LLM_API_KEY", "x")
+LLM_API_KEY = os.getenv("LLM_API_KEY", "")
 LLM_BASE_URL = os.getenv("LLM_BASE_URL", "https://api-inference.modelscope.cn/v1")
 LLM_MODEL = os.getenv("LLM_MODEL", "Qwen/Qwen3-235B-A22B-Instruct-2507")
 
@@ -19,7 +19,7 @@ def test_llm_connection():
     print(f"🔑 API Key: {LLM_API_KEY[:8]}...{LLM_API_KEY[-4:]}" if len(LLM_API_KEY) > 12 else "⚠️ API Key 太短或未设置")
     print("=" * 50)
     
-    if LLM_API_KEY == "your-api-key-here":
+    if not LLM_API_KEY or LLM_API_KEY == "your-api-key-here":
         print("❌ 错误: 请设置 LLM_API_KEY 环境变量")
         print("   示例: $env:LLM_API_KEY = 'sk-xxx'")
         return False

@@ -1,41 +1,292 @@
-[
-  "AI-Sys-Framework (深度学习框架底座, PyTorch, TensorFlow, JAX, MXNet)",
-  "AI-Sys-Hardware (硬件接口与驱动, CUDA, ROCm, Ascend, Metal)",
-  "AI-Sys-Kernel (高性能算子与底层优化, FlashAttention, CUTLASS, Triton)",
-  "AI-Sys-Compiler (编译器与图优化, TVM, MLIR, XLA, TorchCompile, TorchDynamo)",
-  "AI-Sys-MLOps (实验管理与模型监控, MLflow, WandB, Prometheus, Hydra)",
-  "AI-Sys-Training (分布式训练框架, DeepSpeed, Megatron, FSDP, Horovod)",
-  "AI-Sys-FineTuning (轻量微调, LoRA, PEFT, QLoRA, Unsloth, Adapter)",
-  "AI-Sys-RLHF (后训练对齐, RLHF, PPO, DPO, GRPO, TRL, OpenRLHF)",
-  "AI-Sys-Cluster (集群调度与编排, Kubernetes, Ray, Slurm, Skypilot)",
-  "AI-Data-Pipeline (数据处理管线与ETL, Datatrove, Data-Juicer, Apache Beam)",
-  "AI-Data-Synthetic (合成数据生成, Argilla, Distilabel, Self-Instruct)",
-  "AI-Data-Vector (向量数据库与索引, Milvus, Chroma, Faiss, Pinecone, Qdrant)",
-  "AI-Data-Dataset (开源数据集, HuggingFace-Datasets, FineWeb, CommonCrawl)",
-  "AI-Data-Crawl (网页抓取与爬虫, Crawlee, Scrapy, Firecrawl)",
-  "AI-Data-Labeling (数据标注工具, Label Studio, CVAT, Prodigy)",
-  "AI-Sys-Inference (推理引擎与后端, vLLM, TGI, TensorRT-LLM, llama.cpp, SGLang)",
-  "AI-Sys-Quantization (量化与压缩, GPTQ, AWQ, Bitsandbytes, GGUF)",
-  "AI-Algo-LLM (语言模型架构, Llama, Qwen, Mistral, DeepSeek, GLM)",
-  "AI-Algo-Multi (多模态与新架构, CLIP, Mamba, MoE, LLaVA, VLM)",
-  "AI-Algo-Vision (计算机视觉与生成, Stable Diffusion, YOLO, SAM, OpenCV)",
-  "AI-Algo-Audio (语音识别与合成, Whisper, TTS, ASR, Bark)",
-  "AI-Algo-Robotics (机器人与具身智能, Isaac Sim, ROS, LeRobot, RT-X, VLA)",
-  "AI-Algo-Game (游戏AI与仿真, Unity ML-Agents, Gymnasium, PettingZoo)",
-  "AI-App-Framework (应用编排框架, Dify, Flowise, Langflow, LangGraph)",
-  "AI-App-RAG (检索增强生成, LangChain, LlamaIndex, Haystack)",
-  "AI-App-Agent (智能体, 规划与记忆, AutoGPT, MetaGPT, CrewAI)",
-  "AI-App-MCP (Model Context Protocol, MCP Server)",
-  "AI-Algo-Theory (纯理论代码, 论文复现, 数学库, NumPy, SciPy)",
-  "Research-Paper (论文代码复现, Arxiv, PapersWithCode)",
-  "Dev-Web-FullStack (现代Web开发, Next.js, React, Vue, FastAPI, Django)",
-  "Dev-Infra-Cloud (云原生与容器, Docker, Kubernetes, Terraform, Pulumi)",
-  "Dev-DB-Storage (数据库与存储, PostgreSQL, Redis, MongoDB, ClickHouse)",
-  "Dev-Lang-Core (编程语言核心资源, Rust, Python, Go, C++)",
-  "Dev-Sec (安全工具与逆向工程, Kali, Burp, Ghidra, Frida)",
-  "AI-App-Coding (AI编程助手, Cursor, Copilot, Aider, Continue)",
-  "Tools-Efficiency (生产力与终端工具, Oh-My-Zsh, Raycast, Obsidian, Neovim)",
-  "Tools-Media (图像视频处理工具, FFmpeg, ImageMagick, yt-dlp)",
-  "CS-Education (教程与面试, 系统设计, LeetCode, 学习路线图)",
-  "Uncategorized (无法分类)"
-]
+{
+  "schema_version": 2,
+  "taxonomy_version": "2026-07-30",
+  "repository_overrides": {
+    "1277572326": {
+      "name": "NVIDIA-NeMo/labs-molt",
+      "category_id": "training-rl-posttraining",
+      "reasoning": "经人工审查指定为强化学习后训练仓库。",
+      "classified_at": "2026-07-30T07:09:28.6305558Z"
+    },
+    "1023367592": {
+      "name": "Tencent/Wechat-YATT",
+      "category_id": "training-rl-posttraining",
+      "reasoning": "经人工审查指定为强化学习后训练仓库。",
+      "classified_at": "2026-07-30T07:09:28.6305558Z"
+    },
+    "1244657633": {
+      "name": "crazyCrabs/opencode_goal",
+      "category_id": "workflow-ai-coding",
+      "reasoning": "经人工审查指定为 OpenCode 的目标管理扩展，归入 AI Coding 工作流。",
+      "classified_at": "2026-07-30T07:09:28.6305558Z"
+    }
+  },
+  "vault_categories": [
+    {
+      "id": "compute-acceleration",
+      "name": "Domain-计算加速",
+      "description": "GPU、CUDA、Triton、算子、编译、通信、HPC 与性能原语"
+    },
+    {
+      "id": "training-frameworks",
+      "name": "Domain-训练框架",
+      "description": "预训练、SFT、RLHF/RLVR、优化器与分布式训练"
+    },
+    {
+      "id": "inference-frameworks",
+      "name": "Domain-推理框架",
+      "description": "推理引擎、服务、调度、批处理、KV Cache 与推理优化"
+    },
+    {
+      "id": "data-systems",
+      "name": "Domain-数据系统",
+      "description": "数据清洗、标注、合成、数据集、评测数据与数据管道"
+    },
+    {
+      "id": "model-behavior-control",
+      "name": "Domain-模型行为与控制",
+      "description": "模型架构、Attention、MoE、VLM、能力、对齐与可控性"
+    },
+    {
+      "id": "application-systems",
+      "name": "Domain-应用系统",
+      "description": "RAG、MCP、工具调用、产品级 Agent 与模型应用工作流"
+    },
+    {
+      "id": "engineering-practice",
+      "name": "Pillar-工程与实践",
+      "description": "部署、Profiling、MLOps、成本、稳定性、治理与工程案例"
+    },
+    {
+      "id": "workflow-toolchain",
+      "name": "Pillar-工作流与工具链",
+      "description": "AI Coding、IDE、Git、CLI、自动化与知识管理工具"
+    },
+    {
+      "id": "theory-reproduction",
+      "name": "Pillar-理论与复现",
+      "description": "论文、理论、数学、复现实验与 Benchmark 解读"
+    },
+    {
+      "id": "other",
+      "name": "其他",
+      "description": "读完仍无法归入现有 6+3 分类的仓库"
+    }
+  ],
+  "topic_categories": [
+    {
+      "id": "compute-system-framework",
+      "name": "Compute-System-Framework",
+      "description": "GPU 与 AI 芯片、互联通信、PyTorch/JAX 框架底座及其执行机制",
+      "vault_category": "Domain-计算加速",
+      "legacy_names": [
+        "AI-Sys-Hardware",
+        "AI-Sys-Framework",
+        "Compute-Hardware-Interconnect",
+        "Compute-Framework-Internals"
+      ]
+    },
+    {
+      "id": "compute-kernel-operator",
+      "name": "Compute-Kernel-Operator",
+      "description": "CUDA、Triton、CUTLASS、GEMM、FlashAttention、MoE 与算子融合优化",
+      "vault_category": "Domain-计算加速",
+      "legacy_names": ["AI-Sys-Kernel", "Compute-Kernel-Operator"]
+    },
+    {
+      "id": "compute-compiler-runtime",
+      "name": "Compute-Compiler-Runtime",
+      "description": "TVM、MLIR、XLA、torch.compile、Inductor、计算图与编译运行时",
+      "vault_category": "Domain-计算加速",
+      "legacy_names": ["AI-Sys-Compiler", "Compute-Compiler-Runtime"]
+    },
+    {
+      "id": "training-distributed-pretrain",
+      "name": "Training-Distributed-Pretrain",
+      "description": "预训练、中训练、训练循环以及 ZeRO、FSDP、Megatron、Ray 和并行策略",
+      "vault_category": "Domain-训练框架",
+      "legacy_names": [
+        "AI-Sys-Training",
+        "AI-Sys-Cluster",
+        "Training-Distributed-Parallel",
+        "Training-Pretrain-Loop"
+      ]
+    },
+    {
+      "id": "training-sft-peft",
+      "name": "Training-SFT-PEFT",
+      "description": "SFT、LoRA、QLoRA、PEFT、Adapter、数据 Packing 与微调框架",
+      "vault_category": "Domain-训练框架",
+      "legacy_names": ["AI-Sys-FineTuning", "Training-SFT-PEFT"]
+    },
+    {
+      "id": "training-rl-posttraining",
+      "name": "Training-RL-PostTraining",
+      "description": "RLHF、RLVR、PPO、DPO、GRPO、奖励系统与后训练框架",
+      "vault_category": "Domain-训练框架",
+      "legacy_names": [
+        "AI-Sys-RLHF",
+        "AI-Algo-Game",
+        "Training-RL-PostTraining"
+      ]
+    },
+    {
+      "id": "inference-engines-serving",
+      "name": "Inference-Engines-Serving",
+      "description": "vLLM、SGLang、TGI、TensorRT-LLM、llama.cpp 与推理服务架构",
+      "vault_category": "Domain-推理框架",
+      "legacy_names": ["AI-Sys-Inference", "Inference-Engines-Serving"]
+    },
+    {
+      "id": "inference-scheduling-kvcache",
+      "name": "Inference-Scheduling-KVCache",
+      "description": "请求调度、Continuous Batching、PagedAttention、前缀缓存与 KV Cache 管理",
+      "vault_category": "Domain-推理框架",
+      "legacy_names": ["Inference-Scheduling-KVCache"]
+    },
+    {
+      "id": "inference-optimization",
+      "name": "Inference-Optimization",
+      "description": "推测解码、分布式推理、PD 分离、量化、性能诊断、压测与回归",
+      "vault_category": "Domain-推理框架",
+      "legacy_names": [
+        "AI-Sys-Quantization",
+        "Inference-Decoding-Distributed",
+        "Inference-Quantization-Performance"
+      ]
+    },
+    {
+      "id": "data-systems",
+      "name": "Data-Systems",
+      "description": "数据获取、清洗、去重、合成、标注、数据集、评测集、向量检索与索引",
+      "vault_category": "Domain-数据系统",
+      "legacy_names": [
+        "AI-Data-Pipeline",
+        "AI-Data-Crawl",
+        "AI-Data-Dataset",
+        "AI-Data-Synthetic",
+        "AI-Data-Labeling",
+        "AI-Data-Vector",
+        "Data-Curation-Pipeline",
+        "Data-Datasets-Evaluation",
+        "Data-Synthetic-Annotation",
+        "Data-Retrieval-Index"
+      ]
+    },
+    {
+      "id": "model-architecture-components",
+      "name": "Model-Architecture-Components",
+      "description": "LLM 模型家族、Dense/MoE 架构、Attention、RoPE、Norm 与核心组件",
+      "vault_category": "Domain-模型行为与控制",
+      "legacy_names": [
+        "AI-Algo-LLM",
+        "Model-LLM-Architecture",
+        "Model-Components-Attention"
+      ]
+    },
+    {
+      "id": "model-multimodal-vlm",
+      "name": "Model-Multimodal-VLM",
+      "description": "VLM、VLA、视觉、音频、视频、多模态生成与理解，不再拆分音频或游戏门类",
+      "vault_category": "Domain-模型行为与控制",
+      "legacy_names": [
+        "AI-Algo-Multi",
+        "AI-Algo-Vision",
+        "AI-Algo-Audio",
+        "AI-Algo-Robotics",
+        "Model-Multimodal-VLM"
+      ]
+    },
+    {
+      "id": "model-reasoning-alignment",
+      "name": "Model-Reasoning-Alignment",
+      "description": "推理行为、Test-Time Compute、对齐、可控性、模型能力评测与安全",
+      "vault_category": "Domain-模型行为与控制",
+      "legacy_names": ["Model-Reasoning-Alignment"]
+    },
+    {
+      "id": "app-agent-rag",
+      "name": "App-Agent-RAG",
+      "description": "Agentic Loop、规划、记忆、多 Agent、RAG、Research Agent 与工作流编排",
+      "vault_category": "Domain-应用系统",
+      "legacy_names": [
+        "AI-App-Agent",
+        "AI-App-Framework",
+        "AI-App-RAG",
+        "App-Agent-Workflow",
+        "App-RAG-Research"
+      ]
+    },
+    {
+      "id": "app-tools-mcp",
+      "name": "App-Tools-MCP",
+      "description": "工具调用、Function Calling、MCP Server、Schema、权限与安全边界",
+      "vault_category": "Domain-应用系统",
+      "legacy_names": ["AI-App-MCP", "App-Tools-MCP"]
+    },
+    {
+      "id": "engineering-practice",
+      "name": "Engineering-Practice",
+      "description": "容器、云原生、数据库、部署、Profiling、MLOps、稳定性、安全与工程交付",
+      "vault_category": "Pillar-工程与实践",
+      "legacy_names": [
+        "AI-Sys-MLOps",
+        "Dev-Web-FullStack",
+        "Dev-Infra-Cloud",
+        "Dev-DB-Storage",
+        "Dev-Sec",
+        "Engineering-Deployment-Delivery",
+        "Engineering-Observability-Performance",
+        "Engineering-Security-Governance"
+      ]
+    },
+    {
+      "id": "workflow-ai-coding",
+      "name": "Workflow-AI-Coding",
+      "description": "Code Agent、AI Coding、Skills、Harness、IDE 与人机协作开发流程",
+      "vault_category": "Pillar-工作流与工具链",
+      "legacy_names": ["AI-App-Coding", "Workflow-AI-Coding"]
+    },
+    {
+      "id": "workflow-knowledge-tools",
+      "name": "Workflow-Knowledge-Tools",
+      "description": "Obsidian、研究工作流、自动化、Git、CLI、编程语言与内容处理工具",
+      "vault_category": "Pillar-工作流与工具链",
+      "legacy_names": [
+        "Tools-Efficiency",
+        "Dev-Lang-Core",
+        "Tools-Media",
+        "Workflow-Knowledge-Automation",
+        "Workflow-Dev-Content-Tools"
+      ]
+    },
+    {
+      "id": "personal-repositories",
+      "name": "Personal-Repositories",
+      "description": "nideyongbao 名下的个人代码、实验、训练、部署、环境与数据资产",
+      "vault_category": "Pillar-工作流与工具链",
+      "legacy_names": []
+    },
+    {
+      "id": "theory-reproduction",
+      "name": "Theory-Reproduction",
+      "description": "数学与优化理论、论文实现、复现实验、Benchmark、教程与系统化资料",
+      "vault_category": "Pillar-理论与复现",
+      "legacy_names": [
+        "AI-Algo-Theory",
+        "Research-Paper",
+        "CS-Education",
+        "Theory-Math-Optimization",
+        "Theory-Paper-Reproduction",
+        "Theory-Benchmark-Education"
+      ]
+    },
+    {
+      "id": "other",
+      "name": "Other",
+      "description": "不符合当前 AI 系统研究主题且无法可靠归入现有子类",
+      "vault_category": "其他",
+      "legacy_names": ["Uncategorized", "Other"]
+    }
+  ]
+}

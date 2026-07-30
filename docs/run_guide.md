@@ -1,31 +1,32 @@
-# 首次运行指南 (Run Guide)
+# GitHub Actions 运行指南
 
-由于 GitHub Actions 的安全机制，新的 Workflow 文件上传后**不会自动运行**（除非配置了 push 触发器，但本仓库配置的是 schedule 和 workflow_dispatch）。您必须手动触发第一次运行。
+工作流支持每日定时运行和 `workflow_dispatch` 手动运行。
 
-## 步骤
+## 首次运行
 
-1.  **打开 Actions 页面**
-    进入您的仓库页面，点击顶部的 **Actions** 标签。
-    URL: `https://github.com/nideyongbao/my-awesome-stars/actions`
+1. 在仓库的 Actions 页面选择 `Update Awesome Stars`。
+2. 点击 `Run workflow`，使用默认分支运行。
+3. 等待离线测试、分类器和提交步骤全部成功。
 
-2.  **选择 Workflow**
-    在左侧列表中，点击 **Update Awesome Stars**。
-    > 注意：不要停留在 "All workflows" 页面，一定要点击具体的 workflow 名称。
+## 运行顺序
 
-3.  **触发运行**
-    - 在右侧页面，您会看到一个蓝色的横幅或按钮：**Run workflow**。
-    - 点击它，会弹出一个配置框，保持默认分支 (`Branch: main`) 不变。
-    - 再次点击绿色的 **Run workflow** 按钮。
+1. 安装 `requirements.txt`。
+2. 执行 `python -m unittest -v test_main.py`。
+3. 执行 `python main.py`。
+4. 仅在生成文件变化时提交并推送。
 
-4.  **等待结果**
-    - 页面会自动刷新，您会看到一个新的运行记录（黄色圆点 🟡 表示正在运行）。
-    - 运行完成后，它会变成绿色对勾 ✅。
+## 检查结果
 
-## 运行后检查
-运行成功后，回到 **Code** 标签页：
-- `README.md`: 应该已经被更新，展示了分类后的 Star 列表。
-- `stars_cache.json`: 应该已经被创建/更新，包含了已抓取的仓库数据。
+- `README.md` 应按 Vault 6+3 主分类分组。
+- `stars_cache.json` 中每项应包含 `category_id` 和 `vault_category`。
+- `nideyongbao/*` 应全部位于 `Personal-Repositories`，并保留原技术主题的
+  `subject_*` 字段。
+- `repository_overrides` 中的仓库应标记为 `manual_override`，且不调用 LLM。
+- 新仓库应具有 `clone_url`、`default_branch` 等最新元数据。
+- 取消 Star 或不可见的仓库应从活动快照消失，并出现在
+  `removed_stars.json`。
 
-## 下次运行
-- **自动**: 系统会在每天 **UTC 0:00** (北京时间 8:00) 自动运行。
-- **手动**: 随时可以按照上述步骤手动触发更新。
+## 定时
+
+工作流当前配置为每天 UTC 00:00 触发。GitHub 的定时任务可能排队，实际开始和
+提交时间不保证精确等于计划时间。
