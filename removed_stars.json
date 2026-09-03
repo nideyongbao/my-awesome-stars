@@ -1,1 +1,36 @@
-{}
+{
+  "1183758340": {
+    "github_id": 1183758340,
+    "name": "jqlong17/attnres-toy-jupyter",
+    "url": "https://github.com/jqlong17/attnres-toy-jupyter",
+    "category_id": "theory-reproduction",
+    "vault_category": "Pillar-理论与复现",
+    "removed_at": "2026-09-03T02:52:44.072627Z",
+    "reason": "missing_from_visible_stars",
+    "last_entry": {
+      "github_id": 1183758340,
+      "name": "jqlong17/attnres-toy-jupyter",
+      "url": "https://github.com/jqlong17/attnres-toy-jupyter",
+      "clone_url": "https://github.com/jqlong17/attnres-toy-jupyter.git",
+      "description": "A beginner-friendly Jupyter toy reproduction of MoonshotAI Attention Residuals with Chinese explanations, exported figures, and an executable notebook.",
+      "stars": 6,
+      "language": "Jupyter Notebook",
+      "topics": [],
+      "default_branch": "main",
+      "archived": false,
+      "fork": false,
+      "size_kb": 331,
+      "pushed_at": "2026-03-17T00:58:57Z",
+      "updated_at": "2026-08-19T14:21:23Z",
+      "category_id": "theory-reproduction",
+      "category": "Theory-Reproduction (数学与优化理论、论文实现、复现实验、Benchmark、教程与系统化资料)",
+      "vault_category": "Pillar-理论与复现",
+      "confidence": "unknown",
+      "reasoning": "由历史分类按 2026-07-30 Vault taxonomy 审计迁移；原始理由保存在 legacy_reasoning。",
+      "classification_source": "legacy_migration",
+      "first_seen_at": "2026-03-20T01:55:31.479874Z",
+      "classified_at": "2026-03-20T01:55:31.479874Z",
+      "legacy_reasoning": "该项目是一个面向初学者的 Jupyter 笔记本，用于复现 MoonshotAI 的 Attention Residuals 研究工作，并包含中文解释和可视化，属于论文级研究成果的可执行复现，因此归入 Research-Paper。"
+    }
+  }
+}
