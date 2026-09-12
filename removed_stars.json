@@ -32,38 +32,5 @@
       "classified_at": "2026-03-20T01:55:31.479874Z",
       "legacy_reasoning": "该项目是一个面向初学者的 Jupyter 笔记本，用于复现 MoonshotAI 的 Attention Residuals 研究工作，并包含中文解释和可视化，属于论文级研究成果的可执行复现，因此归入 Research-Paper。"
     }
-  },
-  "231865705": {
-    "github_id": 231865705,
-    "name": "TapXWorld/ChinaTextbook",
-    "url": "https://github.com/TapXWorld/ChinaTextbook",
-    "category_id": "other",
-    "vault_category": "其他",
-    "removed_at": "2026-09-10T03:00:53.003363Z",
-    "reason": "missing_from_visible_stars",
-    "last_entry": {
-      "github_id": 231865705,
-      "name": "TapXWorld/ChinaTextbook",
-      "url": "https://github.com/TapXWorld/ChinaTextbook",
-      "clone_url": "https://github.com/TapXWorld/ChinaTextbook.git",
-      "description": "所有小初高、大学PDF教材。",
-      "stars": 81698,
-      "language": "Roff",
-      "topics": [],
-      "default_branch": "master",
-      "archived": false,
-      "fork": false,
-      "size_kb": 43543927,
-      "pushed_at": "2025-10-18T13:39:24Z",
-      "updated_at": "2026-09-09T02:52:08Z",
-      "category_id": "other",
-      "category": "Other (不符合当前 AI 系统研究主题且无法可靠归入现有子类)",
-      "vault_category": "其他",
-      "confidence": "high",
-      "reasoning": "该仓库为教材PDF合集，属于静态资源库，不涉及AI系统研发、训练、推理或工程实践等主题。",
-      "classification_source": "llm",
-      "first_seen_at": "2026-08-08T01:19:19.768026Z",
-      "classified_at": "2026-08-08T01:19:19.767924Z"
-    }
   }
 }
