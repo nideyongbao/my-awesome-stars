@@ -8,7 +8,7 @@
 
 ## 目录
 
-- [Domain-计算加速 (29)](#vault-compute-acceleration)
+- [Domain-计算加速 (33)](#vault-compute-acceleration)
 - [Domain-训练框架 (52)](#vault-training-frameworks)
 - [Domain-推理框架 (14)](#vault-inference-frameworks)
 - [Domain-数据系统 (8)](#vault-data-systems)
@@ -17,15 +17,15 @@
 - [Pillar-工程与实践 (11)](#vault-engineering-practice)
 - [Pillar-工作流与工具链 (33)](#vault-workflow-toolchain)
 - [Pillar-理论与复现 (19)](#vault-theory-reproduction)
-- [其他 (6)](#vault-other)
+- [其他 (2)](#vault-other)
 
 ---
 
-## <span id="vault-compute-acceleration">Domain-计算加速 (29)</span>
+## <span id="vault-compute-acceleration">Domain-计算加速 (33)</span>
 
 GPU、CUDA、Triton、算子、编译、通信、HPC 与性能原语
 
-### <span id="topic-compute-system-framework">Compute-System-Framework (8)</span>
+### <span id="topic-compute-system-framework">Compute-System-Framework (10)</span>
 
 GPU 与 AI 芯片、互联通信、PyTorch/JAX 框架底座及其执行机制
 
@@ -35,12 +35,14 @@ GPU 与 AI 芯片、互联通信、PyTorch/JAX 框架底座及其执行机制
 | [pytorch/pytorch](https://github.com/pytorch/pytorch) | Tensors and Dynamic neural networks in Python with strong GPU acceleration | 103034 | Python |
 | [jinbooooom/OriginDL](https://github.com/jinbooooom/OriginDL) | Implement a Pytorch-like DL library in C++ from scratch, step by step | 377 | C++ |
 | [keith2018/TinyTorch](https://github.com/keith2018/TinyTorch) | A lightweight deep learning training framework implemented from scratch in C++, featuring a PyTorch-style API. | 220 | C++ |
+| [RightNow-AI/RightNow-GPU-Database](https://github.com/RightNow-AI/RightNow-GPU-Database) | Comprehensive GPU specifications database with 2,824 GPUs across NVIDIA, AMD, and Intel | 114 | N/A |
 | [ViperEkura/AstrAI](https://github.com/ViperEkura/AstrAI) | A lightweight Transformer training & inference framework | 109 | Python |
 | [abcdabcd987/libfabric-efa-demo](https://github.com/abcdabcd987/libfabric-efa-demo) |  | 83 | C++ |
 | [tigert1998/mytorch](https://github.com/tigert1998/mytorch) | A toy Python DL training library with PyTorch like API | 38 | Python |
+| [zuhuans-commits/pytorch_spu](https://github.com/zuhuans-commits/pytorch_spu) | spu is a learning project for understanding how PyTorch's PrivateUse1 (custom device) mechanism works end to end. It registers a brand-new torch device type cal | 6 | Python |
 | [Eclipse-Arrebol/CUDA_MATMUAL](https://github.com/Eclipse-Arrebol/CUDA_MATMUAL) |  | 2 | Cuda |
 
-### <span id="topic-compute-kernel-operator">Compute-Kernel-Operator (21)</span>
+### <span id="topic-compute-kernel-operator">Compute-Kernel-Operator (23)</span>
 
 CUDA、Triton、CUTLASS、GEMM、FlashAttention、MoE 与算子融合优化
 
@@ -56,9 +58,11 @@ CUDA、Triton、CUTLASS、GEMM、FlashAttention、MoE 与算子融合优化
 | [stepfun-ai/Step-3.5-Flash](https://github.com/stepfun-ai/Step-3.5-Flash) | Fast, Sharp & Reliable Agentic Intelligence | 2073 | C++ |
 | [RightNow-AI/autokernel](https://github.com/RightNow-AI/autokernel) | Autoresearch for GPU kernels. Give it any PyTorch model, go to sleep, wake up to optimized Triton kernels. | 1556 | Python |
 | [IST-DASLab/marlin](https://github.com/IST-DASLab/marlin) | FP16xINT4 LLM inference kernel that can achieve near-ideal ~4x speedups up to medium batchsizes of 16-32 tokens. | 1147 | Python |
+| [zhuzilin/ring-flash-attention](https://github.com/zhuzilin/ring-flash-attention) | Ring attention implementation with flash attention | 1056 | Python |
 | [QwenLM/FlashQLA](https://github.com/QwenLM/FlashQLA) | high-performance linear attention kernel library built on TileLang | 702 | Python |
 | [hustvl/MoDA](https://github.com/hustvl/MoDA) | An hardware-aware Efficient Implementation for "Mixture-of-Depths Attention". | 277 | Python |
 | [open-lm-engine/coda-kernels](https://github.com/open-lm-engine/coda-kernels) | CODA: Rewriting Transformer Blocks as GEMM-Epilogue Programs | 250 | Python |
+| [mit-han-lab/ncu-report-skill](https://github.com/mit-han-lab/ncu-report-skill) |  | 228 | Python |
 | [RightNow-AI/qwen3.5-triton](https://github.com/RightNow-AI/qwen3.5-triton) | Pure Triton kernels for Qwen3.5-27B inference on NVIDIA B200 | 123 | Python |
 | [DefTruth/CUDA-Learn-Notes](https://github.com/DefTruth/CUDA-Learn-Notes) | 📚200+ Tensor/CUDA Cores Kernels, ⚡️flash-attn-mma, ⚡️hgemm with WMMA, MMA and CuTe (98%~100% TFLOPS of cuBLAS/FA2 🎉🎉). | 95 | Cuda |
 | [TongmingLAIC/AKO4X](https://github.com/TongmingLAIC/AKO4X) | Agentic Kernel Optimization — advanced & eXtensible: a closed-loop, campaign-based multi-agent system for optimizing GPU kernels (benchmark-swappable; default f | 73 | Python |
@@ -405,19 +409,15 @@ nideyongbao 名下的个人代码、实验、训练、部署、环境与数据�
 | [APRIL-AIGC/awesome-optimizer](https://github.com/APRIL-AIGC/awesome-optimizer) | Evolution of Optimization Methods: Algorithms, Scenarios, and Evaluations | 37 | Python |
 | [hanfang/chatgpt-usage-taxonomies](https://github.com/hanfang/chatgpt-usage-taxonomies) | Taxonomies and classification prompts from the 'How People Use ChatGPT' research paper (NBER Working Paper No. 34255) | 4 | N/A |
 
-## <span id="vault-other">其他 (6)</span>
+## <span id="vault-other">其他 (2)</span>
 
 读完仍无法归入现有 6+3 分类的仓库
 
-### <span id="topic-other">Other (6)</span>
+### <span id="topic-other">Other (2)</span>
 
 不符合当前 AI 系统研究主题且无法可靠归入现有子类
 
 | Project | Description | Stars | Language |
 |---|---|---:|---|
 | [TapXWorld/ChinaTextbook](https://github.com/TapXWorld/ChinaTextbook) | 所有小初高、大学PDF教材。 | 81976 | Roff |
-| [zhuzilin/ring-flash-attention](https://github.com/zhuzilin/ring-flash-attention) | Ring attention implementation with flash attention | 1056 | Python |
-| [mit-han-lab/ncu-report-skill](https://github.com/mit-han-lab/ncu-report-skill) |  | 228 | Python |
-| [RightNow-AI/RightNow-GPU-Database](https://github.com/RightNow-AI/RightNow-GPU-Database) | Comprehensive GPU specifications database with 2,824 GPUs across NVIDIA, AMD, and Intel | 114 | N/A |
 | [codfish-zz/cn-trader](https://github.com/codfish-zz/cn-trader) | Python back testing system for trading strategies, based on backtrader and AkShare, customized for China market. | 30 | Python |
-| [zuhuans-commits/pytorch_spu](https://github.com/zuhuans-commits/pytorch_spu) | spu is a learning project for understanding how PyTorch's PrivateUse1 (custom device) mechanism works end to end. It registers a brand-new torch device type cal | 6 | Python |

@@ -206,6 +206,10 @@ class TaxonomyTests(unittest.TestCase):
             "1277572326": "training-rl-posttraining",
             "1023367592": "training-rl-posttraining",
             "1244657633": "workflow-ai-coding",
+            "761086833": "compute-kernel-operator",
+            "1209103931": "compute-kernel-operator",
+            "1129708763": "compute-system-framework",
+            "1345593174": "compute-system-framework",
         }
         for repo_id, category_id in expected.items():
             with self.subTest(repo_id=repo_id):

@@ -19,6 +19,30 @@
       "category_id": "workflow-ai-coding",
       "reasoning": "经人工审查指定为 OpenCode 的目标管理扩展，归入 AI Coding 工作流。",
       "classified_at": "2026-07-30T07:09:28.6305558Z"
+    },
+    "761086833": {
+      "name": "zhuzilin/ring-flash-attention",
+      "category_id": "compute-kernel-operator",
+      "reasoning": "经人工审查指定为 FlashAttention/Ring Attention 算子实现，归入计算加速的算子优化子类。",
+      "classified_at": "2026-09-16T08:33:08.423423Z"
+    },
+    "1209103931": {
+      "name": "mit-han-lab/ncu-report-skill",
+      "category_id": "compute-kernel-operator",
+      "reasoning": "经人工审查指定为 Nsight Compute（NCU）GPU 内核性能统计与报告工具，归入计算加速的算子优化子类。",
+      "classified_at": "2026-09-16T08:33:08.423423Z"
+    },
+    "1129708763": {
+      "name": "RightNow-AI/RightNow-GPU-Database",
+      "category_id": "compute-system-framework",
+      "reasoning": "经人工审查指定为 GPU 硬件规格数据库（NVIDIA/AMD/Intel），归入计算加速的系统框架与硬件子类。",
+      "classified_at": "2026-09-16T08:33:08.423423Z"
+    },
+    "1345593174": {
+      "name": "zuhuans-commits/pytorch_spu",
+      "category_id": "compute-system-framework",
+      "reasoning": "经人工审查指定为 PyTorch PrivateUse1 自定义设备机制学习项目，归入计算加速的框架底座与执行机制子类。",
+      "classified_at": "2026-09-16T08:33:08.423423Z"
     }
   },
   "vault_categories": [
