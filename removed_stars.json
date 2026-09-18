@@ -32,58 +32,5 @@
       "classified_at": "2026-03-20T01:55:31.479874Z",
       "legacy_reasoning": "该项目是一个面向初学者的 Jupyter 笔记本，用于复现 MoonshotAI 的 Attention Residuals 研究工作，并包含中文解释和可视化，属于论文级研究成果的可执行复现，因此归入 Research-Paper。"
     }
-  },
-  "643445235": {
-    "github_id": 643445235,
-    "name": "lobehub/lobehub",
-    "url": "https://github.com/lobehub/lobehub",
-    "category_id": "app-agent-rag",
-    "vault_category": "Domain-应用系统",
-    "removed_at": "2026-09-17T03:21:17.169967Z",
-    "reason": "missing_from_visible_stars",
-    "last_entry": {
-      "github_id": 643445235,
-      "name": "lobehub/lobehub",
-      "url": "https://github.com/lobehub/lobehub",
-      "clone_url": "https://github.com/lobehub/lobehub.git",
-      "description": "🤯 LobeHub is your Chief Agent Operator, organizing your agents into 7×24 operations by hiring, scheduling, and reporting on your entire AI team.",
-      "stars": 82510,
-      "language": "TypeScript",
-      "topics": [
-        "chatgpt",
-        "openai",
-        "ai",
-        "gpt",
-        "claude",
-        "gemini",
-        "knowledge-base",
-        "deepseek",
-        "agent",
-        "mcp",
-        "agent-harness",
-        "agent-collaboration",
-        "cao",
-        "skills",
-        "chief-agent-operator",
-        "fable",
-        "loop-engineering",
-        "glm"
-      ],
-      "default_branch": "canary",
-      "archived": false,
-      "fork": false,
-      "size_kb": 932291,
-      "pushed_at": "2026-09-16T03:08:43Z",
-      "updated_at": "2026-09-16T02:29:36Z",
-      "category_id": "app-agent-rag",
-      "category": "App-Agent-RAG (Agentic Loop、规划、记忆、多 Agent、RAG、Research Agent 与工作流编排)",
-      "vault_category": "Domain-应用系统",
-      "confidence": "unknown",
-      "reasoning": "由历史分类按 2026-07-30 Vault taxonomy 审计迁移；原始理由保存在 legacy_reasoning。",
-      "classification_source": "legacy_migration",
-      "first_seen_at": "2025-12-31T10:12:53.517473Z",
-      "classified_at": "2025-12-31T10:12:53.517473Z",
-      "legacy_reasoning": "仓库核心是面向终端用户的 AI Agent 工作空间，支持多模型、知识库、MCP 市场与一键部署，属于智能体应用层而非底层系统或数据组件。"
-    }
   }
 }
