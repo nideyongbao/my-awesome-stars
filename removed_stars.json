@@ -66,5 +66,58 @@
       "classified_at": "2025-12-31T10:12:09.666831Z",
       "legacy_reasoning": "描述明确为“LLM post-training framework”，属于大模型后训练全量训练范畴，对应 AI-Sys-Posttraining。"
     }
+  },
+  "1102195393": {
+    "github_id": 1102195393,
+    "name": "tradecatlabs/vibe-coding-cn",
+    "url": "https://github.com/tradecatlabs/vibe-coding-cn",
+    "category_id": "app-agent-rag",
+    "vault_category": "Domain-应用系统",
+    "removed_at": "2026-10-26T03:08:17.448402Z",
+    "reason": "missing_from_visible_stars",
+    "last_entry": {
+      "github_id": 1102195393,
+      "name": "tradecatlabs/vibe-coding-cn",
+      "url": "https://github.com/tradecatlabs/vibe-coding-cn",
+      "clone_url": "https://github.com/tradecatlabs/vibe-coding-cn.git",
+      "description": "Vibe Coding 非严肃开发的从入门到门入的工具箱",
+      "stars": 17722,
+      "language": "Makefile",
+      "topics": [
+        "ai",
+        "ai-agents",
+        "claude-code",
+        "codex",
+        "prompts",
+        "prompt-engineering",
+        "skills",
+        "workflow",
+        "vibe-coding",
+        "glue-coding",
+        "ai-agent",
+        "ai-coding",
+        "ai-programming",
+        "chinese",
+        "cursor",
+        "developer-tools",
+        "gemini-cli",
+        "tutorial"
+      ],
+      "default_branch": "main",
+      "archived": false,
+      "fork": false,
+      "size_kb": 65033,
+      "pushed_at": "2026-10-22T22:56:27Z",
+      "updated_at": "2026-10-23T02:58:41Z",
+      "category_id": "app-agent-rag",
+      "category": "App-Agent-RAG (Agentic Loop、规划、记忆、多 Agent、RAG、Research Agent 与工作流编排)",
+      "vault_category": "Domain-应用系统",
+      "confidence": "unknown",
+      "reasoning": "由历史分类按 2026-07-30 Vault taxonomy 审计迁移；原始理由保存在 legacy_reasoning。",
+      "classification_source": "legacy_migration",
+      "first_seen_at": "2025-12-31T10:09:09.049800Z",
+      "classified_at": "2025-12-31T10:09:09.049800Z",
+      "legacy_reasoning": "仓库聚焦提示词库与开发经验，定位为“vibecoding 工作站”，核心用途是驱动 AI Agent 进行代码生成与任务自动化，符合 AI-App-Agent 的智能体规划与提示工程场景。"
+    }
   }
 }
