@@ -4,6 +4,8 @@ from __future__ import annotations
 
 import unittest
 from datetime import datetime, timezone
+from types import SimpleNamespace
+from unittest.mock import Mock, patch
 
 import main as app
 
@@ -236,6 +238,59 @@ class TaxonomyTests(unittest.TestCase):
         self.assertIn("Domain-训练框架 (1)", readme)
         self.assertIn("Training-Distributed-Pretrain (1)", readme)
         self.assertNotIn("AI-Sys-Training", readme)
+
+
+class LLMClassificationTests(unittest.TestCase):
+    def setUp(self):
+        self.taxonomy = app.load_taxonomy()
+        self.client = Mock()
+        self.client.chat.completions.create.return_value = SimpleNamespace(
+            choices=[SimpleNamespace(
+                finish_reason="stop",
+                message=SimpleNamespace(content=(
+                    '{"category_id":"compute-kernel-operator",'
+                    '"confidence":"high","reasoning":"CUDA kernels"}'
+                )),
+            )]
+        )
+
+    def classify(self):
+        return app.get_llm_classification(
+            self.client, "inclusionAI/cuLA", "CUDA kernels", [], self.taxonomy,
+        )
+
+    def test_modelscope_classification_disables_thinking_and_bounds_request(self):
+        with patch.object(app, "LLM_BASE_URL", "https://api-inference.modelscope.cn/v1"), \
+             patch.object(app, "LLM_MODEL", "Qwen/Qwen3.8-27B"):
+            result = self.classify()
+        self.assertEqual(result["category_id"], "compute-kernel-operator")
+        request = self.client.chat.completions.create.call_args.kwargs
+        self.assertEqual(request["extra_body"], {"enable_thinking": False})
+        self.assertEqual(request["max_tokens"], 512)
+        self.assertEqual(request["timeout"], 60.0)
+        self.assertEqual(request["response_format"], {"type": "json_object"})
+
+    def test_other_provider_does_not_receive_modelscope_parameter(self):
+        with patch.object(app, "LLM_BASE_URL", "https://api.deepseek.com"), \
+             patch.object(app, "LLM_MODEL", "deepseek-chat"):
+            self.classify()
+        request = self.client.chat.completions.create.call_args.kwargs
+        self.assertNotIn("extra_body", request)
+
+    def test_token_limit_response_is_not_accepted_as_classification(self):
+        self.client.chat.completions.create.return_value.choices[0].finish_reason = "length"
+        with patch("builtins.print"):
+            result = self.classify()
+        self.assertEqual(result["category_id"], "other")
+        self.assertEqual(result["confidence"], "low")
+
+    def test_timeout_falls_back_without_application_retry(self):
+        self.client.chat.completions.create.side_effect = TimeoutError("timed out")
+        with patch("builtins.print"), patch.object(app.time, "sleep") as sleep:
+            result = self.classify()
+        self.assertEqual(result["category_id"], "other")
+        self.client.chat.completions.create.assert_called_once()
+        sleep.assert_not_called()
 
 
 class RemovalSafetyTests(unittest.TestCase):

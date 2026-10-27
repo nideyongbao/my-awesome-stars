@@ -12,6 +12,7 @@ import time
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import TYPE_CHECKING, Any, Optional, Union
+from urllib.parse import urlparse
 
 if TYPE_CHECKING:
     from openai import OpenAI
@@ -32,6 +33,18 @@ DEFAULT_MAX_REMOVAL_RATIO = 0.20
 UNCATEGORIZED_ID = "other"
 PERSONAL_OWNER = "nideyongbao"
 PERSONAL_CATEGORY_ID = "personal-repositories"
+
+
+def llm_request_options(base_url: str, model: str) -> dict[str, Any]:
+    """Bound short classification requests and disable ModelScope Qwen thinking."""
+    options: dict[str, Any] = {"max_tokens": 512, "timeout": 60.0}
+    if (
+        urlparse(base_url).hostname == "api-inference.modelscope.cn"
+        and model == "Qwen/Qwen3.8-27B"
+    ):
+        # ModelScope API-Inference uses a top-level thinking switch.
+        options["extra_body"] = {"enable_thinking": False}
+    return options
 
 
 PROMPT_TEMPLATE = """
@@ -447,7 +460,10 @@ def get_llm_classification(
                 messages=[{"role": "user", "content": prompt}],
                 response_format={"type": "json_object"},
                 temperature=0.1,
+                **llm_request_options(LLM_BASE_URL, LLM_MODEL),
             )
+            if response.choices and response.choices[0].finish_reason == "length":
+                raise ValueError("LLM 输出达到 token 上限，分类结果可能被截断。")
             if not response.choices or not response.choices[0].message.content:
                 raise ValueError("LLM 返回空响应。")
 
@@ -836,6 +852,8 @@ def main(argv: Optional[list[str]] = None) -> int:
                 llm_client = OpenAI(
                     api_key=LLM_API_KEY,
                     base_url=LLM_BASE_URL,
+                    # Retry policy is handled explicitly by get_llm_classification.
+                    max_retries=0,
                 )
 
             entry, classified = build_entry(
