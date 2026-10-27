@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="nideyongbao 的 AI 开源收藏导航。从计算加速、训练与推理，到模型、应用和工程实践，按研究主题探索 GitHub 项目。">
+  <meta name="theme-color" content="#173e32">
+  <title>AI 开源收藏导航 · My Awesome Stars</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#collection">跳到项目列表</a>
+  <header class="site-header wrap">
+    <a class="brand" href="./"><span class="brand-mark" aria-hidden="true">✳</span><span>AWESOME STARS<small>nideyongbao / 开源收藏</small></span></a>
+    <a class="source-link" href="https://github.com/nideyongbao/my-awesome-stars" target="_blank" rel="noopener noreferrer">GitHub 仓库 <span aria-hidden="true">↗</span></a>
+  </header>
+  <main class="wrap">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy"><p class="eyebrow">A PERSONAL ATLAS OF OPEN SOURCE</p><h1 id="hero-title">探索 AI 系统的<br><span>开源版图。</span></h1><p class="hero-description">把值得深入的项目，放在触手可及的地方。<br>从底层计算到上层应用，沿着研究主题发现下一站。</p></div>
+      <div class="hero-aside"><span class="edition">THE OPEN SOURCE COLLECTION <span aria-hidden="true">✳</span></span><div class="stats"><div><strong>{{TOTAL}}</strong><span>收藏项目</span></div><div><strong>{{VAULT_COUNT}}</strong><span>主分类</span></div><div><strong>{{LANGUAGE_COUNT}}</strong><span>编程语言</span></div></div><p class="hero-note"><span class="status-dot" aria-hidden="true"></span> 跟随 GitHub Stars 持续更新</p></div>
+    </section>
+    <div class="collection-layout" id="collection">
+      <aside class="sidebar"><h2 class="sidebar-heading">浏览分类 <span aria-hidden="true">↓</span></h2><nav id="category-nav" aria-label="项目主分类">{{NAV}}</nav><div class="sidebar-note">从问题出发，<br>让收藏成为知识的地图。<span>6 个研究领域 · 3 个知识支柱</span></div></aside>
+      <section class="results" aria-labelledby="results-title">
+        <div class="search-wrap"><span class="search-icon" aria-hidden="true">⌕</span><label class="sr-only" for="search">搜索项目、简介或标签</label><input id="search" type="search" placeholder="搜索项目、简介或标签…" autocomplete="off"><kbd aria-hidden="true">/</kbd></div>
+        <div class="filters"><div class="filter-field"><label for="topic">细分类</label><select id="topic"><option value="">全部细分类</option></select></div><div class="filter-field"><label for="language">语言</label><select id="language"><option value="">全部语言</option>{{LANGUAGES}}</select></div><div class="filter-field"><label for="sort">排序</label><select id="sort"><option value="stars">Stars 最多</option><option value="recent">最近收录</option><option value="updated">最近推送</option><option value="name">名称 A–Z</option></select></div><button id="reset" class="reset-button" type="button">重置筛选</button></div>
+        <div class="results-heading"><div><p class="eyebrow muted">THE COLLECTION</p><h2 id="results-title">全部项目</h2></div><p id="result-count" role="status" aria-live="polite">{{TOTAL}} 个项目</p></div>
+        <p class="category-description" id="category-description">按主题整理的开源收藏，找到值得深入的下一个项目。</p>
+        <noscript><p class="notice">当前已展示全部项目；启用 JavaScript 后可使用搜索、筛选和排序。</p></noscript>
+        <div class="repo-grid" id="repo-grid">{{CARDS}}</div>
+        <div id="empty-state" class="empty-state" hidden><span aria-hidden="true">⌕</span><h3>还没有匹配的项目</h3><p>试试其他关键词，或清除分类和语言限制。</p><button id="empty-reset" class="reset-button" type="button">查看全部项目</button></div>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer wrap"><p><span aria-hidden="true">✳</span> 为好奇心留一份索引。</p><div><a href="https://github.com/nideyongbao/my-awesome-stars/blob/main/README.md">阅读 Markdown 版本 ↗</a><small>页面构建于 {{BUILT_AT}} · Stars 为最近同步的快照</small></div></footer>
+  <script type="application/json" id="site-data">{{DATA}}</script>
+</body>
+</html>

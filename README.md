@@ -4,6 +4,8 @@
 
 当前收录 **237** 个仓库。
 
+🌐 [网页导航](https://nideyongbao.github.io/my-awesome-stars/) · [网站部署与本地预览](docs/github-pages.md)
+
 分类设计与旧 39 类迁移记录见 [分类体系审计](docs/category_audit.md)。
 
 ## 目录

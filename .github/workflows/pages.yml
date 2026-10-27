@@ -1,0 +1,77 @@
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'site/**'
+      - 'build_site.py'
+      - 'main.py'
+      - 'test_main.py'
+      - 'test_site.py'
+      - 'stars_cache.json'
+      - 'categories.json'
+      - '.github/workflows/pages.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'site/**'
+      - 'build_site.py'
+      - 'main.py'
+      - 'test_main.py'
+      - 'test_site.py'
+      - 'stars_cache.json'
+      - 'categories.json'
+      - '.github/workflows/pages.yml'
+  schedule:
+    - cron: '0 4 * * *' # 每天 UTC 04:00，即北京时间 12:00
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# Finish active deployments; a newer pending build will publish afterwards.
+concurrency:
+  group: pages-${{ github.event_name == 'pull_request' && github.ref || 'production' }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout website and current snapshot
+        uses: actions/checkout@v6
+        with:
+          # Scheduled deployment uses the latest snapshot committed to main.
+          ref: ${{ github.event_name == 'schedule' && 'main' || github.sha }}
+          persist-credentials: false
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Run offline tests
+        run: python -m unittest -v test_main.py test_site.py
+      - name: Check browser script
+        run: node --check site/app.js
+      - name: Generate static website
+        run: python build_site.py
+      - name: Upload website
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+  deploy:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-24.04
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
