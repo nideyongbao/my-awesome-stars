@@ -33,8 +33,8 @@ GPU 与 AI 芯片、互联通信、PyTorch/JAX 框架底座及其执行机制
 
 | Project | Description | Stars | Language |
 |---|---|---:|---|
-| [huggingface/transformers](https://github.com/huggingface/transformers) | 🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference an | 168399 | Python |
-| [pytorch/pytorch](https://github.com/pytorch/pytorch) | Tensors and Dynamic neural networks in Python with strong GPU acceleration | 105050 | Python |
+| [huggingface/transformers](https://github.com/huggingface/transformers) | 🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference an | 168432 | Python |
+| [pytorch/pytorch](https://github.com/pytorch/pytorch) | Tensors and Dynamic neural networks in Python with strong GPU acceleration | 105072 | Python |
 | [jinbooooom/OriginDL](https://github.com/jinbooooom/OriginDL) | Implement a Pytorch-like DL library in C++ from scratch, step by step | 396 | C++ |
 | [keith2018/TinyTorch](https://github.com/keith2018/TinyTorch) | A lightweight deep learning training framework implemented from scratch in C++, featuring a PyTorch-style API. | 234 | C++ |
 | [RightNow-AI/RightNow-GPU-Database](https://github.com/RightNow-AI/RightNow-GPU-Database) | Comprehensive GPU specifications database with 2,824 GPUs across NVIDIA, AMD, and Intel | 124 | N/A |
@@ -50,20 +50,20 @@ CUDA、Triton、CUTLASS、GEMM、FlashAttention、MoE 与算子融合优化
 
 | Project | Description | Stars | Language |
 |---|---|---:|---|
-| [Dao-AILab/flash-attention](https://github.com/Dao-AILab/flash-attention) | Fast and memory-efficient exact attention | 25233 | Python |
-| [triton-lang/triton](https://github.com/triton-lang/triton) | Development repository for the Triton language and compiler | 20499 | MLIR |
-| [deepseek-ai/FlashMLA](https://github.com/deepseek-ai/FlashMLA) | FlashMLA: Efficient Multi-head Latent Attention Kernels | 13225 | C++ |
-| [xlite-dev/LeetCUDA](https://github.com/xlite-dev/LeetCUDA) | An Open-source book with Modern CUDA learning Notes for Beginners - BF16/FP8/FP4, HGEMM, CuTe, Flash-Attention, etc. | 12140 | Cuda |
-| [facebookresearch/xformers](https://github.com/facebookresearch/xformers) | Hackable and optimized Transformers building blocks, supporting a composable construction. | 10574 | Python |
-| [linkedin/Liger-Kernel](https://github.com/linkedin/Liger-Kernel) | Efficient Triton Kernels for LLM Training | 6680 | Python |
-| [fla-org/flash-linear-attention](https://github.com/fla-org/flash-linear-attention) | 🚀 Efficient implementations for emerging model architectures | 6010 | Python |
+| [Dao-AILab/flash-attention](https://github.com/Dao-AILab/flash-attention) | Fast and memory-efficient exact attention | 25235 | Python |
+| [triton-lang/triton](https://github.com/triton-lang/triton) | Development repository for the Triton language and compiler | 20509 | MLIR |
+| [deepseek-ai/FlashMLA](https://github.com/deepseek-ai/FlashMLA) | FlashMLA: Efficient Multi-head Latent Attention Kernels | 13231 | C++ |
+| [xlite-dev/LeetCUDA](https://github.com/xlite-dev/LeetCUDA) | An Open-source book with Modern CUDA learning Notes for Beginners - BF16/FP8/FP4, HGEMM, CuTe, Flash-Attention, etc. | 12146 | Cuda |
+| [facebookresearch/xformers](https://github.com/facebookresearch/xformers) | Hackable and optimized Transformers building blocks, supporting a composable construction. | 10575 | Python |
+| [linkedin/Liger-Kernel](https://github.com/linkedin/Liger-Kernel) | Efficient Triton Kernels for LLM Training | 6682 | Python |
+| [fla-org/flash-linear-attention](https://github.com/fla-org/flash-linear-attention) | 🚀 Efficient implementations for emerging model architectures | 6011 | Python |
 | [stepfun-ai/Step-3.5-Flash](https://github.com/stepfun-ai/Step-3.5-Flash) | Fast, Sharp & Reliable Agentic Intelligence | 2090 | C++ |
 | [RightNow-AI/autokernel](https://github.com/RightNow-AI/autokernel) | Autoresearch for GPU kernels. Give it any PyTorch model, go to sleep, wake up to optimized Triton kernels. | 1615 | Python |
 | [IST-DASLab/marlin](https://github.com/IST-DASLab/marlin) | FP16xINT4 LLM inference kernel that can achieve near-ideal ~4x speedups up to medium batchsizes of 16-32 tokens. | 1174 | Python |
 | [zhuzilin/ring-flash-attention](https://github.com/zhuzilin/ring-flash-attention) | Ring attention implementation with flash attention | 1065 | Python |
 | [QwenLM/FlashQLA](https://github.com/QwenLM/FlashQLA) | high-performance linear attention kernel library built on TileLang | 744 | Python |
 | [hustvl/MoDA](https://github.com/hustvl/MoDA) | An hardware-aware Efficient Implementation for "Mixture-of-Depths Attention". | 279 | Python |
-| [mit-han-lab/ncu-report-skill](https://github.com/mit-han-lab/ncu-report-skill) |  | 267 | Python |
+| [mit-han-lab/ncu-report-skill](https://github.com/mit-han-lab/ncu-report-skill) |  | 269 | Python |
 | [open-lm-engine/coda-kernels](https://github.com/open-lm-engine/coda-kernels) | CODA: Rewriting Transformer Blocks as GEMM-Epilogue Programs | 258 | Python |
 | [RightNow-AI/qwen3.5-triton](https://github.com/RightNow-AI/qwen3.5-triton) | Pure Triton kernels for Qwen3.5-27B inference on NVIDIA B200 | 125 | Python |
 | [DefTruth/CUDA-Learn-Notes](https://github.com/DefTruth/CUDA-Learn-Notes) | 📚200+ Tensor/CUDA Cores Kernels, ⚡️flash-attn-mma, ⚡️hgemm with WMMA, MMA and CuTe (98%~100% TFLOPS of cuBLAS/FA2 🎉🎉). | 98 | Cuda |
@@ -84,19 +84,19 @@ CUDA、Triton、CUTLASS、GEMM、FlashAttention、MoE 与算子融合优化
 
 | Project | Description | Stars | Language |
 |---|---|---:|---|
-| [jingyaogong/minimind](https://github.com/jingyaogong/minimind) | 🧠 Train a 64M-parameter LLM from scratch in just 2h! | 64696 | Python |
-| [ray-project/ray](https://github.com/ray-project/ray) | Ray is an AI compute engine. Ray consists of a core distributed runtime and a set of AI Libraries for accelerating ML workloads. | 44173 | Python |
-| [NVIDIA/Megatron-LM](https://github.com/NVIDIA/Megatron-LM) | Ongoing research training transformer models at scale | 18309 | Python |
+| [jingyaogong/minimind](https://github.com/jingyaogong/minimind) | 🧠 Train a 64M-parameter LLM from scratch in just 2h! | 64746 | Python |
+| [ray-project/ray](https://github.com/ray-project/ray) | Ray is an AI compute engine. Ray consists of a core distributed runtime and a set of AI Libraries for accelerating ML workloads. | 44179 | Python |
+| [NVIDIA/Megatron-LM](https://github.com/NVIDIA/Megatron-LM) | Ongoing research training transformer models at scale | 18312 | Python |
 | [deepspeedai/DeepSpeedExamples](https://github.com/deepspeedai/DeepSpeedExamples) | Example models using DeepSpeed | 6849 | Python |
 | [KellerJordan/modded-nanogpt](https://github.com/KellerJordan/modded-nanogpt) | NanoGPT (124M) in 90 seconds | 6002 | Python |
-| [pytorch/torchtitan](https://github.com/pytorch/torchtitan) | A PyTorch native platform for training generative AI models | 5868 | Python |
+| [pytorch/torchtitan](https://github.com/pytorch/torchtitan) | A PyTorch native platform for training generative AI models | 5869 | Python |
 | [PKU-Alignment/align-anything](https://github.com/PKU-Alignment/align-anything) | Align Anything: Training All-modality Model with Feedback | 4669 | Python |
-| [OpenDCAI/DataFlex](https://github.com/OpenDCAI/DataFlex) | [NeurIPS 2026] DataFlex: A Unified Benchmark and Evaluation Platform for Data-Centric Training of Large Language Models | 3343 | Python |
+| [OpenDCAI/DataFlex](https://github.com/OpenDCAI/DataFlex) | [NeurIPS 2026] DataFlex: A Unified Benchmark and Evaluation Platform for Data-Centric Training of Large Language Models | 3360 | Python |
 | [huggingface/nanotron](https://github.com/huggingface/nanotron) | Minimalistic large language model 3D-parallelism training | 2851 | Python |
-| [qibin0506/Cortex](https://github.com/qibin0506/Cortex) | 从零构建大模型：从预训练到RLHF的完整实践 | 2702 | Python |
-| [huggingface/picotron](https://github.com/huggingface/picotron) | Minimalistic 4D-parallelism distributed training framework for education purpose | 2337 | Python |
+| [qibin0506/Cortex](https://github.com/qibin0506/Cortex) | 从零构建大模型：从预训练到RLHF的完整实践 | 2703 | Python |
+| [huggingface/picotron](https://github.com/huggingface/picotron) | Minimalistic 4D-parallelism distributed training framework for education purpose | 2336 | Python |
 | [Open-Reasoner-Zero/Open-Reasoner-Zero](https://github.com/Open-Reasoner-Zero/Open-Reasoner-Zero) | Official Repo for Open-Reasoner-Zero | 2100 | Python |
-| [NVIDIA-NeMo/Automodel](https://github.com/NVIDIA-NeMo/Automodel) | 🚀 Pytorch Distributed native training library for LLMs/VLMs with OOTB Hugging Face support | 1064 | Python |
+| [NVIDIA-NeMo/Automodel](https://github.com/NVIDIA-NeMo/Automodel) | 🚀 Pytorch Distributed native training library for LLMs/VLMs with OOTB Hugging Face support | 1066 | Python |
 | [DLYuanGod/MegaTrain](https://github.com/DLYuanGod/MegaTrain) |  | 708 | Python |
 | [stepfun-ai/SteptronOss](https://github.com/stepfun-ai/SteptronOss) | A lightweight, AI-native training framework for large language models. Designed for fast iteration, reproducible experiments, and modular configuration across S | 589 | Python |
 | [Victorwz/Open-Qwen2VL](https://github.com/Victorwz/Open-Qwen2VL) | [COLM 2025] Open-Qwen2VL: Compute-Efficient Pre-Training of Fully-Open Multimodal LLMs on Academic Resources | 318 | Python |
@@ -116,9 +116,9 @@ SFT、LoRA、QLoRA、PEFT、Adapter、数据 Packing 与微调框架
 
 | Project | Description | Stars | Language |
 |---|---|---:|---|
-| [unslothai/unsloth](https://github.com/unslothai/unsloth) | Local UI to run and train LLMs and diffusion models. Supports GGUF, MLX, Qwen3.8, DeepSeek-V4.1, MiniMax-H3, Gemma 4, FLUX and more. | 78890 | Python |
-| [hiyouga/LlamaFactory](https://github.com/hiyouga/LlamaFactory) | Unified Efficient Fine-Tuning of 100+ LLMs & VLMs (ACL 2024) | 75810 | Python |
-| [modelscope/ms-swift](https://github.com/modelscope/ms-swift) | Use PEFT or Full-parameter to CPT/SFT/DPO/GRPO 600+ LLMs (Qwen3.8, DeepSeek-V4, GLM-5.1, InternLM3, Llama4, ...) and 300+ MLLMs (Qwen3-VL, Qwen3-Omni, InternVL3 | 16004 | Python |
+| [unslothai/unsloth](https://github.com/unslothai/unsloth) | Local UI to run and train LLMs and diffusion models. Supports GGUF, MLX, Qwen3.8, DeepSeek-V4.1, MiniMax-H3, Gemma 4, FLUX and more. | 78935 | Python |
+| [hiyouga/LlamaFactory](https://github.com/hiyouga/LlamaFactory) | Unified Efficient Fine-Tuning of 100+ LLMs & VLMs (ACL 2024) | 75830 | Python |
+| [modelscope/ms-swift](https://github.com/modelscope/ms-swift) | Use PEFT or Full-parameter to CPT/SFT/DPO/GRPO 600+ LLMs (Qwen3.8, DeepSeek-V4, GLM-5.1, InternLM3, Llama4, ...) and 300+ MLLMs (Qwen3-VL, Qwen3-Omni, InternVL3 | 16011 | Python |
 | [imoneoi/openchat](https://github.com/imoneoi/openchat) | OpenChat: Advancing Open-source Language Models with Imperfect Data | 5481 | Python |
 | [adonis-dym/memory_reduced_optimizer](https://github.com/adonis-dym/memory_reduced_optimizer) |  | 529 | Python |
 | [nwind/llm-finetune](https://github.com/nwind/llm-finetune) | 大模型微调与部署指南 | 145 | HTML |
@@ -133,19 +133,19 @@ RLHF、RLVR、PPO、DPO、GRPO、奖励系统与后训练框架
 
 | Project | Description | Stars | Language |
 |---|---|---:|---|
-| [verl-project/verl](https://github.com/verl-project/verl) | verl/HybridFlow: A Flexible and Efficient RL Post-Training Framework  | 24087 | Python |
-| [huggingface/trl](https://github.com/huggingface/trl) | Train transformer language models with reinforcement learning. | 19643 | Python |
-| [vwxyzjn/cleanrl](https://github.com/vwxyzjn/cleanrl) | High-quality single file implementation of Deep Reinforcement Learning algorithms with research-friendly features (PPO, DQN, C51, DDPG, TD3, SAC, PPG) | 10622 | Python |
-| [OpenRLHF/OpenRLHF](https://github.com/OpenRLHF/OpenRLHF) | An Easy-to-use, Scalable and High-performance Agentic RL Framework based on Ray (PPO & DAPO & REINFORCE++ &  VLM & TIS & vLLM & Ray & Async  RL) | 10133 | Python |
-| [THUDM/slime](https://github.com/THUDM/slime) | slime is an LLM training framework for RL Scaling. | 8772 | Python |
-| [om-ai-lab/VLM-R1](https://github.com/om-ai-lab/VLM-R1) | Solve Visual Understanding with Reinforced VLMs | 6045 | Python |
+| [verl-project/verl](https://github.com/verl-project/verl) | verl/HybridFlow: A Flexible and Efficient RL Post-Training Framework  | 24097 | Python |
+| [huggingface/trl](https://github.com/huggingface/trl) | Train transformer language models with reinforcement learning. | 19654 | Python |
+| [vwxyzjn/cleanrl](https://github.com/vwxyzjn/cleanrl) | High-quality single file implementation of Deep Reinforcement Learning algorithms with research-friendly features (PPO, DQN, C51, DDPG, TD3, SAC, PPG) | 10626 | Python |
+| [OpenRLHF/OpenRLHF](https://github.com/OpenRLHF/OpenRLHF) | An Easy-to-use, Scalable and High-performance Agentic RL Framework based on Ray (PPO & DAPO & REINFORCE++ &  VLM & TIS & vLLM & Ray & Async  RL) | 10134 | Python |
+| [THUDM/slime](https://github.com/THUDM/slime) | slime is an LLM training framework for RL Scaling. | 8774 | Python |
+| [om-ai-lab/VLM-R1](https://github.com/om-ai-lab/VLM-R1) | Solve Visual Understanding with Reinforced VLMs | 6046 | Python |
 | [areal-project/AReaL](https://github.com/areal-project/AReaL) | The RL Bridge for LLM-based Agent Applications. Made Simple & Flexible. | 5889 | Python |
 | [hiyouga/EasyR1](https://github.com/hiyouga/EasyR1) | EasyR1: An Efficient, Scalable, Multi-Modality RL Training Framework based on veRL | 5209 | Python |
 | [alibaba/ROLL](https://github.com/alibaba/ROLL) | An Efficient and User-Friendly Scaling Library for Reinforcement Learning with Large Language Models | 3443 | Python |
-| [radixark/miles](https://github.com/radixark/miles) | Miles is an enterprise-facing reinforcement learning framework for LLM and VLM post-training, forked from and co-evolving with slime. | 3245 | Python |
+| [radixark/miles](https://github.com/radixark/miles) | Miles is an enterprise-facing reinforcement learning framework for LLM and VLM post-training, forked from and co-evolving with slime. | 3247 | Python |
 | [ChenmienTan/RL2](https://github.com/ChenmienTan/RL2) |  | 1323 | Python |
-| [NVIDIA-NeMo/labs-molt](https://github.com/NVIDIA-NeMo/labs-molt) | A scalable, agentic-first, and HuggingFace-native RL framework for research (9k lines). | 1209 | Python |
-| [Accio-Lab/Dressage](https://github.com/Accio-Lab/Dressage) | Scalable RL for Any Agent and Sandbox. | 814 | Python |
+| [NVIDIA-NeMo/labs-molt](https://github.com/NVIDIA-NeMo/labs-molt) | A scalable, agentic-first, and HuggingFace-native RL framework for research (9k lines). | 1210 | Python |
+| [Accio-Lab/Dressage](https://github.com/Accio-Lab/Dressage) | Scalable RL for Any Agent and Sandbox. | 815 | Python |
 | [MiroMindAI/MiroRL](https://github.com/MiroMindAI/MiroRL) | MiroRL is  an MCP-first reinforcement learning framework for deep research agent. | 249 | Python |
 | [Tencent/Wechat-YATT](https://github.com/Tencent/Wechat-YATT) |  | 85 | Python |
 | [DeepLink-org/LightRFT](https://github.com/DeepLink-org/LightRFT) | LightRFT (Light Reinforcement Fine-Tuning) is an advanced reinforcement learning fine-tuning framework designed for Large Language Models (LLMs) and Vision-Lang | 19 | Python |
@@ -160,16 +160,16 @@ vLLM、SGLang、TGI、TensorRT-LLM、llama.cpp 与推理服务架构
 
 | Project | Description | Stars | Language |
 |---|---|---:|---|
-| [ollama/ollama](https://github.com/ollama/ollama) | Get up and running with Kimi, GLM, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models. | 185497 | Go |
-| [ggml-org/llama.cpp](https://github.com/ggml-org/llama.cpp) | LLM inference in C/C++ | 133006 | C++ |
-| [vllm-project/vllm](https://github.com/vllm-project/vllm) | A high-throughput and memory-efficient inference and serving engine for LLMs | 96011 | Python |
-| [sgl-project/sglang](https://github.com/sgl-project/sglang) | SGLang is a high-performance serving framework for large language models and multimodal models. | 38328 | Python |
+| [ollama/ollama](https://github.com/ollama/ollama) | Get up and running with Kimi, GLM, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models. | 185617 | Go |
+| [ggml-org/llama.cpp](https://github.com/ggml-org/llama.cpp) | LLM inference in C/C++ | 133099 | C++ |
+| [vllm-project/vllm](https://github.com/vllm-project/vllm) | A high-throughput and memory-efficient inference and serving engine for LLMs | 96095 | Python |
+| [sgl-project/sglang](https://github.com/sgl-project/sglang) | SGLang is a high-performance serving framework for large language models and multimodal models. | 38356 | Python |
 | [liguodongiot/llm-action](https://github.com/liguodongiot/llm-action) | 本项目旨在分享大模型相关技术原理以及实战经验（大模型工程化、大模型应用落地） | 25237 | HTML |
-| [GeeeekExplorer/nano-vllm](https://github.com/GeeeekExplorer/nano-vllm) | Nano vLLM | 16247 | Python |
-| [sgl-project/mini-sglang](https://github.com/sgl-project/mini-sglang) | A compact implementation of SGLang, designed to demystify the complexities of modern LLM serving systems. | 5485 | Python |
-| [CalvinXKY/InfraTech](https://github.com/CalvinXKY/InfraTech) | 分享AI Infra知识&代码练习：PyTorch、vLLM/SGLang、slime/vime框架入门⚡️、性能加速🚀、大模型基础🧠、AI软硬件🔧等 | 4291 | Jupyter Notebook |
+| [GeeeekExplorer/nano-vllm](https://github.com/GeeeekExplorer/nano-vllm) | Nano vLLM | 16253 | Python |
+| [sgl-project/mini-sglang](https://github.com/sgl-project/mini-sglang) | A compact implementation of SGLang, designed to demystify the complexities of modern LLM serving systems. | 5493 | Python |
+| [CalvinXKY/InfraTech](https://github.com/CalvinXKY/InfraTech) | 分享AI Infra知识&代码练习：PyTorch、vLLM/SGLang、slime/vime框架入门⚡️、性能加速🚀、大模型基础🧠、AI软硬件🔧等 | 4295 | Jupyter Notebook |
 | [naklecha/simple-llm](https://github.com/naklecha/simple-llm) | ~1300 line, minimal, extensible LLM inference engine built from scratch. | 492 | Python |
-| [slwang-ustc/nano-vllm-v1](https://github.com/slwang-ustc/nano-vllm-v1) | Nano vLLM with vLLM v1's request scheduling strategy and chunked prefill | 103 | Python |
+| [slwang-ustc/nano-vllm-v1](https://github.com/slwang-ustc/nano-vllm-v1) | Nano vLLM with vLLM v1's request scheduling strategy and chunked prefill | 104 | Python |
 | [difey/nano-vllm-v1](https://github.com/difey/nano-vllm-v1) | Nano vLLM v1 engine | 15 | N/A |
 | [cosmoliu2002/nano-vllm-triton](https://github.com/cosmoliu2002/nano-vllm-triton) | Nano vLLM Triton | 14 | Python |
 | [RealJosephus/radix-turn-aware-nano-vllm](https://github.com/RealJosephus/radix-turn-aware-nano-vllm) | Radix Tree KV Cache with Turn-Aware Growth | 12 | Python |
@@ -180,7 +180,7 @@ vLLM、SGLang、TGI、TensorRT-LLM、llama.cpp 与推理服务架构
 
 | Project | Description | Stars | Language |
 |---|---|---:|---|
-| [NVIDIA/Model-Optimizer](https://github.com/NVIDIA/Model-Optimizer) | A unified library of SOTA model optimization techniques like quantization, distillation, pruning, neural architecture search, speculative decoding, etc. It comp | 5482 | Python |
+| [NVIDIA/Model-Optimizer](https://github.com/NVIDIA/Model-Optimizer) | A unified library of SOTA model optimization techniques like quantization, distillation, pruning, neural architecture search, speculative decoding, etc. It comp | 5492 | Python |
 
 ## <span id="vault-data-systems">Domain-数据系统 (8)</span>
 
@@ -192,12 +192,12 @@ vLLM、SGLang、TGI、TensorRT-LLM、llama.cpp 与推理服务架构
 
 | Project | Description | Stars | Language |
 |---|---|---:|---|
-| [opendatalab/MinerU](https://github.com/opendatalab/MinerU) | Transforms complex documents like PDFs and Office docs into LLM-ready markdown/JSON for your Agentic workflows. | 82902 | Python |
-| [awesomedata/awesome-public-datasets](https://github.com/awesomedata/awesome-public-datasets) | A topic-centric list of HQ open datasets. | 79888 | N/A |
-| [NanmiCoder/MediaCrawler](https://github.com/NanmiCoder/MediaCrawler) | 小红书笔记 \| 评论爬虫、抖音视频 \| 评论爬虫、快手视频 \| 评论爬虫、B 站视频 ｜ 评论爬虫、微博帖子 ｜ 评论爬虫、百度贴吧帖子 ｜ 百度贴吧评论回复爬虫  \| 知乎问答文章｜评论爬虫 | 69376 | Python |
-| [wechat-article/wechat-article-exporter](https://github.com/wechat-article/wechat-article-exporter) | 一款在线的 微信公众号文章批量下载 工具，支持导出阅读量与评论数据，无需搭建任何环境，可通过 在线网站 使用，支持 docker 私有化部署和 Cloudflare 部署。  支持下载各种文件格式，其中 HTML 格式可100%还原文章排版与样式。 | 13119 | TypeScript |
-| [cv-cat/Spider_XHS](https://github.com/cv-cat/Spider_XHS) | 小红书爬虫数据采集，小红书逆向，私信，直播，小红书全域运营解决方案 | 8333 | Python |
-| [cwjcw/xhs_douyin_content](https://github.com/cwjcw/xhs_douyin_content) | 自动抓取抖音和小红书创作者中心里的每条笔记/视频的播放，完播，点击，播放时长，点赞，分享，评论，收藏，主页访问，粉丝增量等互动数据 | 315 | Python |
+| [opendatalab/MinerU](https://github.com/opendatalab/MinerU) | Transforms complex documents like PDFs and Office docs into LLM-ready markdown/JSON for your Agentic workflows. | 82962 | Python |
+| [awesomedata/awesome-public-datasets](https://github.com/awesomedata/awesome-public-datasets) | A topic-centric list of HQ open datasets. | 79903 | N/A |
+| [NanmiCoder/MediaCrawler](https://github.com/NanmiCoder/MediaCrawler) | 小红书笔记 \| 评论爬虫、抖音视频 \| 评论爬虫、快手视频 \| 评论爬虫、B 站视频 ｜ 评论爬虫、微博帖子 ｜ 评论爬虫、百度贴吧帖子 ｜ 百度贴吧评论回复爬虫  \| 知乎问答文章｜评论爬虫 | 69740 | Python |
+| [wechat-article/wechat-article-exporter](https://github.com/wechat-article/wechat-article-exporter) | 一款在线的 微信公众号文章批量下载 工具，支持导出阅读量与评论数据，无需搭建任何环境，可通过 在线网站 使用，支持 docker 私有化部署和 Cloudflare 部署。  支持下载各种文件格式，其中 HTML 格式可100%还原文章排版与样式。 | 13121 | TypeScript |
+| [cv-cat/Spider_XHS](https://github.com/cv-cat/Spider_XHS) | 小红书爬虫数据采集，小红书逆向，私信，直播，小红书全域运营解决方案 | 8349 | Python |
+| [cwjcw/xhs_douyin_content](https://github.com/cwjcw/xhs_douyin_content) | 自动抓取抖音和小红书创作者中心里的每条笔记/视频的播放，完播，点击，播放时长，点赞，分享，评论，收藏，主页访问，粉丝增量等互动数据 | 317 | Python |
 | [yhslgg-arch/url-reader](https://github.com/yhslgg-arch/url-reader) | 智能网页内容读取器 - Claude Code Skill，支持微信公众号、小红书、今日头条等中国主流平台 | 188 | Python |
 | [OpenDCAI/Flash-MinerU](https://github.com/OpenDCAI/Flash-MinerU) | Ray-powered accelerator for MinerU, turning PDF → Markdown into a scalable, cluster-ready data infrastructure. 基于 Ray 的 MinerU 加速层，将 PDF → Markdown 构建为可扩展、面向集群的 | 72 | Python |
 
@@ -211,12 +211,12 @@ LLM 模型家族、Dense/MoE 架构、Attention、RoPE、Norm 与核心组件
 
 | Project | Description | Stars | Language |
 |---|---|---:|---|
-| [shiyu-coder/Kronos](https://github.com/shiyu-coder/Kronos) | Kronos: A Foundation Model for the Language of Financial Markets | 44740 | Python |
-| [wgwang/awesome-LLMs-In-China](https://github.com/wgwang/awesome-LLMs-In-China) | 中国大模型 | 6490 | N/A |
+| [shiyu-coder/Kronos](https://github.com/shiyu-coder/Kronos) | Kronos: A Foundation Model for the Language of Financial Markets | 45506 | Python |
+| [wgwang/awesome-LLMs-In-China](https://github.com/wgwang/awesome-LLMs-In-China) | 中国大模型 | 6489 | N/A |
 | [Duxiaoman-DI/XuanYuan](https://github.com/Duxiaoman-DI/XuanYuan) | 轩辕：度小满中文金融对话大模型 | 1325 | Python |
-| [wdndev/tiny-llm-zh](https://github.com/wdndev/tiny-llm-zh) | 从零实现一个小参数量中文大语言模型。 | 1094 | Python |
+| [wdndev/tiny-llm-zh](https://github.com/wdndev/tiny-llm-zh) | 从零实现一个小参数量中文大语言模型。 | 1095 | Python |
 | [wdndev/llama3-from-scratch-zh](https://github.com/wdndev/llama3-from-scratch-zh) | 从零实现一个 llama3 中文版 | 1064 | Jupyter Notebook |
-| [Emericen/tiny-qwen](https://github.com/Emericen/tiny-qwen) | A minimal PyTorch re-implementation of Qwen 3.8 | 454 | Python |
+| [Emericen/tiny-qwen](https://github.com/Emericen/tiny-qwen) | A minimal PyTorch re-implementation of Qwen 3.8 | 455 | Python |
 
 ### <span id="topic-model-multimodal-vlm">Model-Multimodal-VLM (14)</span>
 
@@ -224,12 +224,12 @@ VLM、VLA、视觉、音频、视频、多模态生成与理解，不再拆分�
 
 | Project | Description | Stars | Language |
 |---|---|---:|---|
-| [Comfy-Org/ComfyUI](https://github.com/Comfy-Org/ComfyUI) | The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface. The fastest local inference engine in the world. | 144375 | Python |
-| [ATH-MaaS/Pixelle-Video](https://github.com/ATH-MaaS/Pixelle-Video) | 🚀 AI 全自动短视频引擎 \| AI Fully Automated Short Video Engine | 29620 | Python |
-| [QwenLM/Qwen3-VL](https://github.com/QwenLM/Qwen3-VL) | Qwen3-VL is the multimodal large language model series developed by Qwen team, Alibaba Cloud. | 20152 | Jupyter Notebook |
-| [QuentinFuxa/WhisperLiveKit](https://github.com/QuentinFuxa/WhisperLiveKit) | Real-time, local speech-to-text with streaming ASR, speaker diarization, translation, and OpenAI/Deepgram-compatible APIs. | 11196 | Python |
-| [NVlabs/Sana](https://github.com/NVlabs/Sana) | SANA: Efficient High-Resolution Image Synthesis with Linear Diffusion Transformer | 9731 | Python |
-| [RanFeng/clipsketch-ai](https://github.com/RanFeng/clipsketch-ai) | 将视频瞬间转化为手绘故事 Turn Video Moments into Hand-Drawn Stories | 1876 | TypeScript |
+| [Comfy-Org/ComfyUI](https://github.com/Comfy-Org/ComfyUI) | The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface. The fastest local inference engine in the world. | 144516 | Python |
+| [ATH-MaaS/Pixelle-Video](https://github.com/ATH-MaaS/Pixelle-Video) | 🚀 AI 全自动短视频引擎 \| AI Fully Automated Short Video Engine | 29676 | Python |
+| [QwenLM/Qwen3-VL](https://github.com/QwenLM/Qwen3-VL) | Qwen3-VL is the multimodal large language model series developed by Qwen team, Alibaba Cloud. | 20155 | Jupyter Notebook |
+| [QuentinFuxa/WhisperLiveKit](https://github.com/QuentinFuxa/WhisperLiveKit) | Real-time, local speech-to-text with streaming ASR, speaker diarization, translation, and OpenAI/Deepgram-compatible APIs. | 11201 | Python |
+| [NVlabs/Sana](https://github.com/NVlabs/Sana) | SANA: Efficient High-Resolution Image Synthesis with Linear Diffusion Transformer | 9748 | Python |
+| [RanFeng/clipsketch-ai](https://github.com/RanFeng/clipsketch-ai) | 将视频瞬间转化为手绘故事 Turn Video Moments into Hand-Drawn Stories | 1877 | TypeScript |
 | [MoonshotAI/Kimi-VL](https://github.com/MoonshotAI/Kimi-VL) | Kimi-VL: Mixture-of-Experts Vision-Language Model for Multimodal Reasoning, Long-Context Understanding, and Strong Agent Capabilities | 1229 | N/A |
 | [TinyLLaVA/TinyLLaVA_Factory](https://github.com/TinyLLaVA/TinyLLaVA_Factory) | A Framework of Small-scale Large Multimodal Models | 1010 | Python |
 | [hkproj/pytorch-paligemma](https://github.com/hkproj/pytorch-paligemma) | Coding a Multimodal (Vision) Language Model from scratch in PyTorch with full explanation: https://www.youtube.com/watch?v=vAmKB7iPkWw | 637 | Python |
@@ -249,34 +249,34 @@ Agentic Loop、规划、记忆、多 Agent、RAG、Research Agent 与工作流�
 
 | Project | Description | Stars | Language |
 |---|---|---:|---|
-| [open-webui/open-webui](https://github.com/open-webui/open-webui) | User-friendly AI Interface (Supports Ollama, OpenAI API, ...) | 157421 | Python |
-| [langchain-ai/langchain](https://github.com/langchain-ai/langchain) | The agent engineering platform. | 148788 | Python |
-| [x1xhlol/system-prompts-and-models-of-ai-tools](https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools) | FULL Augment Code, Claude Code, Cluely, CodeBuddy, Comet, Cursor, Devin AI, Junie, Kiro, Leap.new, Lovable, Manus, NotionAI, Orchids.app, Perplexity, Poke, Qode | 144393 | N/A |
-| [Shubhamsaboo/awesome-llm-apps](https://github.com/Shubhamsaboo/awesome-llm-apps) | 100+ AI Agents, Agent Skills and RAG Apps - Free and Open Source. | 143608 | Python |
-| [karpathy/autoresearch](https://github.com/karpathy/autoresearch) | AI agents running research on single-GPU nanochat training automatically | 98967 | Python |
-| [datawhalechina/hello-agents](https://github.com/datawhalechina/hello-agents) | 📚 《从零开始构建智能体》——从零开始的智能体原理与实践教程 | 85523 | Python |
-| [shareAI-lab/learn-claude-code](https://github.com/shareAI-lab/learn-claude-code) | Bash is all you need -  A nano claude code–like 「agent harness」, built from 0 to 1 | 79642 | Python |
-| [FoundationAgents/MetaGPT](https://github.com/FoundationAgents/MetaGPT) | 🌟 The Multi-Agent Framework: First AI Software Company, Towards Natural Language Programming | 71110 | Python |
-| [ai-job-search-dev/ai-job-search](https://github.com/ai-job-search-dev/ai-job-search) | The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews | 68485 | Python |
-| [karpathy/nanochat](https://github.com/karpathy/nanochat) | The best ChatGPT that $100 can buy. | 59193 | Python |
-| [microsoft/qlib](https://github.com/microsoft/qlib) | Qlib is an AI-oriented Quant investment platform that aims to use AI tech to empower Quant Research, from exploring ideas to implementing productions. Qlib supp | 49881 | Python |
-| [danielmiessler/Fabric](https://github.com/danielmiessler/Fabric) | Fabric is an open-source framework for augmenting humans using AI. It provides a modular system for solving specific problems using a crowdsourced set of AI pro | 44516 | Go |
-| [666ghj/BettaFish](https://github.com/666ghj/BettaFish) | 微舆：人人可用的多Agent舆情分析助手，打破信息茧房，还原舆情原貌，预测未来走向，辅助决策！从0实现，不依赖任何框架。 | 42559 | Python |
-| [lfnovo/open-notebook](https://github.com/lfnovo/open-notebook) | An Open Source implementation of Notebook LM with more flexibility and features | 41171 | TypeScript |
-| [chatchat-space/Langchain-Chatchat](https://github.com/chatchat-space/Langchain-Chatchat) | Langchain-Chatchat（原Langchain-ChatGLM）基于 Langchain 与 ChatGLM, Qwen 与 Llama 等语言模型的 RAG 与 Agent 应用 \| Langchain-Chatchat (formerly langchain-ChatGLM), local knowl | 38712 | Python |
-| [JCodesMore/ai-website-cloner-template](https://github.com/JCodesMore/ai-website-cloner-template) | Clone any website with one command using AI coding agents | 38304 | TypeScript |
-| [continuedev/continue](https://github.com/continuedev/continue) | open-source coding agent | 36386 | TypeScript |
-| [Alibaba-NLP/DeepResearch](https://github.com/Alibaba-NLP/DeepResearch) | Tongyi Deep Research, the Leading Open-source Deep Research Agent | 20091 | Python |
-| [dataelement/bisheng](https://github.com/dataelement/bisheng) | BISHENG is an open LLM devops platform for next generation Enterprise AI applications. Powerful and comprehensive features include: GenAI workflow, RAG, Agent,  | 12098 | Python |
-| [uditgoenka/autoresearch](https://github.com/uditgoenka/autoresearch) | Claude Autoresearch Skill — Autonomous goal-directed iteration for Claude Code. Inspired by Karpathy's autoresearch. Modify → Verify → Keep/Discard → Repeat for | 6781 | Shell |
-| [shareAI-lab/Kode-CLI](https://github.com/shareAI-lab/Kode-CLI) | Kode CLI — Design for post-human workflows. One unit agent for every human & computer task. | 5235 | TypeScript |
+| [open-webui/open-webui](https://github.com/open-webui/open-webui) | User-friendly AI Interface (Supports Ollama, OpenAI API, ...) | 157496 | Python |
+| [langchain-ai/langchain](https://github.com/langchain-ai/langchain) | The agent engineering platform. | 148850 | Python |
+| [x1xhlol/system-prompts-and-models-of-ai-tools](https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools) | FULL Augment Code, Claude Code, Cluely, CodeBuddy, Comet, Cursor, Devin AI, Junie, Kiro, Leap.new, Lovable, Manus, NotionAI, Orchids.app, Perplexity, Poke, Qode | 144413 | N/A |
+| [Shubhamsaboo/awesome-llm-apps](https://github.com/Shubhamsaboo/awesome-llm-apps) | 100+ AI Agents, Agent Skills and RAG Apps - Free and Open Source. | 143683 | Python |
+| [karpathy/autoresearch](https://github.com/karpathy/autoresearch) | AI agents running research on single-GPU nanochat training automatically | 99033 | Python |
+| [datawhalechina/hello-agents](https://github.com/datawhalechina/hello-agents) | 📚 《从零开始构建智能体》——从零开始的智能体原理与实践教程 | 85659 | Python |
+| [shareAI-lab/learn-claude-code](https://github.com/shareAI-lab/learn-claude-code) | Bash is all you need -  A nano claude code–like 「agent harness」, built from 0 to 1 | 79709 | Python |
+| [FoundationAgents/MetaGPT](https://github.com/FoundationAgents/MetaGPT) | 🌟 The Multi-Agent Framework: First AI Software Company, Towards Natural Language Programming | 71128 | Python |
+| [ai-job-search-dev/ai-job-search](https://github.com/ai-job-search-dev/ai-job-search) | The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews | 68775 | Python |
+| [karpathy/nanochat](https://github.com/karpathy/nanochat) | The best ChatGPT that $100 can buy. | 59524 | Python |
+| [microsoft/qlib](https://github.com/microsoft/qlib) | Qlib is an AI-oriented Quant investment platform that aims to use AI tech to empower Quant Research, from exploring ideas to implementing productions. Qlib supp | 49921 | Python |
+| [danielmiessler/Fabric](https://github.com/danielmiessler/Fabric) | Fabric is an open-source framework for augmenting humans using AI. It provides a modular system for solving specific problems using a crowdsourced set of AI pro | 44525 | Go |
+| [666ghj/BettaFish](https://github.com/666ghj/BettaFish) | 微舆：人人可用的多Agent舆情分析助手，打破信息茧房，还原舆情原貌，预测未来走向，辅助决策！从0实现，不依赖任何框架。 | 42564 | Python |
+| [lfnovo/open-notebook](https://github.com/lfnovo/open-notebook) | An Open Source implementation of Notebook LM with more flexibility and features | 41314 | TypeScript |
+| [chatchat-space/Langchain-Chatchat](https://github.com/chatchat-space/Langchain-Chatchat) | Langchain-Chatchat（原Langchain-ChatGLM）基于 Langchain 与 ChatGLM, Qwen 与 Llama 等语言模型的 RAG 与 Agent 应用 \| Langchain-Chatchat (formerly langchain-ChatGLM), local knowl | 38713 | Python |
+| [JCodesMore/ai-website-cloner-template](https://github.com/JCodesMore/ai-website-cloner-template) | Clone any website with one command using AI coding agents | 38390 | TypeScript |
+| [continuedev/continue](https://github.com/continuedev/continue) | open-source coding agent | 36397 | TypeScript |
+| [Alibaba-NLP/DeepResearch](https://github.com/Alibaba-NLP/DeepResearch) | Tongyi Deep Research, the Leading Open-source Deep Research Agent | 20094 | Python |
+| [dataelement/bisheng](https://github.com/dataelement/bisheng) | BISHENG is an open LLM devops platform for next generation Enterprise AI applications. Powerful and comprehensive features include: GenAI workflow, RAG, Agent,  | 12103 | Python |
+| [uditgoenka/autoresearch](https://github.com/uditgoenka/autoresearch) | Claude Autoresearch Skill — Autonomous goal-directed iteration for Claude Code. Inspired by Karpathy's autoresearch. Modify → Verify → Keep/Discard → Repeat for | 6785 | Shell |
+| [shareAI-lab/Kode-CLI](https://github.com/shareAI-lab/Kode-CLI) | Kode CLI — Design for post-human workflows. One unit agent for every human & computer task. | 5236 | TypeScript |
 | [mangiucugna/json_repair](https://github.com/mangiucugna/json_repair) | Repair malformed JSON from LLMs, APIs, logs, and user input in Python. | 5129 | Python |
-| [leo-lilinxiao/codex-autoresearch](https://github.com/leo-lilinxiao/codex-autoresearch) | Codex Autoresearch Skill — A self-directed iterative system for Codex that continuously cycles through: modify, verify, retain or discard, and repeat indefinite | 3081 | Python |
-| [Anning01/AIMedia](https://github.com/Anning01/AIMedia) | AIMedia 是一款自动抓取热点，AI创作文章，自动发布的集成软件。支持头条，小红书，公众号等 | 2551 | TypeScript |
-| [RAIT-09/obsidian-agent-client](https://github.com/RAIT-09/obsidian-agent-client) | Bring AI agents into Obsidian via Agent Client Protocol (ACP), such as Claude Code, Codex and Gemini CLI. | 2466 | TypeScript |
+| [leo-lilinxiao/codex-autoresearch](https://github.com/leo-lilinxiao/codex-autoresearch) | Codex Autoresearch Skill — A self-directed iterative system for Codex that continuously cycles through: modify, verify, retain or discard, and repeat indefinite | 3091 | Python |
+| [Anning01/AIMedia](https://github.com/Anning01/AIMedia) | AIMedia 是一款自动抓取热点，AI创作文章，自动发布的集成软件。支持头条，小红书，公众号等 | 2558 | TypeScript |
+| [RAIT-09/obsidian-agent-client](https://github.com/RAIT-09/obsidian-agent-client) | Bring AI agents into Obsidian via Agent Client Protocol (ACP), such as Claude Code, Codex and Gemini CLI. | 2467 | TypeScript |
 | [MeetKai/functionary](https://github.com/MeetKai/functionary) | Chat language model that can use tools and interpret the results | 1593 | Python |
 | [study8677/repobrain](https://github.com/study8677/repobrain) | 🧠 RepoBrain (formerly Antigravity) — Give your repo a brain. ChatGPT for your codebase: works in Claude Code, Cursor, Codex, Windsurf & more. | 1356 | Python |
-| [china-qijizhifeng/agentic-harness-engineering](https://github.com/china-qijizhifeng/agentic-harness-engineering) | Official AHE code — Agentic Harness Engineering: observability-driven automatic evolution of coding-agent harnesses (concurrent w/ meta-harness). NexAU-AHE reac | 956 | Python |
+| [china-qijizhifeng/agentic-harness-engineering](https://github.com/china-qijizhifeng/agentic-harness-engineering) | Official AHE code — Agentic Harness Engineering: observability-driven automatic evolution of coding-agent harnesses (concurrent w/ meta-harness). NexAU-AHE reac | 958 | Python |
 | [PolarSeeker/OpenSeeker](https://github.com/PolarSeeker/OpenSeeker) | OpenSeeker: A search agent with open-source data and models | 783 | Python |
 | [microsoft/Orchard-Agentic](https://github.com/microsoft/Orchard-Agentic) | Orchard-Agentic is a collection of open-source work on agentic modeling | 555 | Python |
 | [vibesurf-ai/VibeSurf](https://github.com/vibesurf-ai/VibeSurf) | A powerful browser assistant for vibe surfing 一个开源的AI浏览器智能助手 | 482 | Python |
@@ -289,11 +289,11 @@ Agentic Loop、规划、记忆、多 Agent、RAG、Research Agent 与工作流�
 
 | Project | Description | Stars | Language |
 |---|---|---:|---|
-| [PDFMathTranslate/PDFMathTranslate](https://github.com/PDFMathTranslate/PDFMathTranslate) | [EMNLP 2025 Demo] PDF scientific paper translation with preserved formats - 基于 AI 完整保留排版的 PDF 文档全文双语翻译，支持 Google/DeepL/Ollama/OpenAI 等服务，提供 CLI/GUI/MCP/Docker/Z | 38077 | Python |
-| [xpzouying/xiaohongshu-mcp](https://github.com/xpzouying/xiaohongshu-mcp) | MCP for xiaohongshu.com | 16692 | Go |
-| [idosal/git-mcp](https://github.com/idosal/git-mcp) | Put an end to code hallucinations! GitMCP is a free, open-source, remote MCP server for any GitHub project | 8500 | TypeScript |
-| [agent-infra/sandbox](https://github.com/agent-infra/sandbox) | All-in-One Sandbox for AI Agents that combines Browser, Shell, File, MCP and VSCode Server in a single Docker container. | 6257 | Python |
-| [iFurySt/RedNote-MCP](https://github.com/iFurySt/RedNote-MCP) | 🚀MCP server for accessing RedNote(XiaoHongShu, xhs). | 1127 | TypeScript |
+| [PDFMathTranslate/PDFMathTranslate](https://github.com/PDFMathTranslate/PDFMathTranslate) | [EMNLP 2025 Demo] PDF scientific paper translation with preserved formats - 基于 AI 完整保留排版的 PDF 文档全文双语翻译，支持 Google/DeepL/Ollama/OpenAI 等服务，提供 CLI/GUI/MCP/Docker/Z | 38100 | Python |
+| [xpzouying/xiaohongshu-mcp](https://github.com/xpzouying/xiaohongshu-mcp) | MCP for xiaohongshu.com | 16729 | Go |
+| [idosal/git-mcp](https://github.com/idosal/git-mcp) | Put an end to code hallucinations! GitMCP is a free, open-source, remote MCP server for any GitHub project | 8499 | TypeScript |
+| [agent-infra/sandbox](https://github.com/agent-infra/sandbox) | All-in-One Sandbox for AI Agents that combines Browser, Shell, File, MCP and VSCode Server in a single Docker container. | 6258 | Python |
+| [iFurySt/RedNote-MCP](https://github.com/iFurySt/RedNote-MCP) | 🚀MCP server for accessing RedNote(XiaoHongShu, xhs). | 1128 | TypeScript |
 | [instavm/open-skills](https://github.com/instavm/open-skills) | OpenSkills: Run Claude Skills Locally using any LLM | 451 | Python |
 | [AI-QL/chat-ui](https://github.com/AI-QL/chat-ui) | Single-File AI Chatbot UI with Multimodal & MCP Support: An All-in-One HTML File for a Streamlined Chatbot Conversational Interface | 97 | HTML |
 | [jswortz/antigravity-claude-skills](https://github.com/jswortz/antigravity-claude-skills) |  | 8 | Python |
@@ -308,14 +308,14 @@ Agentic Loop、规划、记忆、多 Agent、RAG、Research Agent 与工作流�
 
 | Project | Description | Stars | Language |
 |---|---|---:|---|
-| [DigitalPlatDev/FreeDomain](https://github.com/DigitalPlatDev/FreeDomain) | Free domain registration and practical DNS learning resources for everyone. | 206614 | Markdown |
-| [slidevjs/slidev](https://github.com/slidevjs/slidev) | Presentation Slides for Developers | 49310 | TypeScript |
-| [vnpy/vnpy](https://github.com/vnpy/vnpy) | 基于Python的开源量化交易平台开发框架 | 46171 | Python |
-| [DayuanJiang/next-ai-draw-io](https://github.com/DayuanJiang/next-ai-draw-io) | Draw and edit draw.io diagrams by chatting with an AI. Web app, desktop app, and an MCP server for Claude Code, Cursor, Codex and VS Code. | 36530 | TypeScript |
-| [komi-store/komi-store](https://github.com/komi-store/komi-store) | 🩵 A free, open-source app store for developers' releases on GitHub, Codeberg & Forgejo — browse, discover, and install apps with one click. Formerly GitHub Stor | 20179 | Kotlin |
+| [DigitalPlatDev/FreeDomain](https://github.com/DigitalPlatDev/FreeDomain) | Free domain registration and practical DNS learning resources for everyone. | 206735 | Markdown |
+| [slidevjs/slidev](https://github.com/slidevjs/slidev) | Presentation Slides for Developers | 49322 | TypeScript |
+| [vnpy/vnpy](https://github.com/vnpy/vnpy) | 基于Python的开源量化交易平台开发框架 | 46188 | Python |
+| [DayuanJiang/next-ai-draw-io](https://github.com/DayuanJiang/next-ai-draw-io) | Draw and edit draw.io diagrams by chatting with an AI. Web app, desktop app, and an MCP server for Claude Code, Cursor, Codex and VS Code. | 36548 | TypeScript |
+| [komi-store/komi-store](https://github.com/komi-store/komi-store) | 🩵 A free, open-source app store for developers' releases on GitHub, Codeberg & Forgejo — browse, discover, and install apps with one click. Formerly GitHub Stor | 20224 | Kotlin |
 | [alshedivat/al-folio](https://github.com/alshedivat/al-folio) | A beautiful, simple, clean, and responsive Jekyll theme for academics | 16289 | HTML |
-| [jnsahaj/tweakcn](https://github.com/jnsahaj/tweakcn) | A visual no-code theme editor for shadcn/ui components | 10498 | TypeScript |
-| [gamosoft/NoteDiscovery](https://github.com/gamosoft/NoteDiscovery) | Your Self-Hosted Knowledge Base | 2862 | JavaScript |
+| [jnsahaj/tweakcn](https://github.com/jnsahaj/tweakcn) | A visual no-code theme editor for shadcn/ui components | 10502 | TypeScript |
+| [gamosoft/NoteDiscovery](https://github.com/gamosoft/NoteDiscovery) | Your Self-Hosted Knowledge Base | 2867 | JavaScript |
 | [dqbd/tiktokenizer](https://github.com/dqbd/tiktokenizer) | Online playground for OpenAPI tokenizers | 1715 | TypeScript |
 | [hezhizheng/go-wxpush](https://github.com/hezhizheng/go-wxpush) | 极简且免费的微信消息推送服务 (基于golang) | 1663 | Go |
 | [YangWang92/remote-perfetto](https://github.com/YangWang92/remote-perfetto) |  | 16 | Python |
@@ -330,10 +330,10 @@ Code Agent、AI Coding、Skills、Harness、IDE 与人机协作开发流程
 
 | Project | Description | Stars | Language |
 |---|---|---:|---|
-| [rtk-ai/rtk](https://github.com/rtk-ai/rtk) | CLI proxy that reduces LLM token consumption by 60-90% on common dev commands. Single Rust binary, zero dependencies | 85154 | Rust |
-| [google-labs-code/design.md](https://github.com/google-labs-code/design.md) | A format specification for describing a visual identity to coding agents. DESIGN.md gives agents a persistent, structured understanding of a design system. | 28679 | TypeScript |
-| [chenhg5/cc-connect](https://github.com/chenhg5/cc-connect) | Bridge local AI coding agents (Claude Code, Cursor, Gemini CLI, Codex) to messaging platforms (Feishu/Lark, DingTalk, Slack, Telegram, Discord, LINE, WeChat Wor | 16185 | Go |
-| [1rgs/nanocode](https://github.com/1rgs/nanocode) | Minimal Claude Code alternative. Single Python file, zero dependencies, ~250 lines. | 2793 | Python |
+| [rtk-ai/rtk](https://github.com/rtk-ai/rtk) | CLI proxy that reduces LLM token consumption by 60-90% on common dev commands. Single Rust binary, zero dependencies | 85249 | Rust |
+| [google-labs-code/design.md](https://github.com/google-labs-code/design.md) | A format specification for describing a visual identity to coding agents. DESIGN.md gives agents a persistent, structured understanding of a design system. | 28683 | TypeScript |
+| [chenhg5/cc-connect](https://github.com/chenhg5/cc-connect) | Bridge local AI coding agents (Claude Code, Cursor, Gemini CLI, Codex) to messaging platforms (Feishu/Lark, DingTalk, Slack, Telegram, Discord, LINE, WeChat Wor | 16201 | Go |
+| [1rgs/nanocode](https://github.com/1rgs/nanocode) | Minimal Claude Code alternative. Single Python file, zero dependencies, ~250 lines. | 2791 | Python |
 | [CloudAI-X/claude-workflow-v2](https://github.com/CloudAI-X/claude-workflow-v2) | Universal Claude Code workflow plugin with agents, skills, hooks, and commands | 1421 | Python |
 | [jokemon/antiPM-Workflow](https://github.com/jokemon/antiPM-Workflow) | A collection of Antigravity workflows for Product Managers. (产品经理专属的 Antigravity 工作流合集) | 30 | N/A |
 | [ChenZiHong-Gavin/weekly-vibe-coding](https://github.com/ChenZiHong-Gavin/weekly-vibe-coding) | 用提示词实现一百个idea | 27 | TypeScript |
@@ -345,22 +345,22 @@ Obsidian、研究工作流、自动化、Git、CLI、编程语言与内容处理
 
 | Project | Description | Stars | Language |
 |---|---|---:|---|
-| [tw93/Mole](https://github.com/tw93/Mole) | 🐹 Keep your Mac and PC clean, light, and running like new. Fast open-source CLI, plus native Mac and Windows apps. | 73478 | Shell |
-| [psf/black](https://github.com/psf/black) | The uncompromising Python code formatter | 42090 | Python |
-| [lbjlaq/Antigravity-Manager](https://github.com/lbjlaq/Antigravity-Manager) | Professional Antigravity Account Manager & Switcher. One-click seamless account switching for Antigravity Tools. Built with Tauri v2 + React (Rust).专业的 Antigrav | 32737 | Rust |
-| [newsnext/newsnow](https://github.com/newsnext/newsnow) | Elegant reading of real-time and hottest news | 22198 | TypeScript |
-| [githubnext/monaspace](https://github.com/githubnext/monaspace) | An innovative superfamily of fonts for code | 19770 | Shell |
-| [rendercv/rendercv](https://github.com/rendercv/rendercv) | Resume builder for academics and engineers | 17879 | Python |
-| [iamgio/quarkdown](https://github.com/iamgio/quarkdown) | 🪐 Markdown with superpowers: from ideas to papers, presentations, websites, books, and knowledge bases. | 16344 | Kotlin |
-| [VERT-sh/VERT](https://github.com/VERT-sh/VERT) | The next-generation file converter. Open source, fully local* and free forever. | 16190 | TypeScript |
-| [dreammis/social-auto-upload](https://github.com/dreammis/social-auto-upload) | 自动化上传视频到社交媒体：抖音、小红书、视频号、tiktok、youtube、bilibili | 15979 | Python |
-| [funstory-ai/BabelDOC](https://github.com/funstory-ai/BabelDOC) | Yet Another Document Translator | 9793 | Python |
-| [Diorser/LiteMonitor](https://github.com/Diorser/LiteMonitor) | 一款轻量级、高度可定制的 Windows桌面和任务栏硬件性能监控工具，支持监测 CPU、GPU、内存、磁盘、网速、FPS 计数、插件扩展及内存清理。A lightweight, customizable hardware monitor for the Windows desktop & taskbar. Featur | 6809 | C# |
-| [axtonliu/axton-obsidian-visual-skills](https://github.com/axtonliu/axton-obsidian-visual-skills) | Visual Skills Pack for Obsidian: generate Canvas, Excalidraw, and Mermaid diagrams from text with Claude Code | 3673 | N/A |
-| [op7418/Youtube-clipper-skill](https://github.com/op7418/Youtube-clipper-skill) |  | 2269 | Python |
+| [tw93/Mole](https://github.com/tw93/Mole) | 🐹 Keep your Mac and PC clean, light, and running like new. Fast open-source CLI, plus native Mac and Windows apps. | 73567 | Shell |
+| [psf/black](https://github.com/psf/black) | The uncompromising Python code formatter | 42094 | Python |
+| [lbjlaq/Antigravity-Manager](https://github.com/lbjlaq/Antigravity-Manager) | Professional Antigravity Account Manager & Switcher. One-click seamless account switching for Antigravity Tools. Built with Tauri v2 + React (Rust).专业的 Antigrav | 32761 | Rust |
+| [newsnext/newsnow](https://github.com/newsnext/newsnow) | Elegant reading of real-time and hottest news | 22208 | TypeScript |
+| [githubnext/monaspace](https://github.com/githubnext/monaspace) | An innovative superfamily of fonts for code | 19779 | Shell |
+| [rendercv/rendercv](https://github.com/rendercv/rendercv) | Resume builder for academics and engineers | 17883 | Python |
+| [iamgio/quarkdown](https://github.com/iamgio/quarkdown) | 🪐 Markdown with superpowers: from ideas to papers, presentations, websites, books, and knowledge bases. | 16346 | Kotlin |
+| [VERT-sh/VERT](https://github.com/VERT-sh/VERT) | The next-generation file converter. Open source, fully local* and free forever. | 16194 | TypeScript |
+| [dreammis/social-auto-upload](https://github.com/dreammis/social-auto-upload) | 自动化上传视频到社交媒体：抖音、小红书、视频号、tiktok、youtube、bilibili | 16008 | Python |
+| [funstory-ai/BabelDOC](https://github.com/funstory-ai/BabelDOC) | Yet Another Document Translator | 9801 | Python |
+| [Diorser/LiteMonitor](https://github.com/Diorser/LiteMonitor) | 一款轻量级、高度可定制的 Windows桌面和任务栏硬件性能监控工具，支持监测 CPU、GPU、内存、磁盘、网速、FPS 计数、插件扩展及内存清理。A lightweight, customizable hardware monitor for the Windows desktop & taskbar. Featur | 6826 | C# |
+| [axtonliu/axton-obsidian-visual-skills](https://github.com/axtonliu/axton-obsidian-visual-skills) | Visual Skills Pack for Obsidian: generate Canvas, Excalidraw, and Mermaid diagrams from text with Claude Code | 3674 | N/A |
+| [op7418/Youtube-clipper-skill](https://github.com/op7418/Youtube-clipper-skill) |  | 2271 | Python |
 | [Lulzx/tinypdf](https://github.com/Lulzx/tinypdf) | Minimal PDF creation library. <400 LOC, zero dependencies, makes real PDFs. | 1927 | TypeScript |
-| [OpenGithubs/github-daily-rank](https://github.com/OpenGithubs/github-daily-rank) | Github开源项目:每天📈飙升榜 top10,每天早上8:30更新 | 1319 | N/A |
-| [PKM-er/awesome-obsidian-zh](https://github.com/PKM-er/awesome-obsidian-zh) | Obsidian 优秀中文插件、主题与资源 | 774 | N/A |
+| [OpenGithubs/github-daily-rank](https://github.com/OpenGithubs/github-daily-rank) | Github开源项目:每天📈飙升榜 top10,每天早上8:30更新 | 1321 | N/A |
+| [PKM-er/awesome-obsidian-zh](https://github.com/PKM-er/awesome-obsidian-zh) | Obsidian 优秀中文插件、主题与资源 | 777 | N/A |
 | [zimya/zhihu_obsidian](https://github.com/zimya/zhihu_obsidian) | Zhihu on Obsidian \| 知乎 Obsidian 插件 | 287 | TypeScript |
 | [simwy/Side-Markdown](https://github.com/simwy/Side-Markdown) | A sleek edge-mounted Markdown editor—accessible yet non-intrusive. Full support for headings, lists & code blocks, real-time rendering, and seamless full-screen | 4 | TypeScript |
 
@@ -388,20 +388,20 @@ nideyongbao 名下的个人代码、实验、训练、部署、环境与数据�
 
 | Project | Description | Stars | Language |
 |---|---|---:|---|
-| [harvard-edge/cs249r_book](https://github.com/harvard-edge/cs249r_book) | Machine Learning Systems: Foundations, Scaling, Agentic AI, and Physical AI (Vols I–IV) • Harvard CS249r \| https://mlsysbook.ai | 29752 | Python |
-| [WangRongsheng/awesome-LLM-resources](https://github.com/WangRongsheng/awesome-LLM-resources) | 🧑‍🚀 全世界最好的LLM资料总结（多模态生成、Agent、辅助编程、AI审稿、数据处理、模型训练、模型推理、o1 模型、MCP、小语言模型、视觉语言模型） \| Summary of the world's best LLM resources.  | 9056 | N/A |
-| [itcharge/AlgoNote](https://github.com/itcharge/AlgoNote) | ⛽️「算法通关手册」：从零开始的「算法与数据结构」学习教程，200 道「算法面试热门题目」，1000+ 道「LeetCode 题目解析」，持续更新中！ | 7846 | Python |
-| [zhaochenyang20/Awesome-ML-SYS-Tutorial](https://github.com/zhaochenyang20/Awesome-ML-SYS-Tutorial) | My learning notes for ML SYS. | 7624 | HTML |
+| [harvard-edge/cs249r_book](https://github.com/harvard-edge/cs249r_book) | Machine Learning Systems: Foundations, Scaling, Agentic AI, and Physical AI (Vols I–IV) • Harvard CS249r \| https://mlsysbook.ai | 29769 | Python |
+| [WangRongsheng/awesome-LLM-resources](https://github.com/WangRongsheng/awesome-LLM-resources) | 🧑‍🚀 全世界最好的LLM资料总结（多模态生成、Agent、辅助编程、AI审稿、数据处理、模型训练、模型推理、o1 模型、MCP、小语言模型、视觉语言模型） \| Summary of the world's best LLM resources.  | 9062 | N/A |
+| [itcharge/AlgoNote](https://github.com/itcharge/AlgoNote) | ⛽️「算法通关手册」：从零开始的「算法与数据结构」学习教程，200 道「算法面试热门题目」，1000+ 道「LeetCode 题目解析」，持续更新中！ | 7845 | Python |
+| [zhaochenyang20/Awesome-ML-SYS-Tutorial](https://github.com/zhaochenyang20/Awesome-ML-SYS-Tutorial) | My learning notes for ML SYS. | 7629 | HTML |
 | [xlite-dev/Awesome-LLM-Inference](https://github.com/xlite-dev/Awesome-LLM-Inference) | 📚A curated list of Awesome LLM/VLM Inference Papers with Codes: Flash-Attention, Paged-Attention, WINT8/4, Parallelism, etc.🎉 | 5542 | Python |
-| [changyeyu/LLM-RL-Visualized](https://github.com/changyeyu/LLM-RL-Visualized) | 🌟100+ 原创 LLM / RL 原理图📚，《大模型算法》作者巨献！💥（100+  LLM/RL Algorithm Maps ） | 4984 | Python |
-| [walkinglabs/hands-on-modern-rl](https://github.com/walkinglabs/hands-on-modern-rl) | 🚀 An open-source, hands-on curriculum bridging the gap from basic RL concepts to LLM alignment, RLVR, and advanced Agentic systems.  | 4836 | Jupyter Notebook |
-| [ginobefun/BestBlogs](https://github.com/ginobefun/BestBlogs) | bestblogs.dev - 汇集顶级编程、人工智能、产品、科技文章，大语言模型摘要评分辅助阅读，探索编程和技术未来 | 4070 | TypeScript |
+| [changyeyu/LLM-RL-Visualized](https://github.com/changyeyu/LLM-RL-Visualized) | 🌟100+ 原创 LLM / RL 原理图📚，《大模型算法》作者巨献！💥（100+  LLM/RL Algorithm Maps ） | 4988 | Python |
+| [walkinglabs/hands-on-modern-rl](https://github.com/walkinglabs/hands-on-modern-rl) | 🚀 An open-source, hands-on curriculum bridging the gap from basic RL concepts to LLM alignment, RLVR, and advanced Agentic systems.  | 4839 | Jupyter Notebook |
+| [ginobefun/BestBlogs](https://github.com/ginobefun/BestBlogs) | bestblogs.dev - 汇集顶级编程、人工智能、产品、科技文章，大语言模型摘要评分辅助阅读，探索编程和技术未来 | 4072 | TypeScript |
 | [wyf3/llm_related](https://github.com/wyf3/llm_related) | 复现大模型相关算法及一些学习记录 | 3564 | Python |
-| [caomaolufei/AIInfraGuide](https://github.com/caomaolufei/AIInfraGuide) | AI Infra 全栈从0入门学习资料：https://caomaolufei.github.io/AIInfraGuide/ | 3059 | Astro |
+| [caomaolufei/AIInfraGuide](https://github.com/caomaolufei/AIInfraGuide) | AI Infra 全栈从0入门学习资料：https://caomaolufei.github.io/AIInfraGuide/ | 3083 | Astro |
 | [CoinCheung/pytorch-loss](https://github.com/CoinCheung/pytorch-loss) | label-smooth, amsoftmax, partial-fc, focal-loss, triplet-loss, lovasz-softmax. Maybe useful  | 2252 | Python |
 | [thinkwee/AgentsMeetRL](https://github.com/thinkwee/AgentsMeetRL) | Awesome List for Agentic RL | 1868 | HTML |
 | [jinbooooom/ai-infra-hpc](https://github.com/jinbooooom/ai-infra-hpc) | hpc 教程，包含集合通信(mpi、nccl)、cuda 编程、向量化 SIMD、RDMA 通信等 | 779 | Cuda |
-| [datawhalechina/deep-learning-notes](https://github.com/datawhalechina/deep-learning-notes) | Personal deep learning study notes and tutorial-style notebooks | 713 | Python |
+| [datawhalechina/deep-learning-notes](https://github.com/datawhalechina/deep-learning-notes) | Personal deep learning study notes and tutorial-style notebooks | 714 | Python |
 | [firechecking/CleanTransformer](https://github.com/firechecking/CleanTransformer) | an implementation of transformer, bert, gpt, and diffusion models for learning purposes | 157 | Python |
 | [ChinmayK0607/heiretsu](https://github.com/ChinmayK0607/heiretsu) | minimal pytorch 4D parallelism | 74 | Python |
 | [KylinC/Awesome-Awesome-LLM](https://github.com/KylinC/Awesome-Awesome-LLM) | awesome LLM papers！ 🚀 🚀 🚀 | 50 | N/A |
@@ -418,11 +418,11 @@ nideyongbao 名下的个人代码、实验、训练、部署、环境与数据�
 
 | Project | Description | Stars | Language |
 |---|---|---:|---|
-| [TapXWorld/ChinaTextbook](https://github.com/TapXWorld/ChinaTextbook) | 所有小初高、大学PDF教材。 | 83896 | N/A |
-| [lobehub/lobehub](https://github.com/lobehub/lobehub) | 🤯 LobeHub is your Chief Agent Operator, organizing your agents into 7×24 operations by hiring, scheduling, and reporting on your entire AI team. | 83651 | TypeScript |
-| [bojieli/ai-infra-book](https://github.com/bojieli/ai-infra-book) | 《深入理解 AI Infra：量化分析与系统设计》（李博杰 著）开源书稿：从硬件约束和模型架构出发，量化推导 LLM 推理与训练系统设计。含全书正文、PDF、配套计算工具与实验 | 7203 | Python |
+| [TapXWorld/ChinaTextbook](https://github.com/TapXWorld/ChinaTextbook) | 所有小初高、大学PDF教材。 | 83937 | N/A |
+| [lobehub/lobehub](https://github.com/lobehub/lobehub) | 🤯 LobeHub is your Chief Agent Operator, organizing your agents into 7×24 operations by hiring, scheduling, and reporting on your entire AI team. | 83687 | TypeScript |
+| [bojieli/ai-infra-book](https://github.com/bojieli/ai-infra-book) | 《深入理解 AI Infra：量化分析与系统设计》（李博杰 著）开源书稿：从硬件约束和模型架构出发，量化推导 LLM 推理与训练系统设计。含全书正文、PDF、配套计算工具与实验 | 7224 | Python |
 | [sachinhosmani/torchvista](https://github.com/sachinhosmani/torchvista) | Interactive Pytorch forward pass visualization in notebooks | 768 | Python |
 | [inclusionAI/cuLA](https://github.com/inclusionAI/cuLA) | CUDA kernels for linear attention variants, written in CuTe DSL and CUTLASS C++. | 561 | Python |
-| [vllm-project/humming](https://github.com/vllm-project/humming) | Humming is a high-performance, lightweight, and highly flexible JIT (Just-In-Time) compiled GEMM kernel library specifically designed for quantized inference. | 343 | Python |
+| [vllm-project/humming](https://github.com/vllm-project/humming) | Humming is a high-performance, lightweight, and highly flexible JIT (Just-In-Time) compiled GEMM kernel library specifically designed for quantized inference. | 345 | Python |
 | [ifm-ai/xllm](https://github.com/ifm-ai/xllm) | Light-weight infrastructure for express LLM pre-training | 123 | Python |
 | [codfish-zz/cn-trader](https://github.com/codfish-zz/cn-trader) | Python back testing system for trading strategies, based on backtrader and AkShare, customized for China market. | 30 | Python |
