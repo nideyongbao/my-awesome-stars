@@ -11,7 +11,7 @@
 ## 运行顺序
 
 1. 安装 `requirements.txt`。
-2. 执行 `python -m unittest -v test_main.py`。
+2. 执行 `python -m unittest -v tests.test_main`。
 3. 执行 `python main.py`。
 4. 仅在生成文件变化时提交并推送。
 

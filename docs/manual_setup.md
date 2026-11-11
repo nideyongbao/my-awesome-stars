@@ -10,7 +10,10 @@
 ├── removed_stars.json
 ├── requirements.txt
 ├── stars_cache.json
-├── test_main.py
+├── tests/
+│   ├── check_llm.py
+│   ├── test_main.py
+│   └── test_site.py
 └── README.md
 ```
 
@@ -27,7 +30,7 @@ python -m pip install -r requirements.txt
 离线测试：
 
 ```powershell
-python -m unittest -v test_main.py
+python -m unittest discover -s tests -v
 ```
 
 只迁移现有缓存并重建 README：
@@ -39,6 +42,9 @@ python main.py --render-only
 该命令不读取 `GH_TOKEN`，也不会访问 GitHub 或 LLM。
 
 ## 完整同步
+
+配置 `LLM_API_KEY`、`LLM_BASE_URL` 和 `LLM_MODEL` 后，可运行
+`python -m tests.check_llm` 验证 LLM API 连接和 JSON 模式。
 
 配置 `GH_TOKEN` 和 `LLM_API_KEY` 后：
 

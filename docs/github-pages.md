@@ -36,7 +36,7 @@ Pages 的定时配置为 `0 4 * * *`（UTC），即北京时间每天中午 12:0
 需要 Python 3.10+，网站构建不需要第三方 Python 包、Node 构建工具或 API 密钥。
 
 ```sh
-python -m unittest -v test_main.py test_site.py
+python -m unittest discover -s tests -v
 python build_site.py
 python -m http.server 8000 --directory _site
 ```

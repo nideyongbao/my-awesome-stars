@@ -10,24 +10,24 @@
 
 ## 目录
 
-- [Domain-计算加速 (33)](#vault-compute-acceleration)
-- [Domain-训练框架 (51)](#vault-training-frameworks)
+- [Domain-计算加速 (36)](#vault-compute-acceleration)
+- [Domain-训练框架 (52)](#vault-training-frameworks)
 - [Domain-推理框架 (14)](#vault-inference-frameworks)
 - [Domain-数据系统 (8)](#vault-data-systems)
 - [Domain-模型行为与控制 (20)](#vault-model-behavior-control)
-- [Domain-应用系统 (41)](#vault-application-systems)
+- [Domain-应用系统 (42)](#vault-application-systems)
 - [Pillar-工程与实践 (11)](#vault-engineering-practice)
 - [Pillar-工作流与工具链 (33)](#vault-workflow-toolchain)
-- [Pillar-理论与复现 (19)](#vault-theory-reproduction)
-- [其他 (8)](#vault-other)
+- [Pillar-理论与复现 (20)](#vault-theory-reproduction)
+- [其他 (2)](#vault-other)
 
 ---
 
-## <span id="vault-compute-acceleration">Domain-计算加速 (33)</span>
+## <span id="vault-compute-acceleration">Domain-计算加速 (36)</span>
 
 GPU、CUDA、Triton、算子、编译、通信、HPC 与性能原语
 
-### <span id="topic-compute-system-framework">Compute-System-Framework (10)</span>
+### <span id="topic-compute-system-framework">Compute-System-Framework (11)</span>
 
 GPU 与 AI 芯片、互联通信、PyTorch/JAX 框架底座及其执行机制
 
@@ -35,6 +35,7 @@ GPU 与 AI 芯片、互联通信、PyTorch/JAX 框架底座及其执行机制
 |---|---|---:|---|
 | [huggingface/transformers](https://github.com/huggingface/transformers) | 🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference an | 168770 | Python |
 | [pytorch/pytorch](https://github.com/pytorch/pytorch) | Tensors and Dynamic neural networks in Python with strong GPU acceleration | 105340 | Python |
+| [sachinhosmani/torchvista](https://github.com/sachinhosmani/torchvista) | Interactive Pytorch forward pass visualization in notebooks | 769 | Python |
 | [jinbooooom/OriginDL](https://github.com/jinbooooom/OriginDL) | Implement a Pytorch-like DL library in C++ from scratch, step by step | 401 | C++ |
 | [keith2018/TinyTorch](https://github.com/keith2018/TinyTorch) | A lightweight deep learning training framework implemented from scratch in C++, featuring a PyTorch-style API. | 235 | C++ |
 | [RightNow-AI/RightNow-GPU-Database](https://github.com/RightNow-AI/RightNow-GPU-Database) | Comprehensive GPU specifications database with 2,824 GPUs across NVIDIA, AMD, and Intel | 125 | N/A |
@@ -44,7 +45,7 @@ GPU 与 AI 芯片、互联通信、PyTorch/JAX 框架底座及其执行机制
 | [zuhuans-commits/pytorch_spu](https://github.com/zuhuans-commits/pytorch_spu) | spu is a learning project for understanding how PyTorch's PrivateUse1 (custom device) mechanism works end to end. It registers a brand-new torch device type cal | 6 | Python |
 | [Eclipse-Arrebol/CUDA_MATMUAL](https://github.com/Eclipse-Arrebol/CUDA_MATMUAL) |  | 1 | Cuda |
 
-### <span id="topic-compute-kernel-operator">Compute-Kernel-Operator (23)</span>
+### <span id="topic-compute-kernel-operator">Compute-Kernel-Operator (25)</span>
 
 CUDA、Triton、CUTLASS、GEMM、FlashAttention、MoE 与算子融合优化
 
@@ -62,6 +63,8 @@ CUDA、Triton、CUTLASS、GEMM、FlashAttention、MoE 与算子融合优化
 | [IST-DASLab/marlin](https://github.com/IST-DASLab/marlin) | FP16xINT4 LLM inference kernel that can achieve near-ideal ~4x speedups up to medium batchsizes of 16-32 tokens. | 1174 | Python |
 | [zhuzilin/ring-flash-attention](https://github.com/zhuzilin/ring-flash-attention) | Ring attention implementation with flash attention | 1068 | Python |
 | [QwenLM/FlashQLA](https://github.com/QwenLM/FlashQLA) | high-performance linear attention kernel library built on TileLang | 751 | Python |
+| [inclusionAI/cuLA](https://github.com/inclusionAI/cuLA) | CUDA kernels for linear attention variants, written in CuTe DSL and CUTLASS C++. | 560 | Python |
+| [vllm-project/humming](https://github.com/vllm-project/humming) | Humming is a high-performance, lightweight, and highly flexible JIT (Just-In-Time) compiled GEMM kernel library specifically designed for quantized inference. | 356 | Python |
 | [hustvl/MoDA](https://github.com/hustvl/MoDA) | An hardware-aware Efficient Implementation for "Mixture-of-Depths Attention". | 279 | Python |
 | [mit-han-lab/ncu-report-skill](https://github.com/mit-han-lab/ncu-report-skill) |  | 278 | Python |
 | [open-lm-engine/coda-kernels](https://github.com/open-lm-engine/coda-kernels) | CODA: Rewriting Transformer Blocks as GEMM-Epilogue Programs | 258 | Python |
@@ -74,11 +77,11 @@ CUDA、Triton、CUTLASS、GEMM、FlashAttention、MoE 与算子融合优化
 | [Pearblossom-M/flash-swiglu-mlp](https://github.com/Pearblossom-M/flash-swiglu-mlp) | High-performance fused SwiGLU MLP kernel in Triton, outperforming Liger kernel and torch.compile. | 2 | Python |
 | [liangyuwang/MetaProfiler](https://github.com/liangyuwang/MetaProfiler) | MetaProfiler is a lightweight, structure-agnostic operator-level profiler for PyTorch models that leverages MetaTensor execution to simulate and benchmark indiv | 2 | Python |
 
-## <span id="vault-training-frameworks">Domain-训练框架 (51)</span>
+## <span id="vault-training-frameworks">Domain-训练框架 (52)</span>
 
 预训练、SFT、RLHF/RLVR、优化器与分布式训练
 
-### <span id="topic-training-distributed-pretrain">Training-Distributed-Pretrain (25)</span>
+### <span id="topic-training-distributed-pretrain">Training-Distributed-Pretrain (26)</span>
 
 预训练、中训练、训练循环以及 ZeRO、FSDP、Megatron、Ray 和并行策略
 
@@ -102,6 +105,7 @@ CUDA、Triton、CUTLASS、GEMM、FlashAttention、MoE 与算子融合优化
 | [Victorwz/Open-Qwen2VL](https://github.com/Victorwz/Open-Qwen2VL) | [COLM 2025] Open-Qwen2VL: Compute-Efficient Pre-Training of Fully-Open Multimodal LLMs on Academic Resources | 318 | Python |
 | [liangyuwang/zo2](https://github.com/liangyuwang/zo2) | ZO2 (Zeroth-Order Offloading): Full Parameter Fine-Tuning 175B LLMs with 18GB GPU Memory [COLM2025] | 208 | Python |
 | [MiroMindAI/MiroTrain](https://github.com/MiroMindAI/MiroTrain) | MiroTrain is an efficient and algorithm-first framework research agent. | 143 | Python |
+| [ifm-ai/xllm](https://github.com/ifm-ai/xllm) | Light-weight infrastructure for express LLM pre-training | 124 | Python |
 | [liangyuwang/Tiny-FSDP](https://github.com/liangyuwang/Tiny-FSDP) | Tiny-FSDP, a minimalistic re-implementation of the PyTorch FSDP | 111 | Python |
 | [CoinCheung/gdGPT](https://github.com/CoinCheung/gdGPT) | Train llm (bloom, llama, baichuan2-7b, chatglm3-6b) with deepspeed pipeline mode. Faster than zero/zero++/fsdp. | 98 | Python |
 | [wxhcore/bumblecore](https://github.com/wxhcore/bumblecore) | An LLM training framework built from the ground up, featuring a custom BumbleBee architecture and end-to-end support for multiple open-source models across Pret | 72 | Python |
@@ -239,11 +243,11 @@ VLM、VLA、视觉、音频、视频、多模态生成与理解，不再拆分�
 | [forXuyx/Cinego](https://github.com/forXuyx/Cinego) | 🚀 轻量视频🎥 大模型🤖 | 23 | Python |
 | [Layjins/Spider](https://github.com/Layjins/Spider) | Code for paper "Spider: Any-to-Many Multimodal LLM" | 16 | Python |
 
-## <span id="vault-application-systems">Domain-应用系统 (41)</span>
+## <span id="vault-application-systems">Domain-应用系统 (42)</span>
 
 RAG、MCP、工具调用、产品级 Agent 与模型应用工作流
 
-### <span id="topic-app-agent-rag">App-Agent-RAG (33)</span>
+### <span id="topic-app-agent-rag">App-Agent-RAG (34)</span>
 
 Agentic Loop、规划、记忆、多 Agent、RAG、Research Agent 与工作流编排
 
@@ -255,6 +259,7 @@ Agentic Loop、规划、记忆、多 Agent、RAG、Research Agent 与工作流�
 | [Shubhamsaboo/awesome-llm-apps](https://github.com/Shubhamsaboo/awesome-llm-apps) | 100+ AI Agents, Agent Skills and RAG Apps - Free and Open Source. | 144385 | Python |
 | [karpathy/autoresearch](https://github.com/karpathy/autoresearch) | AI agents running research on single-GPU nanochat training automatically | 99762 | Python |
 | [datawhalechina/hello-agents](https://github.com/datawhalechina/hello-agents) | 📚 《从零开始构建智能体》——从零开始的智能体原理与实践教程 | 86646 | Python |
+| [lobehub/lobehub](https://github.com/lobehub/lobehub) | 🤯 LobeHub - Super-Agents on Your Team. Add super-agents to the chats your team already uses.They take on work by themselves and get better every week. | 84916 | TypeScript |
 | [shareAI-lab/learn-claude-code](https://github.com/shareAI-lab/learn-claude-code) | Bash is all you need -  A nano claude code–like 「agent harness」, built from 0 to 1 | 80232 | Python |
 | [FoundationAgents/MetaGPT](https://github.com/FoundationAgents/MetaGPT) | 🌟 The Multi-Agent Framework: First AI Software Company, Towards Natural Language Programming | 71239 | Python |
 | [ai-job-search-dev/ai-job-search](https://github.com/ai-job-search-dev/ai-job-search) | The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews | 71129 | Python |
@@ -378,11 +383,11 @@ nideyongbao 名下的个人代码、实验、训练、部署、环境与数据�
 | [nideyongbao/llm-lab-v3-env](https://github.com/nideyongbao/llm-lab-v3-env) |  | 1 | Shell |
 | [nideyongbao/LightRFT](https://github.com/nideyongbao/LightRFT) | LightRFT (Light Reinforcement Fine-Tuning) is an advanced reinforcement learning fine-tuning framework designed for Large Language Models (LLMs) and Vision-Lang | 1 | N/A |
 
-## <span id="vault-theory-reproduction">Pillar-理论与复现 (19)</span>
+## <span id="vault-theory-reproduction">Pillar-理论与复现 (20)</span>
 
 论文、理论、数学、复现实验与 Benchmark 解读
 
-### <span id="topic-theory-reproduction">Theory-Reproduction (19)</span>
+### <span id="topic-theory-reproduction">Theory-Reproduction (20)</span>
 
 数学与优化理论、论文实现、复现实验、Benchmark、教程与系统化资料
 
@@ -392,6 +397,7 @@ nideyongbao 名下的个人代码、实验、训练、部署、环境与数据�
 | [WangRongsheng/awesome-LLM-resources](https://github.com/WangRongsheng/awesome-LLM-resources) | 🧑‍🚀 全世界最好的LLM资料总结（多模态生成、Agent、辅助编程、AI审稿、数据处理、模型训练、模型推理、o1 模型、MCP、小语言模型、视觉语言模型） \| Summary of the world's best LLM resources.  | 9076 | N/A |
 | [itcharge/AlgoNote](https://github.com/itcharge/AlgoNote) | ⛽️「算法通关手册」：从零开始的「算法与数据结构」学习教程，200 道「算法面试热门题目」，1000+ 道「LeetCode 题目解析」，持续更新中！ | 7848 | Python |
 | [zhaochenyang20/Awesome-ML-SYS-Tutorial](https://github.com/zhaochenyang20/Awesome-ML-SYS-Tutorial) | My learning notes for ML SYS. | 7662 | HTML |
+| [bojieli/ai-infra-book](https://github.com/bojieli/ai-infra-book) | 《深入理解 AI Infra：量化分析与系统设计》（李博杰 著）开源书稿：从硬件约束和模型架构出发，量化推导 LLM 推理与训练系统设计。含全书正文、PDF、配套计算工具与实验 | 7463 | Python |
 | [xlite-dev/Awesome-LLM-Inference](https://github.com/xlite-dev/Awesome-LLM-Inference) | 📚A curated list of Awesome LLM/VLM Inference Papers with Codes: Flash-Attention, Paged-Attention, WINT8/4, Parallelism, etc.🎉 | 5553 | Python |
 | [changyeyu/LLM-RL-Visualized](https://github.com/changyeyu/LLM-RL-Visualized) | 🌟100+ 原创 LLM / RL 原理图📚，《大模型算法》作者巨献！💥（100+  LLM/RL Algorithm Maps ） | 5009 | Python |
 | [walkinglabs/hands-on-modern-rl](https://github.com/walkinglabs/hands-on-modern-rl) | 🚀 An open-source, hands-on curriculum bridging the gap from basic RL concepts to LLM alignment, RLVR, and advanced Agentic systems.  | 4892 | Jupyter Notebook |
@@ -408,21 +414,15 @@ nideyongbao 名下的个人代码、实验、训练、部署、环境与数据�
 | [APRIL-AIGC/awesome-optimizer](https://github.com/APRIL-AIGC/awesome-optimizer) | Evolution of Optimization Methods: Algorithms, Scenarios, and Evaluations | 40 | Python |
 | [hanfang/chatgpt-usage-taxonomies](https://github.com/hanfang/chatgpt-usage-taxonomies) | Taxonomies and classification prompts from the 'How People Use ChatGPT' research paper (NBER Working Paper No. 34255) | 4 | N/A |
 
-## <span id="vault-other">其他 (8)</span>
+## <span id="vault-other">其他 (2)</span>
 
 读完仍无法归入现有 6+3 分类的仓库
 
-### <span id="topic-other">Other (8)</span>
+### <span id="topic-other">Other (2)</span>
 
 不符合当前 AI 系统研究主题且无法可靠归入现有子类
 
 | Project | Description | Stars | Language |
 |---|---|---:|---|
-| [lobehub/lobehub](https://github.com/lobehub/lobehub) | 🤯 LobeHub - Super-Agents on Your Team. Add super-agents to the chats your team already uses.They take on work by themselves and get better every week. | 84916 | TypeScript |
 | [TapXWorld/ChinaTextbook](https://github.com/TapXWorld/ChinaTextbook) | 所有小初高、大学PDF教材。 | 84346 | N/A |
-| [bojieli/ai-infra-book](https://github.com/bojieli/ai-infra-book) | 《深入理解 AI Infra：量化分析与系统设计》（李博杰 著）开源书稿：从硬件约束和模型架构出发，量化推导 LLM 推理与训练系统设计。含全书正文、PDF、配套计算工具与实验 | 7463 | Python |
-| [sachinhosmani/torchvista](https://github.com/sachinhosmani/torchvista) | Interactive Pytorch forward pass visualization in notebooks | 769 | Python |
-| [inclusionAI/cuLA](https://github.com/inclusionAI/cuLA) | CUDA kernels for linear attention variants, written in CuTe DSL and CUTLASS C++. | 560 | Python |
-| [vllm-project/humming](https://github.com/vllm-project/humming) | Humming is a high-performance, lightweight, and highly flexible JIT (Just-In-Time) compiled GEMM kernel library specifically designed for quantized inference. | 356 | Python |
-| [ifm-ai/xllm](https://github.com/ifm-ai/xllm) | Light-weight infrastructure for express LLM pre-training | 124 | Python |
 | [codfish-zz/cn-trader](https://github.com/codfish-zz/cn-trader) | Python back testing system for trading strategies, based on backtrader and AkShare, customized for China market. | 30 | Python |

@@ -23,7 +23,7 @@ jobs:
       run: pip install -r requirements.txt
 
     - name: Run offline tests
-      run: python -m unittest -v test_main.py
+      run: python -m unittest -v tests.test_main
       
     - name: Run classifier script
       env:

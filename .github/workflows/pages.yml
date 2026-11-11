@@ -7,8 +7,7 @@ on:
       - 'site/**'
       - 'build_site.py'
       - 'main.py'
-      - 'test_main.py'
-      - 'test_site.py'
+      - 'tests/**'
       - 'stars_cache.json'
       - 'categories.json'
       - '.github/workflows/pages.yml'
@@ -18,8 +17,7 @@ on:
       - 'site/**'
       - 'build_site.py'
       - 'main.py'
-      - 'test_main.py'
-      - 'test_site.py'
+      - 'tests/**'
       - 'stars_cache.json'
       - 'categories.json'
       - '.github/workflows/pages.yml'
@@ -50,7 +48,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Run offline tests
-        run: python -m unittest -v test_main.py test_site.py
+        run: python -m unittest discover -s tests -v
       - name: Check browser script
         run: node --check site/app.js
       - name: Generate static website

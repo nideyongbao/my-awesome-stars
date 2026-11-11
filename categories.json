@@ -43,6 +43,42 @@
       "category_id": "compute-system-framework",
       "reasoning": "经人工审查指定为 PyTorch PrivateUse1 自定义设备机制学习项目，归入计算加速的框架底座与执行机制子类。",
       "classified_at": "2026-09-16T08:33:08.423423Z"
+    },
+    "643445235": {
+      "name": "lobehub/lobehub",
+      "category_id": "app-agent-rag",
+      "reasoning": "团队协作场景下的 Agent 应用，归入应用系统的 Agent 子类。",
+      "classified_at": "2026-11-11T02:47:07Z"
+    },
+    "1342935078": {
+      "name": "bojieli/ai-infra-book",
+      "category_id": "theory-reproduction",
+      "reasoning": "涵盖 AI 基础设施的量化推导、系统设计与配套实验，归入理论与复现。",
+      "classified_at": "2026-11-11T02:47:07Z"
+    },
+    "958163543": {
+      "name": "sachinhosmani/torchvista",
+      "category_id": "compute-system-framework",
+      "reasoning": "用于可视化 PyTorch 前向传播的框架配套工具，归入计算加速的系统框架子类。",
+      "classified_at": "2026-11-11T02:47:07Z"
+    },
+    "1199246880": {
+      "name": "inclusionAI/cuLA",
+      "category_id": "compute-kernel-operator",
+      "reasoning": "用 CuTe DSL 和 CUTLASS 实现线性注意力 CUDA 算子，归入计算加速的算子优化子类。",
+      "classified_at": "2026-11-11T02:47:07Z"
+    },
+    "1155296313": {
+      "name": "vllm-project/humming",
+      "category_id": "compute-kernel-operator",
+      "reasoning": "面向量化推理的 JIT GEMM 算子库，归入计算加速的算子优化子类。",
+      "classified_at": "2026-11-11T02:47:07Z"
+    },
+    "1354327327": {
+      "name": "ifm-ai/xllm",
+      "category_id": "training-distributed-pretrain",
+      "reasoning": "轻量级 LLM 预训练基础设施，归入训练框架的预训练子类。",
+      "classified_at": "2026-11-11T02:47:07Z"
     }
   },
   "vault_categories": [
